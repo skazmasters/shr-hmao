@@ -1,0 +1,41 @@
+{{#ifCond fallback-ext 'svg'}}
+  <img src="../assets/images/{{img}}.{{fallback-ext}}"/>
+{{else}}
+  <picture>
+    {{#if img-tablet}}
+      {{#if ext-tablet}}
+        {{> core/picture-source media="max-width: 1279px" img=img-tablet ext=ext-tablet}}
+      {{else}}
+        {{> core/picture-source media="max-width: 1279px" img=img-tablet ext=ext}}
+      {{/if}}
+    {{/if}}
+
+    {{#if img-tabletSmall}}
+      {{#if ext-tablet}}
+        {{> core/picture-source media="max-width: 979px" img=img-tabletSmall ext=ext-tablet}}
+      {{else}}
+        {{> core/picture-source media="max-width: 979px" img=img-tabletSmall ext=ext}}
+      {{/if}}
+    {{/if}}
+
+    {{#if img-mobile}}
+      {{#if ext-mobile}}
+        {{> core/picture-source media="max-width: 767px" img=img-mobile ext=ext-mobile}}
+      {{else}}
+        {{> core/picture-source media="max-width: 767px" img=img-mobile ext=ext}}
+      {{/if}}
+    {{/if}}
+
+    {{> core/picture-source}}
+
+    {{#if no-lazy}}
+      <img src="../assets/images/{{img}}.{{ext}}" alt="{{alt}}">
+    {{else}}
+      <img class="lazy"
+           data-sizes="auto"
+           data-original="../assets/images/{{img}}.{{ext}}"
+           src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+           alt="{{alt}}">
+    {{/if}}
+  </picture>
+{{/ifCond}}

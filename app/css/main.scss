@@ -1,0 +1,16 @@
+@import 'config/index';
+@import 'mixins/index';
+@import 'core/index';
+
+@import "~normalize-scss/sass/normalize/import-now";
+@import '~swiper/swiper';
+@import '~js-datepicker/src/datepicker';
+@import 'vendor/index';
+
+@import 'components/index';
+@import 'form/index';
+@import 'blocks/index';
+@import 'widgets/index';
+@import 'layout/index';
+@import 'pages/index';
+@import "popups/index";

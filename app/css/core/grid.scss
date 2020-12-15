@@ -1,0 +1,27 @@
+@-ms-viewport {
+  width: device-width;
+}
+
+html {
+  box-sizing: border-box;
+  -ms-overflow-style: scrollbar;
+}
+
+.container {
+  width: $desktopWidth + $desktopGutter * 2;
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: $desktopGutter;
+  padding-right: $desktopGutter;
+
+  @include tablet {
+    padding-left: $tabletGutter;
+    padding-right: $tabletGutter;
+  }
+
+  @include mobile {
+    padding-left: $mobileGutter;
+    padding-right: $mobileGutter;
+  }
+}

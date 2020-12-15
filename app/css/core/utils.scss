@@ -1,0 +1,73 @@
+.fixed-scroll {
+  overflow: hidden;
+
+  @include mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+}
+
+.scroll-measure {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  z-index: -100;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+._mobile {
+  &-visible {
+    @include media(mobile, up) {
+      display: none !important;
+    }
+  }
+
+  &-hidden {
+    @include media(mobile) {
+      display: none !important;
+    }
+  }
+}
+
+._tabletSmall {
+  &-visible {
+    @include media(tabletSmall, up) {
+      display: none !important;
+    }
+  }
+
+  &-hidden {
+    @include media(tabletSmall) {
+      display: none!important;
+    }
+  }
+}
+
+._tablet {
+  &-visible {
+    @include media(tablet, up) {
+      display: none!important;
+    }
+  }
+
+  &-hidden {
+    @include media(tablet) {
+      display: none!important;
+    }
+  }
+}

@@ -1,0 +1,284 @@
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: ' ';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin align($horizontal: true, $vertical: true, $transform: null) {
+  position: absolute;
+
+  @if ($horizontal) {
+    left: 50%;
+  }
+  @if ($vertical) {
+    top: 50%;
+  }
+
+  @if ($horizontal and $vertical) {
+    transform: translate(-50%, -50%), $transform;
+  } @else if ($horizontal) {
+    transform: translate(-50%, 0), $transform;
+  } @else {
+    transform: translate(0, -50%), $transform;
+  }
+}
+
+@mixin digital_list() {
+  list-style-type: none;
+  counter-reset: li-counter;
+
+  li {
+    position: relative;
+  }
+
+  li::before {
+    content: counter(li-counter);
+    counter-increment: li-counter;
+    display: inline-block !important;
+  }
+}
+
+@mixin fill($digit: 0) {
+  position: absolute;
+  top: $digit;
+  bottom: $digit;
+  left: $digit;
+  right: $digit;
+}
+
+@mixin filter() {
+  filter: grayscale(1) brightness(1.15);
+  opacity: 0.65;
+}
+
+@mixin letter-spacing($photoshop) {
+  letter-spacing: #{$photoshop / 1000}em;
+}
+
+@mixin link-underline {
+  text-decoration: underline;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+@mixin hide-scrollbar {
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+  &:-moz-placeholder {
+    @content;
+  }
+  &::-moz-placeholder {
+    @content;
+  }
+  &:-ms-input-placeholder {
+    @content;
+  }
+  &::-ms-input-placeholder {
+    @content;
+  }
+}
+
+@mixin rotate($deg: 180deg) {
+  transform: rotate($deg);
+}
+
+@mixin transition($duration: 300ms, $property: all,$fn: ease-in-out) {
+  transition: $duration $property $fn;
+}
+
+@mixin triangle($width, $dir, $color) {
+  @if $dir == up {
+    width: 0;
+    height: 0;
+    border-left: $width/2 solid transparent;
+    border-right: $width/2 solid transparent;
+    border-bottom: $width/2 solid $color;
+  } @else if $dir == down {
+    width: 0;
+    height: 0;
+    border-left: $width/2 solid transparent;
+    border-right: $width/2 solid transparent;
+    border-top: $width/2 solid $color;
+  } @else if $dir == right {
+    width: 0;
+    height: 0;
+    border-top: $width solid transparent;
+    border-bottom: $width solid transparent;
+    border-left: $width solid $color;
+  } @else if $dir == left {
+    width: 0;
+    height: 0;
+    border-top: $width solid transparent;
+    border-bottom: $width solid transparent;
+    border-right: $width solid $color;
+  }
+}
+
+@function hsla-calc($color, $opacity) {
+  @return hsla(hue($color), saturation($color), lightness($color), $opacity);
+}
+
+@mixin png-icon($name, $width, $height) {
+  background: url($images_dir + $name + '.png') no-repeat;
+  width: $width + px;
+  height: $height + px;
+}
+
+/******************************************************/
+/******************** Animations **********************/
+/******************************************************/
+
+@mixin animation-loop($from: 1, $to: 15, $tick: 1, $ticking: .04) {
+  $accum: $tick;
+
+  @for $i from $from through $to {
+    &:nth-child(#{$i}) {
+      @content($accum);
+      $accum: $accum + $ticking;
+    }
+  }
+}
+
+/* For buttons */
+
+// Make button with specific color and outline statement
+@mixin btn-color(
+  $name,
+  $arg,
+  $theme: $color-white,
+  $hover-color: darken($arg, 10%),
+  $active-color: darken($arg, 20%),
+  $outline-hover-color: $arg,
+  $outline-active-color: darken($arg, 20%)
+) {
+  &--#{$name} {
+    background-color: $arg;
+    border-color: $arg;
+    color: $theme;
+
+    &:hover,
+    &.btn--hover {
+      background-color: $hover-color;
+      border-color: $hover-color;
+      color: $theme;
+    }
+
+    &:focus,
+    &:active,
+    &.btn--focus,
+    &.btn--active {
+      background-color: $active-color;
+      border-color: $active-color;
+      color: $theme;
+    }
+
+    &.btn--active {
+      &:hover {
+        background-color: $hover-color;
+        border-color: $hover-color;
+        color: $theme;
+      }
+    }
+
+    &:disabled,
+    &.btn--disabled {
+      background-color: $arg;
+      border-color: $arg;
+      color: $theme;
+    }
+
+    &-outline {
+      background-color: transparent;
+      border-color: $arg;
+      color: $arg;
+
+      &:hover,
+      &.btn--hover {
+        background-color: $outline-hover-color;
+        border-color: $outline-hover-color;
+        color: $theme;
+      }
+
+      &:focus,
+      &:active,
+      &.btn--focus,
+      &.btn--active {
+        background-color: $outline-active-color;
+        border-color: $outline-active-color;
+        color: $theme;
+      }
+
+      &.btn--active {
+        &:hover {
+          background-color: $outline-hover-color;
+          border-color: $outline-hover-color;
+          color: $theme;
+        }
+      }
+
+      &:disabled,
+      &.btn--disabled {
+        background-color: transparent;
+        border-color: $arg;
+        color: $arg;
+      }
+    }
+  }
+}
+
+@mixin square($size, $background: #fff, $border-radius: 0px) {
+  width: $size;
+  height: $size;
+  display: inline-block;
+  background: $background;
+  border-radius: $border-radius;
+}
+
+@mixin circle($size, $background: #fff) {
+  @include square($size, $background, 50%);
+}
+
+
+@mixin cross($size, $color) {
+  display: block;
+  position: relative;
+  width: to-number($size);
+  height: to-number($size);
+
+  &::after,
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    display: block;
+    width: #{diagonal(to-number($size))};
+    height: 1.8px;
+    border-radius: 5px;
+    background-color: $color;
+    @include transition;
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
