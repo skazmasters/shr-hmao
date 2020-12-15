@@ -10,18 +10,17 @@ html {
 .container {
   width: $desktopWidth + $desktopGutter * 2;
   max-width: 100%;
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: $desktopGutter;
-  padding-right: $desktopGutter;
+  margin: 0 auto;
 
-  @include tablet {
-    padding-left: $tabletGutter;
-    padding-right: $tabletGutter;
+  @include media(tablet, up) {
+    padding: 0 $desktopGutter;
   }
 
-  @include mobile {
-    padding-left: $mobileGutter;
-    padding-right: $mobileGutter;
+  @include media(tablet, only) {
+    padding: 0 $tabletGutter;
+  }
+
+  @include media(mobile) {
+    padding: 0 $mobileGutter;
   }
 }

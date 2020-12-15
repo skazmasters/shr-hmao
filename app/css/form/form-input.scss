@@ -2,16 +2,41 @@
   position: relative;
 
   input {
-    background: #FFFFFF;
-    border: 1px solid $color-input-border;
-    border-radius: 8px;
-    padding: 0 10px;
-    height: 44px;
-    font-size: 16px;
+    height: 48px;
     width: 100%;
+    padding: 0 10px;
+    color: inherit;
+    font-size: 16px;
+    line-height: 22px;
+    background: transparent;
+    border: 1px solid $color-black-75;
+    border-radius: 3px;
+    @include transition;
 
     @include placeholder {
-      color: $color-placeholder;
+      color: $color-black-75;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus-within {
+      cursor: text;
+      border-color: $color-black;
+    }
+
+    &.input-white {
+      border: 1px solid $color-white-75;
+
+      @include placeholder {
+        color: $color-white-75;
+      }
+
+      &:focus-within {
+        cursor: text;
+        border-color: $color-white;
+      }
     }
   }
 
@@ -49,6 +74,36 @@
 
     &--date {
       @include sprite('input-date');
+    }
+  }
+
+  &__submit {
+    position: absolute;
+    top: 50%;
+    right: 26px;
+    height: 25px;
+    transform: translateY(-50%);
+
+    &:hover {
+      .arrow-right {
+        opacity: initial;
+      }
+
+      .arrow-right__body {
+        @include media(mobile) {
+          width: 25px;
+        }
+
+        @include media(mobile) {
+          width: 20px;
+        }
+      }
+    }
+
+    .arrow-right__body {
+      @include media(mobile) {
+        width: 30px;
+      }
     }
   }
 }

@@ -1,0 +1,29 @@
+.main-contacts {
+  > * + * {
+    margin-top: 22px;
+  }
+
+  &__item {
+    position: relative;
+    display: block;
+    padding-left: 25px;
+  }
+
+  b {
+    font-weight: 500;
+  }
+
+  a {
+    &:hover {
+      color: $color-white-75;
+    }
+  }
+
+  .icon {
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 16px;
+    height: 16px;
+  }
+}

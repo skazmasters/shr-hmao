@@ -1,3 +1,101 @@
 .footer {
+  color: $color-white;
+  background-color: #346C55;
 
+  @include media(tablet, up) {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  @include media(tablet) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__grid {
+    display: grid;
+
+    @include media(tablet, up) {
+      grid-template-areas: 'menu contacts form' 'menu contacts form' 'logo contacts socials';
+      grid-template-columns: minmax(280px, auto) minmax(auto, 280px) 1fr;
+      grid-gap: 10px 44px;
+      padding: 58px 0 34px;
+    }
+
+    @include media(tablet, only) {
+      grid-template-areas: 'menu contacts' 'socials contacts' 'logo form';
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 40px;
+      max-width: 685px;
+      margin: 0 auto;
+      padding: 54px 0 84px;
+    }
+
+    @include media(tabletSmall, only) {
+      margin-left: 30px;
+    }
+
+    @include media(mobile) {
+      grid-template-areas: 'menu' 'contacts' 'form' 'socials' 'logo';
+      grid-template-columns: 1fr;
+      grid-gap: 46px;
+      justify-items: center;
+      padding: 54px 0 68px;
+    }
+  }
+
+  &__menu {
+    grid-area: menu;
+
+    @include media(mobile) {
+      position: relative;
+      left: 25px;
+      width: 100%;
+      max-width: 255px;
+    }
+
+    .main-menu__list {
+      @include media(mobile) {
+        column-gap: 50px;
+      }
+    }
+  }
+
+  &__contacts {
+    grid-area: contacts;
+
+    @include media(mobile) {
+      max-width: 255px;
+    }
+  }
+
+  &__form {
+    grid-area: form;
+
+    @include media(tablet, only) {
+      align-self: center;
+    }
+
+    @include media(mobile) {
+      justify-self: stretch;
+    }
+  }
+
+  &__logo {
+    grid-area: logo;
+
+    .icon {
+      width: 115px;
+      height: 105px;
+    }
+  }
+
+  &__socials {
+    grid-area: socials;
+
+    @include media(tablet, up) {
+      align-self: center;
+      justify-self: flex-end;
+    }
+  }
 }

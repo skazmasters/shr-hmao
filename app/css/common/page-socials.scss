@@ -1,0 +1,23 @@
+.page-socials {
+  display: flex;
+  align-items: center;
+
+  > * + * {
+    margin-left: 18px;
+  }
+
+  &__link {
+    display: inline-flex;
+    color: $color-white;
+    opacity: 0.54;
+
+    &:hover {
+      opacity: initial;
+    }
+  }
+
+  .icon {
+    width: 32px;
+    height: 32px;
+  }
+}

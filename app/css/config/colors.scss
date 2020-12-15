@@ -1,12 +1,17 @@
 // Colors
 $color-white: #FFFFFF;
+$color-white-75: rgba(255, 255, 255, 0.74);
 $color-black: #000000;
+$color-black-75: rgba(0, 0, 0, 0.74);
 $color-red: #FF0000;
 
-$color-primary: #DD6900;
+$color-gray-dark: #767676;
+$color-gray-lite: #EDEDED;
+
+$color-primary: #448D6E;
 $color-primary-hover: darken($color-primary, 5%);
 $color-secondary: #1B74FD;
 $color-secondary-hover: darken($color-secondary, 5%);
 
-$color-placeholder: rgba(5, 36, 51, 0.2);
+$color-placeholder: rgba(255, 255, 255, 0.74);
 $color-input-border: #DAE4ED;

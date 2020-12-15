@@ -1,23 +1,16 @@
 .form-field {
-  padding-bottom: 26px;
   position: relative;
   width: 100%;
 
-  @include mobile{
-    padding-bottom: 22px;
-  }
-
   &__label {
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.02em;
     display: block;
-    color: #000;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
   }
 
   &__input {
-    margin-top: 5px;
+    margin-top: 13px;
   }
 
   &__note {

@@ -1,0 +1,14 @@
+.page-logo {
+  display: flex;
+  align-items: center;
+
+  &__link {
+    display: inline-flex;
+    align-items: center;
+  }
+
+  .icon {
+    width: 155px;
+    height: 140px;
+  }
+}

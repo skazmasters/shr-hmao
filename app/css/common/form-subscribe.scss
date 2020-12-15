@@ -1,0 +1,21 @@
+.form-subscribe {
+  position: relative;
+
+  input {
+    @include media(mobile, up) {
+      padding-right: 80px;
+      padding-left: 30px;
+    }
+
+    @include media(mobile) {
+      padding-right: 70px;
+      padding-left: 20px;
+    }
+  }
+
+  &--white {
+    .arrow-right {
+      --arrow-color: #{$color-white};
+    }
+  }
+}

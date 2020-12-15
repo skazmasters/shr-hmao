@@ -1,0 +1,33 @@
+.arrow-right {
+  --arrow-color: #{$color-black};
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 45px;
+  height: 8px;
+  margin-right: -5px;
+  color: var(--arrow-color);
+  opacity: 0.74;
+  @include transition;
+
+  &::after {
+    position: relative;
+    right: 5px;
+    content: '';
+    width: 5px;
+    height: 5px;
+    border-right: 1px solid;
+    border-bottom: 1px solid;
+    transform: rotate(-45deg);
+  }
+
+  &__body {
+    display: block;
+    width: 40px;
+    height: 1px;
+    background-color: currentColor;
+    @include transition;
+  }
+}

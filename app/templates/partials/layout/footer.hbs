@@ -1,8 +1,24 @@
 </main>
 
-<footer class="footer page__footer">
+<footer class="page__footer footer">
   <div class="container">
-    <h2>FOOTER</h2>
+    <div class="footer__grid">
+      <div class="footer__menu">
+        {{>blocks/common/main-menu footer=1}}
+      </div>
+      <div class="footer__contacts">
+        {{>blocks/common/main-contacts}}
+      </div>
+      <div class="footer__form">
+        {{>blocks/common/form-subscribe mode="white"}}
+      </div>
+      <div class="footer__logo">
+        {{>blocks/common/page-logo name="logo-white"}}
+      </div>
+      <div class="footer__socials">
+        {{>blocks/common/page-socials}}
+      </div>
+    </div>
   </div>
 </footer>
 
