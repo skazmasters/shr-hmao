@@ -1,8 +1,9 @@
-<div class="form-input{{#if icon}} form-input--icon{{#if icon-position}} form-input--icon-{{icon-position}}{{/if}}{{/if}}{{#if mod}} {{mod}}{{/if}}">
+<div class="form-input{{#if icon}} form-input--icon{{#if icon-position}} form-input--icon-{{icon-position}}{{/if}}{{/if}}{{#if reset}} form-input--reset{{/if}}{{#if mod}} {{mod}}{{/if}}">
   <input {{#if id}} id="{{id}}"{{/if}} type="{{#if type}}{{type}}{{else}}text{{/if}}" placeholder="{{placeholder}}"
          class="{{#if class}}{{class}}{{/if}}{{#if mask}} js-masked-input{{/if}}{{#if date}} js-datepicker{{/if}}{{#if numeric}} js-numeric-input{{/if}}"
          {{#if maxlength}} maxlength="{{maxlength}}"{{/if}} {{#if mask}} data-mask="{{mask}}"{{/if}}
          {{#if inputmode}} inputmode="{{inputmode}}"{{/if}}/>
   {{#if icon}}<i class="form-input__icon form-input__icon--{{icon}}"></i>{{/if}}
   {{#if submit}}<button class="form-input__submit" type="submit" aria-label="Подписаться">{{>icons/arrow-right}}</button>{{/if}}
+  {{#if reset}}<button class="form-input__reset {{reset}}" type="reset" aria-label="Очистить форму">{{>icons/close}}</button>{{/if}}
 </div>

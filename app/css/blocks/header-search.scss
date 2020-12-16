@@ -1,0 +1,60 @@
+.header-search {
+  &__btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    @include transition;
+
+    &.active,
+    &:hover {
+      color: $color-primary;
+    }
+
+    > .icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    color: $color-white;
+    background-color: $color-dark;
+    @include transition;
+
+    &.active {
+      opacity: initial;
+      pointer-events: auto;
+      visibility: visible;
+    }
+  }
+
+  &__form {
+    padding-top: 10px;
+    padding-bottom: 38px;
+  }
+
+  .form-input input {
+    height: auto;
+    padding: 22px 10px;
+    border: unset;
+    border-bottom: 1px solid #DADADA;
+    border-radius: unset;
+
+    &::placeholder {
+      color: $color-white;
+    }
+
+    &:focus {
+      border-color: $color-white;
+    }
+  }
+}

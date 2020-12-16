@@ -1,5 +1,5 @@
 <div class="form-field">
-  <label class="form-field__label" for="{{id}}">{{label}}</label>
+  {{#if label}}<label class="form-field__label" for="{{id}}">{{label}}</label>{{/if}}
   <div class="form-field__input">
     {{> @partial-block}}
   </div>

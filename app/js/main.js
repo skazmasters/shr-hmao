@@ -20,8 +20,12 @@ import './src/utils/vh-hack';
 import './src/utils/mobile-debug';
 import './src/utils/input-filter';
 
-import './src/widgets/example';
+// import './src/widgets/example';
 import './src/widgets/accord';
+
+import './src/widgets/header/header-scroll';
+import './src/widgets/header/header-search';
+import './src/widgets/header/header';
 
 import './src/widgets/popups';
 import './src/widgets/video-link';

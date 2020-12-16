@@ -1,0 +1,56 @@
+.icon-close {
+  position: relative;
+  z-index: z(default) + 1;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  margin: -5px;
+  border-radius: 4px;
+  cursor: pointer;
+  @include transition(all, 300ms, linear);
+
+  &:hover {
+    &::after,
+    &::before {
+      background-color: $color-black;
+    }
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    content: '';
+    display: block;
+    width: #{diagonal(13)}px;
+    height: 1.5px;
+    border-radius: 5px;
+    background-color: $color-gray-dark;
+    @include transition;
+  }
+
+  &::after {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+
+  &::before {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+
+  &--white {
+    &:hover {
+      opacity: 0.5;
+
+      &::after,
+      &::before {
+        background-color: #F2F2F2;
+      }
+    }
+
+    &::after,
+    &::before {
+      background-color: #F2F2F2;
+    }
+  }
+}

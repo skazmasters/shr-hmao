@@ -1,21 +1,49 @@
 {{#if footer}}
   <div class="main-menu main-menu--footer">
     <ul class="main-menu__list">
-      <li><a href="#">О союзе</a></li>
-      <li><a href="#">Наши проекты</a></li>
-      <li><a href="#">Выставки</a></li>
-      <li><a href="#">Новости</a></li>
-      <li><a href="#">Контакты</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="#">О союзе</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="#">Наши проекты</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="#">Выставки</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="#">Новости</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="#">Контакты</a></li>
     </ul>
   </div>
 {{else}}
-  <div class="main-menu">
+  <div class="main-menu main-menu--header">
     <ul class="main-menu__list">
-      <li><a href="#">О союзе</a></li>
-      <li><a href="#">Наши проекты</a></li>
-      <li><a href="#">Выставки</a></li>
-      <li><a href="#">Новости</a></li>
-      <li><a href="#">Контакты</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="#">О союзе</a></li>
+      <li class="main-menu__item main-menu__item--nested">
+        <a class="main-menu__link" href="#">Наши проекты</a>
+        {{>ui/svg name="chevron-right"}}
+        <div class="main-menu__submenu">
+          <div class="main-submenu">
+            <ul class="main-submenu__list">
+              <li class="main-submenu__item"><a class="main-submenu__link" href="#">Акции</a></li>
+              <li class="main-submenu__item"><a class="main-submenu__link" href="#">КПД</a></li>
+              <li class="main-submenu__item main-submenu__item--nested">
+                <a class="main-submenu__link" href="#">Пленэры</a>
+                {{>ui/svg name="chevron-right"}}
+                <div class="main-submenu__menu">
+                  <div class="main-submenu">
+                    <ul class="main-submenu__list">
+                      <li class="main-submenu__item">
+                        <a class="main-submenu__link" href="#">III Международный арт-пленэр «ART-UGRA 2020»</a>
+                      </li>
+                      <li class="main-submenu__item">
+                        <a class="main-submenu__link" href="#">Межрегиональный пленэр «Югорская академичка»</a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </li>
+              <li class="main-submenu__item"><a class="main-submenu__link" href="#">Издания союза</a></li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li class="main-menu__item"><a class="main-menu__link" href="#">Выставки</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="#">Новости</a></li>
+      <li class="main-menu__item"><a class="main-menu__link" href="#">Контакты</a></li>
     </ul>
   </div>
 {{/if}}

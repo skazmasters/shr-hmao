@@ -14,7 +14,7 @@
     @include transition;
 
     @include placeholder {
-      color: $color-black-75;
+      color: $color-gray-lite;
     }
 
     &:hover {
@@ -55,6 +55,10 @@
       padding-left: 10px;
       padding-right: 36px;
     }
+  }
+
+  &--reset {
+    padding-right: 44px;
   }
 
   &__icon {
@@ -105,5 +109,17 @@
         width: 30px;
       }
     }
+  }
+
+  &__reset {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    transform: translateY(-50%);
   }
 }

@@ -1,0 +1,14 @@
+<div class="header-search js-header-search">
+  <button class="header-search__btn js-header-search__open" type="button" aria-label="Открыть поиск">{{>ui/svg name="search"}}</button>
+  <div class="header-search__dropdown js-header-search__dropdown">
+    <div class="container">
+      <form>
+        <div class="header-search__form">
+          {{#> ui/field id="search_01"}}
+            {{> ui/input id="search_01" placeholder="Что вы ищите?" class="js-header-search__input" reset="js-header-search__close" white=1}}
+          {{/ui/field}}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

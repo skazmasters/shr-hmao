@@ -7,16 +7,130 @@
       column-gap: 8px;
     }
 
-    li {
+    .main-menu__item {
       padding: 0 0 8px;
       -webkit-column-break-inside: avoid;
       break-inside: avoid;
     }
 
-    a {
+    .main-menu__link {
       &:hover {
         color: $color-white-75;
       }
     }
   }
+
+  &--header {
+    .main-menu__list {
+      display: flex;
+      align-self: center;
+      margin: 0 -20px;
+    }
+
+    .main-menu__item {
+      position: relative;
+
+      &:hover,
+      &:focus-within {
+        > .main-menu__submenu {
+          visibility: visible;
+          pointer-events: auto;
+          opacity: initial;
+        }
+
+        > .main-menu__link {
+          color: rgba(118, 118, 118, 0.87);
+        }
+      }
+
+      > .icon {
+        @include media(mobile, up) {
+          display: none;
+        }
+      }
+    }
+
+    .main-menu__link {
+      display: block;
+      padding: 30px 20px;
+      @include rodchenko;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 21px;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      color: $color-dark;
+    }
+
+    .main-menu__submenu {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      min-width: 210px;
+      visibility: hidden;
+      pointer-events: none;
+      opacity: 0;
+      @include transition;
+    }
+  }
 }
+
+.main-submenu {
+  &__item {
+    position: relative;
+
+    &:hover,
+    &:focus-within {
+      > .main-submenu__link {
+        background-color: $color-primary;
+      }
+
+      > .icon {
+        color: rgba(255,255,255,0.54);
+      }
+
+      > .main-submenu__menu {
+        visibility: visible;
+        pointer-events: auto;
+        opacity: initial;
+      }
+    }
+
+    &--nested {
+      > .icon {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        width: 24px;
+        height: 24px;
+        color: $color-white;
+        transform: translateY(-50%);
+        @include transition;
+      }
+    }
+  }
+
+  &__link {
+    display: block;
+    width: 100%;
+    padding: 19px 18px;
+    color: $color-white;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+    background-color: $color-dark;
+  }
+
+  &__menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    min-width: 260px;
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    @include transition;
+  }
+}
+

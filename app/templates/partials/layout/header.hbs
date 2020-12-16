@@ -1,8 +1,21 @@
 {{>layout/head}}
 
-<header class="header page__header">
+<header class="page__header header js-header">
   <div class="container">
-    <h2>HEADER</h2>
+    <div class="header__grid">
+      <div class="header__logo">
+        {{>blocks/common/page-logo name="logo"}}
+      </div>
+      <div class="header__top">
+        <h2 class="header__top-title">
+          Региональное отделение ВТОО
+          «Союз&nbsp;Художников&nbsp;России» по ХМАО — Югре</h2>
+      </div>
+      <div class="header__menu">
+        {{>blocks/common/main-menu}}
+        {{>blocks/common/header-search}}
+      </div>
+    </div>
   </div>
 </header>
 
