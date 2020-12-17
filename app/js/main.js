@@ -25,6 +25,7 @@ import './src/widgets/accord';
 
 import './src/widgets/header/header-scroll';
 import './src/widgets/header/header-search';
+import './src/widgets/header/header-mobile';
 import './src/widgets/header/header';
 
 import './src/widgets/popups';

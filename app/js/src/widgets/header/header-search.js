@@ -43,6 +43,7 @@ class HeaderSearch extends Widget {
 
   onDocumentClick(e) {
     let target = e.target;
+
     do {
       if (target === this.$node) return;
       target = target.parentNode;

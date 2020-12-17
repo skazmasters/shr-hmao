@@ -8,7 +8,14 @@
   }
 
   .icon {
-    width: 155px;
-    height: 140px;
+    @include media(tablet, up) {
+      width: 155px;
+      height: 140px;
+    }
+
+    @include media(tablet) {
+      width: 75px;
+      height: 68px;
+    }
   }
 }

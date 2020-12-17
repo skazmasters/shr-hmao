@@ -18,6 +18,7 @@ html {
 
   @include media(tablet, only) {
     padding: 0 $tabletGutter;
+    max-width: 932px;
   }
 
   @include media(mobile) {

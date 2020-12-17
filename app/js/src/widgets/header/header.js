@@ -8,10 +8,10 @@ class Header extends Widget {
     document.body.append(this.$node);
 
     // HeaderDropdown.init(this.$originNode);
-    // HeaderMobile.init(this.$originNode);
+    HeaderMobile.init(this.$originNode);
 
     // HeaderDropdown.init(this.$node);
-    // HeaderMobile.init(this.$node);
+    HeaderMobile.init(this.$node);
     HeaderScroll.init(this.$node);
 
     HeaderSearch.init(this.$originNode.querySelector('.js-header-search'));

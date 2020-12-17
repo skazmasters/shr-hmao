@@ -8,12 +8,21 @@
       </div>
       <div class="header__top">
         <h2 class="header__top-title">
-          Региональное отделение ВТОО
-          «Союз&nbsp;Художников&nbsp;России» по ХМАО — Югре</h2>
+          Региональное отделение ВТОО <br class="_tablet-hidden">
+          «Союз Художников России» по ХМАО — Югре</h2>
       </div>
-      <div class="header__menu">
-        {{>blocks/common/main-menu}}
-        {{>blocks/common/header-search}}
+      <div class="header__nav">
+        <div class="header__menu js-header__menu">
+          {{>blocks/common/main-menu}}
+        </div>
+        <div class="header__search">
+          {{>blocks/common/header-search}}
+        </div>
+        <div class="header__burger _tablet-visible">
+          <button class="header__burger-btn js-header__burger" type="button" aria-label="Открыть меню">
+            <span></span>
+          </button>
+        </div>
       </div>
     </div>
   </div>
