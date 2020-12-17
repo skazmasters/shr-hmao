@@ -1,0 +1,33 @@
+.page-pagination {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0 7px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 20px;
+    min-height: 20px;
+
+    &--current {
+      font-weight: bold;
+    }
+  }
+
+  a {
+    &:hover {
+      color: $color-primary;
+    }
+
+    &:active {
+      color: $color-primary-hover;
+    }
+  }
+}
