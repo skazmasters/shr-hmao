@@ -1,0 +1,29 @@
+.sidebar-pubdate {
+  &__time {
+    display: block;
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: $color-black-87;
+  }
+
+  &__views {
+    display: flex;
+    align-items: center;
+    margin: 37px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: $color-black-87;
+
+    &::before {
+      content: '';
+      @include sprite('eye');
+      margin-right: 10px;
+      margin-bottom: 1px;
+    }
+  }
+}

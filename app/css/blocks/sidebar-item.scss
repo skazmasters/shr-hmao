@@ -1,0 +1,33 @@
+.sidebar-item {
+  &__title {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    color: $color-black-75;
+
+    &--pubdate {
+      &::before {
+        content: '';
+        @include sprite('date');
+        margin-right: 5px;
+      }
+    }
+
+    &--video {
+      &::before {
+        content: '';
+        @include sprite('video');
+        margin-right: 5px;
+      }
+    }
+  }
+
+  &__content {
+    margin-top: 14px;
+    padding-left: 25px;
+  }
+}

@@ -4,12 +4,27 @@
     border-top: 1px solid $color-black-34;
   }
 
-  &__content {
-    padding: 80px 0;
+  &__body {
+    padding-top: 80px;
     border-top: 1px solid $color-black-34;
+
+    &--sidebar {
+      display: grid;
+      grid-template-columns: minmax(auto, 730px)  minmax(285px, 1fr);
+      grid-gap: 50px;
+    }
+  }
+
+  &__sidebar {
+    padding-left: 20px;
+    border-left: 1px solid $color-black-34;
   }
 
   &__pagination {
     margin-top: 65px;
+  }
+
+  .container {
+    padding-bottom: 80px;
   }
 }
