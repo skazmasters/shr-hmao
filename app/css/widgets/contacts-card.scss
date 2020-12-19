@@ -1,0 +1,52 @@
+.contacts-card {
+  display: grid;
+  grid-template-columns: minmax(auto, 345px) minmax(auto, 345px) minmax(auto, 345px);
+  grid-gap: 20px;
+
+  &__text {
+    display: block;
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 27px;
+    line-height: 32px;
+
+    &:first-child {
+      margin-right: 75px;
+    }
+
+    a {
+      display: flex;
+      align-items: baseline;
+      margin-top: 8px;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:hover {
+        color: $color-primary;
+      }
+
+      &[href^="tel:"] {
+        &:before {
+          content: '';
+          display: block;
+          margin-right: 11px;
+          @include sprite('phone')
+        }
+      }
+
+      &[href^="mailto:"] {
+        font-weight: bold;
+
+        &:before {
+          content: '';
+          display: block;
+          margin-right: 11px;
+          @include sprite('mail')
+        }
+      }
+    }
+  }
+}

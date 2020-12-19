@@ -1,0 +1,15 @@
+.contacts-page {
+  &__item {
+    padding: 82px 0;
+    border-top: 1px solid $color-black-34;
+
+    &:first-child {
+      padding-top: 0;
+      border-top: unset;
+    }
+
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}

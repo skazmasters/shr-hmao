@@ -1,0 +1,6 @@
+<div class="form-textarea{{#if icon}} form-textarea--icon{{#if icon-position}} form-textarea--icon-{{icon-position}}{{/if}}{{/if}}{{#if mod}} {{mod}}{{/if}}">
+  <textarea {{#if id}} id="{{id}}"{{/if}}{{#if name}} name="{{name}}"{{/if}} placeholder="{{placeholder}}"
+         class="{{#if class}}{{class}}{{/if}}" cols="30" rows="10"/>
+  </textarea>
+  {{#if icon}}<i class="form-textarea__icon form-textarea__icon--{{icon}}"></i>{{/if}}
+</div>

@@ -1,0 +1,65 @@
+.form-textarea {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  textarea {
+    max-height: 130px;
+    width: 100%;
+    padding: 13px 10px;
+    color: inherit;
+    font-size: 16px;
+    line-height: 22px;
+    background: transparent;
+    border: 1px solid $color-black-75;
+    border-radius: 3px;
+    resize: none;
+    @include transition;
+
+    @include placeholder {
+      color: $color-gray-lite;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus-within {
+      cursor: text;
+      border-color: $color-black;
+    }
+  }
+
+  &--icon {
+    position: relative;
+
+    textarea {
+      padding-left: 36px;
+    }
+  }
+
+  &--icon-right {
+    position: relative;
+
+    textarea {
+      padding-left: 10px;
+      padding-right: 36px;
+    }
+  }
+
+  &__icon {
+    content: '';
+    display: block;
+    @include align(false, true);
+    z-index: 1;
+    pointer-events: none;
+    margin-top: -2px;
+
+    left: 10px;
+
+    .form-input--icon-right & {
+      right: 10px;
+      left: auto;
+    }
+  }
+}
