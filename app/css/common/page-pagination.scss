@@ -1,33 +1,61 @@
 .page-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   &__list {
     display: flex;
-    align-items: center;
+    align-items: baseline;
+  }
+
+  li {
+    margin: 0 5px;
   }
 
   &__item {
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 32px;
+    height: 32px;
     margin: 0;
-    padding: 0 7px;
+    color: #828282;
     font-style: normal;
-    font-weight: normal;
-    font-size: 17px;
+    font-weight: bold;
+    font-size: 15px;
     line-height: 20px;
     min-height: 20px;
 
-    &--current {
-      font-weight: bold;
-    }
-  }
-
-  a {
     &:hover {
-      color: $color-primary;
+      color: $color-dark;
     }
 
-    &:active {
-      color: $color-primary-hover;
+    &:not(a) {
+      color: #6979F8;
+      pointer-events: none;
+    }
+
+    &--current {
+      display: flex;
+      flex-direction: column;
+      color: $color-primary;
+
+      &:hover {
+        color: $color-primary-hover;
+
+        &::after {
+          opacity: 0;
+        }
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 10px;
+        border-bottom: 2px solid;
+        opacity: initial;
+        @include transition;
+      }
     }
   }
 }

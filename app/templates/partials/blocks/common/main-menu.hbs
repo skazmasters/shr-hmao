@@ -12,9 +12,9 @@
   <div class="main-menu main-menu--header">
     <nav>
       <ul class="main-menu__list">
-        <li class="main-menu__item"><a class="main-menu__link" href="#">О союзе</a></li>
+        <li class="main-menu__item"><a class="main-menu__link{{#ifCond activeLink 'about'}} main-menu__link--current{{/ifCond}}" href="#">О союзе</a></li>
         <li class="main-menu__item main-menu__item--nested">
-          <a class="main-menu__link js-header__menu-link" href="#">Наши проекты</a>
+          <a class="main-menu__link js-header__menu-link{{#ifCond activeLink 'projects'}} main-menu__link--current{{/ifCond}}" href="#">Наши проекты</a>
           {{>ui/svg name="chevron-right"}}
           <div class="main-menu__submenu">
             <div class="main-submenu">
@@ -42,9 +42,9 @@
             </div>
           </div>
         </li>
-        <li class="main-menu__item"><a class="main-menu__link" href="#">Выставки</a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="#">Новости</a></li>
-        <li class="main-menu__item"><a class="main-menu__link" href="#">Контакты</a></li>
+        <li class="main-menu__item"><a class="main-menu__link{{#ifCond activeLink 'expositions'}} main-menu__link--current{{/ifCond}}" href="#">Выставки</a></li>
+        <li class="main-menu__item"><a class="main-menu__link{{#ifCond activeLink 'news'}} main-menu__link--current{{/ifCond}}" href="#">Новости</a></li>
+        <li class="main-menu__item"><a class="main-menu__link{{#ifCond activeLink 'contacts'}} main-menu__link--current{{/ifCond}}" href="#">Контакты</a></li>
       </ul>
     </nav>
   </div>

@@ -3,4 +3,13 @@
     padding-top: 95px;
     border-top: 1px solid $color-black-34;
   }
+
+  &__content {
+    padding: 80px 0;
+    border-top: 1px solid $color-black-34;
+  }
+
+  &__pagination {
+    margin-top: 65px;
+  }
 }

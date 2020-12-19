@@ -118,6 +118,10 @@
         color: $color-white-54;
         background-color: $color-dark;
       }
+
+      &--current {
+        color: $color-primary;
+      }
     }
 
     .main-menu__submenu {

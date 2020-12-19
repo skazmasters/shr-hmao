@@ -1,3 +1,30 @@
-{{#>blocks/common/page-single title="Новости" crumb-1="Новости"}}
-
+{{#>blocks/common/page-single title="Новости" crumb-1="Новости" pagination=1}}
+  <div class="news-page">
+    <ul class="news-page__list">
+      <li class="news-page__item">
+        {{>widgets/news-card
+            img="01"
+            category="ВЫСТАВКИ"
+            title="Отчетная выставка Ханты-Мансийского отделения СХР"
+            time="28 ноября 2020"
+        }}
+      </li>
+      <li class="news-page__item">
+        {{>widgets/news-card
+            img="02"
+            category="ЛЕКТОРИЙ"
+            title="Конференция «Геннадий Райшев: Культурный ланшафт. Диалоги в пространстве и времени»"
+            time="23 октября 2020"
+        }}
+      </li>
+      <li class="news-page__item">
+        {{>widgets/news-card
+            img="03"
+            category="МАСТЕР-КЛАССЫ"
+            title="IV Всероссийский фестиваль графики «Урал-ГРАФО»"
+            time="19 сентября 2020"
+        }}
+      </li>
+    </ul>
+  </div>
 {{/blocks/common/page-single}}

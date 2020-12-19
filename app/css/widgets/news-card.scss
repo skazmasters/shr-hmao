@@ -1,0 +1,89 @@
+.news-card {
+  display: grid;
+  grid-template-areas:
+    'img ...'
+    'img category'
+    'img title'
+    'img date'
+    'img ...';
+  grid-template-columns: minmax(auto, 381px)minmax(auto, 475px);
+  grid-gap: 12px 94px;
+  align-items: center;
+
+  &__image {
+    grid-area: img;
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      display: block;
+      padding-top: 64.3%;
+    }
+
+    img {
+      @include fill;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      @include transition;
+    }
+  }
+
+  &__image-link {
+    &:hover {
+      cursor: pointer;
+
+      img {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  &__category {
+    grid-area: category;
+    display: block;
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 22px;
+    color: $color-black-60;
+    text-transform: uppercase;
+    @include transition;
+
+    a {
+      &:hover {
+        color: $color-primary;
+      }
+    }
+  }
+
+  &__title {
+    grid-area: title;
+    display: block;
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 22px;
+    color: $color-black-87;
+
+    a {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__date {
+    grid-area: date;
+    display: block;
+    margin: 17px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    color: $color-black-54;
+  }
+}
