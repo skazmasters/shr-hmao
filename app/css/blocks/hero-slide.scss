@@ -1,22 +1,23 @@
 .hero-slide {
-  display: grid;
-  grid-template-columns: minmax(auto, 411px) 1fr;
-  gap: 65px;
-  color: #333333;
-  min-height: 620px;
+  background-color: #DADADA;
 
-
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(auto, 411px) 1fr;
+    gap: 65px;
+    color: #333333;
+    min-height: 620px;
+  }
 
   &__image {
     position: relative;
+    margin-right: calc(-1 * (100vw - 1110px) / 2);
 
     img {
       position: absolute;
       top: 0;
-      left: 0;
       bottom: 0;
       display: block;
-      margin-right: calc(-1 * (100vw - 1110px) / 2);
       width: 100%;
       height: 100%;
       object-fit: cover;

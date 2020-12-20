@@ -23,6 +23,7 @@
     top: 100%;
     left: 0;
     right: 0;
+    z-index: z(modal);
     opacity: 0;
     pointer-events: none;
     visibility: hidden;

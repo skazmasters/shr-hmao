@@ -1,35 +1,67 @@
 .home-hero {
   position: relative;
-
-  &::before {
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    right: -100vw;
-    left: -100vw;
-    background-color: #DADADA;
-  }
+  max-width: 100vw;
+  overflow: hidden;
 
   &__nav {
     position: absolute;
     right: 0;
+    left: 0;
     top: 65px;
     z-index: 1;
-    display: flex;
-    align-items: center;
+
+    > * {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
   }
 
   &__nav-btn {
+    display: flex;
+    align-items: center;
     margin-left: 34px;
+    min-width: 51px;
 
     &:first-child {
       margin-left: 0;
     }
 
-    .arrow {
-      --arrow-color: #{$color-white};
+    &:hover {
+      .home-hero__nav-icon--prev {
+        left: 10px;
+      }
+      .home-hero__nav-icon--next {
+        left: 10px;
+      }
+    }
+  }
+
+  &__nav-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    @include transition;
+
+    &--prev {
+      justify-content: flex-start;
+
+      &::after {
+        @include sprite('slick-left');
+      }
+    }
+
+    &--next {
+      justify-content: flex-end;
+
+      &::after {
+        @include sprite('slick-right');
+      }
+    }
+
+    &::after {
+      content: '';
+      display: block;
     }
   }
 }
