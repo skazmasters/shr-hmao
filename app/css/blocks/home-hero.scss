@@ -27,12 +27,15 @@
       margin-left: 0;
     }
 
-    &:hover {
-      .home-hero__nav-icon--prev {
-        left: 10px;
+    &--prev {
+      &:hover i {
+        clip-path: inset(0 15px 0 0);
       }
-      .home-hero__nav-icon--next {
-        left: 10px;
+    }
+
+    &--next {
+      &:hover i {
+        clip-path: inset(0 0 0 15px);
       }
     }
   }
@@ -41,9 +44,10 @@
     position: relative;
     display: flex;
     align-items: center;
+    clip-path: inset(0 0 0 0);
     @include transition;
 
-    &--prev {
+    .home-hero__nav-btn--prev & {
       justify-content: flex-start;
 
       &::after {
@@ -51,7 +55,7 @@
       }
     }
 
-    &--next {
+    .home-hero__nav-btn--next & {
       justify-content: flex-end;
 
       &::after {

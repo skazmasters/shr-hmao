@@ -129,6 +129,7 @@
         position: absolute;
         top: 100%;
         left: 0;
+        z-index: z(default) + 1;
         min-width: 210px;
         visibility: hidden;
         pointer-events: none;
