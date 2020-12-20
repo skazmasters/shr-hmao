@@ -4,17 +4,49 @@
   justify-content: space-between;
 
   &__btn {
+    position: relative;
+
+    &::before,
+    &::after {
+      content: '';
+      @include transition;
+    }
+
+    &::after {
+      @include fill;
+    }
+
+    &:hover {
+      &::before {
+        opacity: 0;
+      }
+
+      &::after {
+        opacity: initial;
+      }
+    }
+
     &--prev {
       &::before {
-        content: '';
-        @include sprite('slider-prev')
+        @include sprite('slider-prev');
+        opacity: initial;
+      }
+
+      &::after {
+        @include sprite('slider-prev-primary');
+        opacity: 0;
       }
     }
 
     &--next {
       &::before {
-        content: '';
-        @include sprite('slider-next')
+        @include sprite('slider-next');
+        opacity: initial;
+      }
+
+      &::after {
+        @include sprite('slider-next-primary');
+        opacity: 0;
       }
     }
   }

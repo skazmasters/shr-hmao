@@ -1,4 +1,4 @@
-$icons: (sprite: (width: 415px, height: 316px, pngPath: '../assets/images/sprite.png', svgPath: '../assets/images/sprite.svg'),
+$icons: (sprite: (width: 511px, height: 412px, pngPath: '../assets/images/sprite.png', svgPath: '../assets/images/sprite.svg'),
 date: (width: 22px, height: 22px, backgroundX: 0px, backgroundY: 0px),
 eye: (width: 32px, height: 18px, backgroundX: -22px, backgroundY: -22px),
 form-checkbox-tick: (width: 16px, height: 12px, backgroundX: -54px, backgroundY: -40px),
@@ -12,6 +12,8 @@ select2-arrow-active: (width: 14px, height: 9px, backgroundX: -183px, background
 slick-left: (width: 51px, height: 16px, backgroundX: -197px, backgroundY: -172px),
 slick-right: (width: 51px, height: 16px, backgroundX: -248px, backgroundY: -188px),
 slider-next: (width: 48px, height: 48px, backgroundX: -299px, backgroundY: -204px),
-slider-prev: (width: 48px, height: 48px, backgroundX: -347px, backgroundY: -252px),
-video: (width: 20px, height: 16px, backgroundX: -395px, backgroundY: -300px),
+slider-next-primary: (width: 48px, height: 48px, backgroundX: -347px, backgroundY: -252px),
+slider-prev: (width: 48px, height: 48px, backgroundX: -395px, backgroundY: -300px),
+slider-prev-primary: (width: 48px, height: 48px, backgroundX: -443px, backgroundY: -348px),
+video: (width: 20px, height: 16px, backgroundX: -491px, backgroundY: -396px),
 );
