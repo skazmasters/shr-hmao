@@ -9,25 +9,33 @@
     line-height: 22px;
     color: $color-black-75;
 
-    &--pubdate {
+    &::before {
+      flex: 0 0 22px;
+      content: '';
+      margin-right: 5px;
+    }
+
+    &--date {
       &::before {
-        content: '';
         @include sprite('date');
-        margin-right: 5px;
+      }
+    }
+
+    &--location {
+      &::before {
+        @include sprite('location');
       }
     }
 
     &--video {
       &::before {
-        content: '';
         @include sprite('video');
-        margin-right: 5px;
       }
     }
   }
 
   &__content {
     margin-top: 14px;
-    padding-left: 25px;
+    padding-left: 27px;
   }
 }

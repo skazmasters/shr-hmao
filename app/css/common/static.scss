@@ -17,4 +17,48 @@
     font-size: 15px;
     line-height: 22px;
   }
+
+  h3 {
+    margin-top: 55px;
+
+    + ol,
+    + ul {
+      margin-top: 10px;
+    }
+  }
+
+  ul, ol {
+    margin: 55px 0;
+  }
+
+  ol {
+    list-style-type: none;
+    counter-reset: li-counter;
+
+    li {
+      position: relative;
+      padding-left: 25px;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 15px;
+        line-height: 22px;
+        content: counter(li-counter)'.';
+        counter-increment: li-counter;
+      }
+    }
+  }
+
+  li {
+    margin-top: 5px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+  }
 }

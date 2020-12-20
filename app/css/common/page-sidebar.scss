@@ -1,5 +1,13 @@
 .page-sidebar {
+  position: sticky;
+  top: 120px;
+  max-height: calc(100 * var(--vh) - 120px);
+  overflow: auto;
+  @include hide-scrollbar;
+
   &__content {
+    padding-bottom: 20px;
+
     > * + * {
       margin-top: 71px;
     }

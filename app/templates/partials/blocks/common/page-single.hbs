@@ -1,18 +1,13 @@
 <section class="page-single{{#if page-class}} {{page-class}}{{/if}}">
   <h1 class="visually-hidden">{{title}}</h1>
   <div class="container">
-    {{# crumb-1}}
+    {{#if crumb-1}}
       <div class="page-single__header">
         {{>blocks/common/page-breadcrumbs}}
       </div>
-    {{/crumb-1}}
+    {{/if}}
     <div class="page-single__body{{#if sidebar}} page-single__body--sidebar{{/if}}">
       {{>@partial-block}}
-      {{#if sidebar}}
-        <div class="page-single__sidebar">
-          {{>blocks/common/page-sidebar}}
-        </div>
-      {{/if}}
       {{#if pagination}}
         <div class="page-single__pagination">
           {{>blocks/common/page-pagination}}
