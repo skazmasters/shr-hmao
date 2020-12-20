@@ -31,6 +31,7 @@ import './src/widgets/sliders/partners-slider';
 import './src/widgets/sliders/hero-slider';
 import './src/widgets/sliders/sliders';
 
+import './src/widgets/page-sidebar';
 import './src/widgets/popups';
 import './src/widgets/video-link';
 
