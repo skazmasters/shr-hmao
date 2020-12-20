@@ -1,0 +1,194 @@
+<div class="home-main">
+  <div class="container">
+    <div class="home-main__content">
+      <div class="home-main__hero">
+        <div class="home-hero js-slider-hero">
+          <div class="swiper-container js-slider-hero__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="hero-slide">
+                  <div class="hero-slide__content">
+                    <span class="hero-slide__label">НАШИ ПРОЕКТЫ</span>
+                    <h2 class="hero-slide__title">«Радуга Юга — 2020» Межрегиональная художественная выставка&nbsp;пейзажа г. Пятигорск 08.11—20.12</h2>
+                    <p class="hero-slide__text">В ней принимают участие художники Южного и Северо-Кавказского федеральных округов России.</p>
+                    <div class="hero-slide__action">
+                      <a class="hero-slide__action-link" href="#">УЗНАТЬ БОЛЬШЕ</a>
+                    </div>
+                  </div>
+                  <div class="hero-slide__image">
+                    {{>components/image img="home/hero/01" ext="jpg"}}
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="hero-slide">
+                  <div class="hero-slide__content">
+                    <span class="hero-slide__label">НАШИ ПРОЕКТЫ</span>
+                    <h2 class="hero-slide__title">«Радуга Юга — 2020» Межрегиональная художественная выставка пейзажа г. Пятигорск 08.11—20.12</h2>
+                    <p class="hero-slide__text">В ней принимают участие художники Южного и Северо-Кавказского федеральных округов России.</p>
+                    <div class="hero-slide__action">
+                      <a class="hero-slide__action-link" href="#">УЗНАТЬ БОЛЬШЕ</a>
+                    </div>
+                  </div>
+                  <div class="hero-slide__image">
+                    {{>components/image img="home/hero/01" ext="jpg"}}
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="hero-slide">
+                  <div class="hero-slide__content">
+                    <span class="hero-slide__label">НАШИ ПРОЕКТЫ</span>
+                    <h2 class="hero-slide__title">«Радуга Юга — 2020» Межрегиональная художественная выставка пейзажа г. Пятигорск 08.11—20.12</h2>
+                    <p class="hero-slide__text">В ней принимают участие художники Южного и Северо-Кавказского федеральных округов России.</p>
+                    <div class="hero-slide__action">
+                      <a class="hero-slide__action-link" href="#">УЗНАТЬ БОЛЬШЕ</a>
+                    </div>
+                  </div>
+                  <div class="hero-slide__image">
+                    {{>components/image img="home/hero/01" ext="jpg"}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="home-hero__nav">
+            <button class="home-hero__nav-btn js-slider-hero__prev" type="button">{{>icons/arrow-left white=1 big=1}}</button>
+            <button class="home-hero__nav-btn js-slider-hero__next" type="button">{{>icons/arrow-right white=1 big=1}}</button>
+          </div>
+        </div>
+      </div>
+      <div class="home-main__section">
+        {{#>blocks/common/page-section title="Наши проекты" action="проекты"}}
+          <div class="home-projects">
+            <ul class="home-projects__list">
+              <li class="home-projects__item">
+                {{>widgets/projects-item
+                    img="01"
+                    category="МАСТЕР-КЛАССЫ"
+                    title="Портретная живопись"
+                }}
+              </li>
+              <li class="home-projects__item">
+                {{>widgets/projects-item
+                    img="02"
+                    category="МАСТЕР-КЛАССЫ"
+                    title="Мастер-класс «Живопись и лед»"
+                }}
+              </li>
+              <li class="home-projects__item">
+                {{>widgets/projects-item
+                    img="03"
+                    category="ПЛЕНЭРЫ"
+                    title="II Международный арт-пленэр «ART-UGRA 2020»"
+                }}
+              </li>
+              <li class="home-projects__item">
+                {{>widgets/projects-item
+                    img="04"
+                    category="АКЦИИ"
+                    title="Творческий лагерь в области зала (Венгрия)"
+                }}
+              </li>
+            </ul>
+          </div>
+        {{/blocks/common/page-section}}
+      </div>
+      <div class="home-main__section-group">
+        {{#>blocks/common/page-section title="Новости" action="новости" link="news.html"}}
+          <div class="news-home">
+            <ul class="news-home__list">
+              <li class="news-home__item">
+                {{>widgets/news-card
+                    img="01"
+                    category="ВЫСТАВКИ"
+                    title="Отчетная выставка Ханты-Мансийского отделения СХР"
+                    time="28 ноября 2020"
+                }}
+              </li>
+              <li class="news-home__item">
+                {{>widgets/news-card
+                    img="02"
+                    category="ЛЕКТОРИЙ"
+                    title="Конференция «Геннадий Райшев: Культурный ланшафт. Диалоги в пространстве и времени»"
+                    time="23 октября 2020"
+                }}
+              </li>
+              <li class="news-home__item">
+                {{>widgets/news-card
+                    img="03"
+                    category="МАСТЕР-КЛАССЫ"
+                    title="IV Всероссийский фестиваль графики «Урал-ГРАФО»"
+                    time="19 сентября 2020"
+                }}
+              </li>
+            </ul>
+          </div>
+        {{/blocks/common/page-section}}
+        {{#>blocks/common/page-section title="Объявления"}}
+          <div class="home-announcements">
+            <div class="home-announcements__content">
+              <div class="home-announcements__item">
+                {{>widgets/announcements-item
+                    time="4 февраля 2020"
+                    title="Устюжанины. <br> Николай &ndash; Сергей &ndash; Николай"
+                    text="2 февраля в выставочном зале Магнитогорской Картинной галереи открылась выставка династии Устюжаниных «УСТЮЖАНИНЫ. НИКОЛАЙ – СЕРГЕЙ – НИКОЛАЙ»"
+                }}
+              </div>
+              <div class="home-announcements__item">
+                {{>widgets/announcements-item
+                    time="13 января 2020"
+                    title="Выставка"
+                    text="В вывставочном зале Российской академии художеств открылась выставка Галины Михайловны Визель и Александра Георгиевича Визель."
+                }}
+              </div>
+              <div class="home-announcements__form">
+                <form>
+                  <div class="form-subscribe">
+                    {{#> ui/field label="Подпишитесь на рассылку объявлений:" id="email_an_01"}}
+                      {{> ui/input id="email_an_01" placeholder="Ваш e-mail адрес" submit=1}}
+                    {{/ui/field}}
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        {{/blocks/common/page-section}}
+      </div>
+      <div class="home-main__section">
+        {{#>blocks/common/page-section title="Наши партнеры"}}
+          <div class="home-partners js-slider-partners">
+            <div class="swiper-container js-slider-partners__slider">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  {{>components/image img="home/partners/01" ext="jpg"}}
+                </div>
+                <div class="swiper-slide">
+                  {{>components/image img="home/partners/02" ext="jpg"}}
+                </div>
+                <div class="swiper-slide">
+                  {{>components/image img="home/partners/03" ext="jpg"}}
+                </div>
+                <div class="swiper-slide">
+                  {{>components/image img="home/partners/04" ext="jpg"}}
+                </div>
+                <div class="swiper-slide">
+                  {{>components/image img="home/partners/04" ext="jpg"}}
+                </div>
+                <div class="swiper-slide">
+                  {{>components/image img="home/partners/04" ext="jpg"}}
+                </div>
+                <div class="swiper-slide">
+                  {{>components/image img="home/partners/04" ext="jpg"}}
+                </div>
+              </div>
+            </div>
+            <div class="home-partners__nav">
+              {{>components/slider-nav nav-mode="center" class="js-slider-partners"}}
+            </div>
+          </div>
+        {{/blocks/common/page-section}}
+      </div>
+    </div>
+  </div>
+</div>

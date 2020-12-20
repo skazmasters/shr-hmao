@@ -1,0 +1,23 @@
+.home-announcements {
+  height: 100%;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  &__item {
+    padding: 21px 0 45px;
+    border-top: 1px solid $color-black-34;
+
+    &:first-child {
+      padding-top: 0;
+      border-top: unset;
+    }
+  }
+
+  &__form {
+    margin-top: auto;
+  }
+}

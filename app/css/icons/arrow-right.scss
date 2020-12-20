@@ -33,10 +33,18 @@
   }
 
   &--big {
-    width: 57px;
+    width: 55px;
 
     .arrow-right__body {
       width: 50px;
+    }
+  }
+
+  &--small {
+    width: 32px;
+
+    .arrow-right__body {
+      width: 27px;
     }
   }
 }

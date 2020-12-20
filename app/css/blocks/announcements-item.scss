@@ -1,0 +1,39 @@
+.announcements-item {
+  &__date {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    color: $color-black-75;
+  }
+
+  &__title {
+    display: block;
+    margin: 5px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 23px;
+    color: $color-black-87;
+  }
+
+  &__text {
+    display: block;
+    margin: 25px 0 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  &__action {
+    margin: 24px 0 0;
+  }
+
+  &__link {
+    font-size: 15px;
+    line-height: 22px;
+    text-decoration: underline;
+    color: $color-black-75;
+  }
+}

@@ -1,0 +1,35 @@
+.home-hero {
+  position: relative;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -100vw;
+    left: -100vw;
+    background-color: #DADADA;
+  }
+
+  &__nav {
+    position: absolute;
+    right: 0;
+    top: 65px;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  &__nav-btn {
+    margin-left: 34px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    .arrow {
+      --arrow-color: #{$color-white};
+    }
+  }
+}

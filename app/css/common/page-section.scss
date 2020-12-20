@@ -1,0 +1,41 @@
+.page-section {
+  display: flex;
+  flex-direction: column;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    + * {
+      margin-top: 70px;
+    }
+  }
+
+  &__header-link {
+    display: inline-flex;
+    align-items: center;
+
+    &:hover {
+      opacity: 0.54;
+    }
+
+    .arrow {
+      margin-right: 10px;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin: 0;
+    @include rodchenko;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 1;
+  }
+
+  &__content {
+    flex: 1 1 auto;
+  }
+}

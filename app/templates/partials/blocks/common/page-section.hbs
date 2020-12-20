@@ -1,0 +1,13 @@
+<section class="page-section">
+  <div class="page-section__header">
+    <h2 class="page-section__title">{{title}}</h2>
+    {{#if action}}
+      <div class="page-section__header-action">
+        <a href="{{#if link}}{{link}}{{else}}#{{/if}}" class="page-section__header-link">{{>icons/arrow-right small=1}} Все {{action}}</a>
+      </div>
+    {{/if}}
+  </div>
+  <div class="page-section__content">
+    {{>@partial-block}}
+  </div>
+</section>

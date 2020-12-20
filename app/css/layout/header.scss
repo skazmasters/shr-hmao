@@ -185,6 +185,7 @@
   top: 0;
   left: 0;
   right: 0;
+  z-index: z(header);
   margin-top: -81px;
   background-color: $color-white;
   transition: all 450ms ease-in-out;

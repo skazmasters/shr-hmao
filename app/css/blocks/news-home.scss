@@ -1,0 +1,14 @@
+.news-home {
+  &__item {
+    margin-top: 50px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  .news-card {
+    grid-gap: 12px 50px;
+    grid-template-columns: minmax(auto,300px) 1fr;
+  }
+}

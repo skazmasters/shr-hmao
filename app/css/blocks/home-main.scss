@@ -1,0 +1,30 @@
+.home-main {
+  &__hero {
+    + * {
+      margin-top: 80px;
+    }
+  }
+
+  &__section {
+    padding: 45px 0 75px;
+    border-top: 1px solid $color-black-34;
+  }
+
+  &__section-group {
+    display: grid;
+    grid-template-columns: minmax(auto, 700px) minmax(auto, 412px);
+    padding: 45px 0 75px;
+    border-top: 1px solid $color-black-34;
+
+    > * {
+      &:first-child {
+        padding-right: 70px;
+        border-right: 1px solid $color-black-34;
+      }
+
+      &:last-child {
+        padding-left: 60px;
+      }
+    }
+  }
+}
