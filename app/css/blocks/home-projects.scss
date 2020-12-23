@@ -1,8 +1,19 @@
 .home-projects {
-
   &__list {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+
+    @include media(mobile, up) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 30px;
+    }
+
+    @include media(tablet, only) {
+      grid-gap: 11px;
+    }
+
+    @include media(mobile) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 35px 8px;
+    }
   }
 }

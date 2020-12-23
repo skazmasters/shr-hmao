@@ -2,28 +2,59 @@
   &__hero {
     + * {
       margin-top: 80px;
+
+      @include media(mobile) {
+        margin-top: 43px;
+      }
     }
   }
 
   &__section {
-    padding: 45px 0 75px;
     border-top: 1px solid $color-black-34;
+
+    @include media(mobile, up) {
+      padding: 45px 0 75px;
+    }
+
+    @include media(mobile) {
+      padding: 16px 0 50px;
+    }
   }
 
   &__section-group {
     display: grid;
-    grid-template-columns: minmax(auto, 700px) minmax(auto, 412px);
     padding: 45px 0 75px;
     border-top: 1px solid $color-black-34;
 
+    @include media(tabletSmall, up) {
+      grid-template-columns: minmax(auto, 700px) minmax(auto, 412px);
+    }
+
     > * {
       &:first-child {
-        padding-right: 70px;
-        border-right: 1px solid $color-black-34;
+        @include media(tablet, up) {
+          padding-right: 70px;
+          border-right: 1px solid $color-black-34;
+        }
+
+        @include media(tabletSmall, up) {
+          padding-right: 30px;
+        }
+
+        @include media(tabletSmall, only) {
+          padding-bottom: 70px;
+          border-bottom: 1px solid $color-black-34;
+        }
       }
 
       &:last-child {
-        padding-left: 60px;
+        @include media(tablet, up) {
+          padding-left: 60px;
+        }
+
+        @include media(tabletSmall, up) {
+          padding-left: 30px;
+        }
       }
     }
   }

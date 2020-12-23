@@ -7,13 +7,27 @@
     position: absolute;
     right: 0;
     left: 0;
-    top: 65px;
     z-index: 1;
+
+    @include media(mobile, up) {
+      top: 65px;
+    }
+
+    @include media(mobile) {
+      bottom: 21vh;
+    }
 
     > * {
       display: flex;
       align-items: center;
-      justify-content: flex-end;
+
+      @include media(mobile, up) {
+        justify-content: flex-end;
+      }
+
+      @include media(mobile) {
+        justify-content: space-between;
+      }
     }
   }
 
@@ -67,5 +81,9 @@
       content: '';
       display: block;
     }
+  }
+
+  .swiper-slide {
+    height: auto !important;
   }
 }
