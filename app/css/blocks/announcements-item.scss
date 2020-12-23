@@ -1,4 +1,11 @@
 .announcements-item {
+  position: relative;
+
+  &__link {
+    @include fill;
+    z-index: 0;
+  }
+
   &__date {
     font-style: normal;
     font-weight: normal;
@@ -30,7 +37,11 @@
     margin: 24px 0 0;
   }
 
-  &__link {
+  &__action-link {
+    position: relative;
+    z-index: 0;
+    display: block;
+    margin: 0;
     font-size: 15px;
     line-height: 22px;
     text-decoration: underline;

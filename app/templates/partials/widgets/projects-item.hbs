@@ -1,9 +1,10 @@
 <div class="projects-item">
+  <a class="projects-item__link" href="#" aria-label="Перейти на страницу"></a>
   <div class="projects-item__image">
-    <a href="#">
+    <a class="projects-item__image-link" href="#">
       {{>components/image img=(concat 'home/projects/' img) ext="jpg"}}
     </a>
   </div>
-  <span class="projects-item__category">{{category}}</span>
+  <span class="projects-item__category"><a href="#">{{category}}</a></span>
   <span class="projects-item__title"><a href="#">{{title}}</a></span>
 </div>

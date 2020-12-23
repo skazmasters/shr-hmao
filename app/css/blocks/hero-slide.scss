@@ -85,11 +85,12 @@
 
   &__action-link {
     display: block;
+    max-width: 343px;
     margin: 60px 0 0;
-    text-align: center;
     padding: 13px 10px;
     width: 100%;
     color:  #333333;
+    text-align: center;
     border: 1px solid;
     border-radius: 3px;
 

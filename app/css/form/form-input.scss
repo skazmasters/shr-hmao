@@ -23,7 +23,7 @@
 
     &:focus-within {
       cursor: text;
-      border-color: $color-black;
+      border-color: $color-primary;
     }
 
     &.input-white {
@@ -94,7 +94,7 @@
       }
 
       .arrow-right__body {
-        @include media(mobile) {
+        @include media(mobile, up) {
           width: 25px;
         }
 
