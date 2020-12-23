@@ -7,11 +7,24 @@
     gap: 65px;
     color: #333333;
     min-height: 620px;
+
+    @include media(tablet) {
+      min-height: 360px;
+    }
   }
 
   &__image {
     position: relative;
     margin-right: calc(-1 * (100vw - 1110px) / 2);
+
+    @include media(tablet) {
+      margin-right: -$tabletGutter;
+    }
+
+
+    @include media(mobile) {
+      margin-right: -$mobileGutter;
+    }
 
     img {
       position: absolute;
@@ -48,6 +61,11 @@
     font-size: 35px;
     line-height: 37px;
     color: #333333;
+
+    @include media(tablet) {
+      font-size: 22px;
+      line-height: 1.15;
+    }
   }
 
   &__text {
@@ -58,6 +76,11 @@
     font-size: 15px;
     line-height: 18px;
     color: #333333;
+
+    @include media(tablet) {
+      font-size: 14px;
+      line-height: 1.15;
+    }
   }
 
   &__action-link {

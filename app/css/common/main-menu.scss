@@ -213,6 +213,10 @@
     line-height: 18px;
     background-color: $color-dark;
 
+    &:first-letter {
+      text-transform: capitalize;
+    }
+
     @include media(tablet) {
       padding-left: 68px;
     }

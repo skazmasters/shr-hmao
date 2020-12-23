@@ -32,11 +32,11 @@ class PartnersSlider extends Widget {
       slidesPerView: 2,
       spaceBetween: 20,
       breakpoints: {
-        640: {
-          slidesPerView: 2,
+        768: {
+          slidesPerView: 3,
           spaceBetween: 20,
         },
-        1200: {
+        1024: {
           slidesPerView: 4,
           spaceBetween: 40,
         },
