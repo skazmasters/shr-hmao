@@ -1,19 +1,15 @@
 .contacts-card {
   display: grid;
-  grid-template-columns: minmax(auto, 345px) minmax(auto, 345px) minmax(auto, 345px);
-  grid-gap: 20px;
+  grid-template-columns: minmax(auto, 345px) minmax(auto, 245px) 1fr;
+  grid-gap: 100px;
 
   &__text {
     display: block;
     margin: 0;
     font-style: normal;
     font-weight: normal;
-    font-size: 27px;
-    line-height: 32px;
-
-    &:first-child {
-      margin-right: 75px;
-    }
+    font-size: 20px;
+    line-height: 24px;
 
     a {
       display: flex;

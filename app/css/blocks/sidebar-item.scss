@@ -32,6 +32,12 @@
         @include sprite('video');
       }
     }
+
+    &--views {
+      &::before {
+        @include sprite('views');
+      }
+    }
   }
 
   &__content {

@@ -22,8 +22,8 @@
     margin: 50px 0 0;
     font-style: normal;
     font-weight: normal;
-    font-size: 20px;
-    line-height: 23px;
+    font-size: 15px;
+    line-height: 18px;
 
     &:first-child {
       margin-top: 0;
@@ -55,6 +55,13 @@
     text-align: center;
     border: 1px solid;
     border-radius: 3px;
+    @include transition;
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-primary;
+      border-color: $color-primary;
+    }
   }
 
   .form-field__label {
