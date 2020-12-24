@@ -14,8 +14,15 @@
     margin: 22px 0 0;
     font-style: normal;
     font-weight: normal;
-    font-size: 15px;
     line-height: 22px;
+
+    @include media(tablet, up) {
+      font-size: 15px;
+    }
+
+    @include media(tablet) {
+      font-size: 14px;
+    }
   }
 
   h3 {
@@ -60,5 +67,9 @@
     font-weight: normal;
     font-size: 15px;
     line-height: 22px;
+
+    @include media(tablet) {
+      font-size: 14px;
+    }
   }
 }

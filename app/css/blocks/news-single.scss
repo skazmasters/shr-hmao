@@ -29,11 +29,22 @@
     font-size: 35px;
     line-height: 37px;
     color: $color-black-87;
+
+    @include media(tablet) {
+      font-size: 22px;
+      line-height: 35px;
+    }
   }
 
   &__section {
-    margin-top: 65px;
+    margin-top: 0;
     padding-top: 44px;
     border-top: 1px solid $color-black-34;
+  }
+
+  &__static {
+    @include media(tabletSmall) {
+      padding-bottom: 65px;
+    }
   }
 }
