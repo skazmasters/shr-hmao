@@ -22,28 +22,26 @@
   }
 
   &__section-group {
-    display: grid;
-    padding: 45px 0 75px;
-    border-top: 1px solid $color-black-34;
-
     @include media(tabletSmall, up) {
+      display: grid;
       grid-template-columns: minmax(auto, 700px) minmax(auto, 412px);
+      padding: 45px 0 75px;
+      border-top: 1px solid $color-black-34;
     }
 
     > * {
       &:first-child {
         @include media(tablet, up) {
           padding-right: 70px;
-          border-right: 1px solid $color-black-34;
         }
 
         @include media(tabletSmall, up) {
           padding-right: 30px;
+          border-right: 1px solid $color-black-34;
         }
 
         @include media(tabletSmall, only) {
           padding-bottom: 70px;
-          border-bottom: 1px solid $color-black-34;
         }
       }
 
@@ -55,6 +53,14 @@
         @include media(tabletSmall, up) {
           padding-left: 30px;
         }
+      }
+    }
+
+    .home-main__section {
+      @include media(tabletSmall, up) {
+        padding-top: 0;
+        padding-bottom: 0;
+        border-top: unset;
       }
     }
   }

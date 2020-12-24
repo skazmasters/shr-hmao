@@ -96,6 +96,11 @@
     line-height: 22px;
     color: $color-black-87;
 
+    @include media(tablet) {
+      font-size: 17px;
+      line-height: 20px;
+    }
+
     a {
       position: relative;
       z-index: 0;

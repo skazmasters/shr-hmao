@@ -8,11 +8,11 @@
     justify-content: space-between;
 
     + * {
-      @include media(mobile, up) {
+      @include media(tabletSmall, up) {
         margin-top: 70px;
       }
 
-      @include media(mobile) {
+      @include media(tabletSmall) {
         margin-top: 35px;
       }
     }
