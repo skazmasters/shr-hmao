@@ -49,6 +49,13 @@
         {{/widgets/sidebar-item}}
       </div>
     {{/if}}
+    {{#if video-ex}}
+      <div class="page-sidebar__item">
+        {{#>widgets/sidebar-item title="Видео материалы:" icon="video"}}
+          {{>widgets/sidebar-video label="Отчетная выставка Ханты-Мансийского отделения Союза художников России" url="https://www.youtube.com/embed/YmICcD-tyg0"}}
+        {{/widgets/sidebar-item}}
+      </div>
+    {{/if}}
     {{#if pubdate}}
       <div class="page-sidebar__item">
         {{#>widgets/sidebar-item title="Дата публикации:" icon="date"}}
