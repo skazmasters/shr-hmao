@@ -1,7 +1,14 @@
 .contacts-page {
   &__item {
-    padding: 82px 0;
     border-top: 1px solid $color-black-34;
+
+    @include media(mobile, up) {
+      padding: 82px 0;
+    }
+
+    @include media(mobile) {
+      padding: 76px 0;
+    }
 
     &:first-child {
       padding-top: 0;

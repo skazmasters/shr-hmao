@@ -11,6 +11,14 @@
     @include media(mobile, up) {
       grid-gap: 12px 50px;
       grid-template-columns: minmax(auto,300px) 1fr;
+      grid-template-areas: 'img ...' 'img category' 'img title' 'img date' 'img ...';
+      align-items: center;
+    }
+
+    @include media(mobile) {
+      grid-template-columns: 1fr;
+      grid-template-areas: 'img' 'category' 'title' 'date';
+      grid-gap: 12px;
     }
   }
 }

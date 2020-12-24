@@ -9,6 +9,15 @@
     align-items: center;
   }
 
+  @include media(tablet, only) {
+    grid-template-columns: minmax(auto, 430px) minmax(auto, 408px);
+  }
+
+  @include media(tabletSmall, only) {
+    grid-template-columns: 1fr 1fr;
+    column-gap: 32px;
+  }
+
   @include media(mobile) {
     grid-template-columns: 1fr;
     grid-template-areas: 'img' 'category' 'title' 'date';

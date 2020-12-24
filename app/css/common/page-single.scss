@@ -5,8 +5,15 @@
   }
 
   &__body {
-    padding-top: 80px;
     border-top: 1px solid $color-black-34;
+
+    @include media(mobile, up) {
+      padding-top: 80px;
+    }
+
+    @include media(mobile) {
+      padding-top: 75px;
+    }
 
     &--sidebar {
       display: grid;

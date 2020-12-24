@@ -1,7 +1,20 @@
 .contacts-card {
   display: grid;
-  grid-template-columns: minmax(auto, 345px) minmax(auto, 245px) 1fr;
-  grid-gap: 100px;
+
+  @include media(tablet, up) {
+    grid-template-columns: minmax(100px, 345px) minmax(100px, 245px) 1fr;
+    grid-gap: 100px;
+  }
+
+  @include media(tablet, only) {
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 35px;
+  }
+
+  @include media(mobile) {
+    grid-template-columns: 1fr;
+    grid-gap: 47px;
+  }
 
   &__text {
     display: block;
@@ -10,6 +23,11 @@
     font-weight: normal;
     font-size: 20px;
     line-height: 24px;
+
+    @include media(tablet) {
+      font-size: 17px;
+      line-height: 20px;
+    }
 
     a {
       display: flex;

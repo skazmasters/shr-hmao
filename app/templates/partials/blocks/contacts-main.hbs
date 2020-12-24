@@ -31,29 +31,31 @@
       </li>
       <li class="contacts-page__item">
         <div class="contacts-form">
-          <div class="contacts-form__text-content">
+          <div class="contacts-form__info">
             <h3 class="contacts-form__title">Обратная связь</h3>
             <p class="contacts-form__text">*Все поля обязательны для заполнения.</p>
             <p class="contacts-form__text">Ответы на ваши вопросы придут на указанный адрес e-mail в самое ближайшее время</p>
           </div>
-          <form>
-            <div class="contacts-form__form">
-              <div class="contacts-form__group">
-                {{#> ui/field label="E-mail:*" id="email-contacts_01"}}
-                  {{> ui/input id="email-contacts_01"}}
+          <div class="contacts-form__form">
+            <form>
+              <div class="contacts-form__form-container">
+                <div class="contacts-form__form-group">
+                  {{#> ui/field label="E-mail:*" id="email-contacts_01"}}
+                    {{> ui/input id="email-contacts_01"}}
+                  {{/ui/field}}
+                  {{#> ui/field label="Как вас зовут:*" id="name-contacts_01"}}
+                    {{> ui/input id="name-contacts_01"}}
+                  {{/ui/field}}
+                </div>
+                {{#> ui/field label="Ваш вопрос:*" id="message-contacts_01"}}
+                  {{> ui/textarea id="message-contacts_01"}}
                 {{/ui/field}}
-                {{#> ui/field label="Как вас зовут:*" id="name-contacts_01"}}
-                  {{> ui/input id="name-contacts_01"}}
-                {{/ui/field}}
+                <div class="contacts-form__form-submit">
+                  <button class="contacts-form__form-btn" type="submit">УЗНАТЬ БОЛЬШЕ</button>
+                </div>
               </div>
-              {{#> ui/field label="Ваш вопрос:*" id="message-contacts_01"}}
-                {{> ui/textarea id="message-contacts_01"}}
-              {{/ui/field}}
-              <div class="contacts-form__submit">
-                <button class="contacts-form__btn" type="submit">УЗНАТЬ БОЛЬШЕ</button>
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
       </li>
     </ul>
