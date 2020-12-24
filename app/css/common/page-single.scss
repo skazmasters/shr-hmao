@@ -16,15 +16,24 @@
     }
 
     &--sidebar {
-      display: grid;
-      grid-template-columns: minmax(auto, 730px)  minmax(285px, 1fr);
-      grid-gap: 50px;
+      @include media(tabletSmall, up) {
+        display: grid;
+        grid-template-columns: minmax(auto, 730px)  minmax(285px, 1fr);
+        grid-gap: 50px;
+      }
     }
   }
 
   &__sidebar {
-    padding-left: 20px;
-    border-left: 1px solid $color-black-34;
+    @include media(tabletSmall, up) {
+      padding-left: 20px;
+      border-left: 1px solid $color-black-34;
+    }
+
+    @include media(tabletSmall) {
+      padding-top: 40px;
+      border-top: 1px solid $color-black-34;
+    }
   }
 
   &__pagination {

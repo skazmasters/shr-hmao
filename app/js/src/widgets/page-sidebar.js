@@ -5,11 +5,26 @@ class PageSidebar extends Widget {
     this.sidebar = null;
     this.$inner = this.queryElement('.content');
 
-    this.events();
+    this.resizeEvents = this.resizeEvents.bind(this);
+
+    this.events()
   }
 
   events() {
+    this.resizeEvents();
+    onResize(this.resizeEvents);
+  }
+
+  resizeEvents() {
+    !Layout.isTabletLayout() ? this.init() : this.destroy();
+  }
+
+  init() {
     this.setup();
+  }
+
+  destroy() {
+    this.sidebar.destroy();
   }
 
   setup() {

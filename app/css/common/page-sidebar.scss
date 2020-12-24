@@ -29,8 +29,16 @@
       display: flex;
       align-items: center;
 
+      @include media(tabletSmall) {
+        justify-content: center;
+      }
+
       + * {
         margin-top: 95px;
+
+        @include media(tabletSmall) {
+          margin-top: 82px;
+        }
       }
     }
   }
