@@ -43,8 +43,6 @@
   }
 
   &__static {
-    @include media(tabletSmall) {
-      padding-bottom: 65px;
-    }
+    padding-bottom: 65px;
   }
 }
