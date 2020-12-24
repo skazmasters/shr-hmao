@@ -22,6 +22,15 @@
     font-size: 20px;
     line-height: 23px;
     color: $color-black-87;
+
+    a {
+      position: relative;
+      z-index: 0;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
 
   &__text {

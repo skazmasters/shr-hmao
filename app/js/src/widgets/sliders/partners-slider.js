@@ -36,7 +36,7 @@ class PartnersSlider extends Widget {
           slidesPerView: 3,
           spaceBetween: 20,
         },
-        1024: {
+        1261: {
           slidesPerView: 4,
           spaceBetween: 40,
         },

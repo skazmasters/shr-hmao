@@ -8,7 +8,9 @@
   }
 
   .news-card {
-    grid-gap: 12px 50px;
-    grid-template-columns: minmax(auto,300px) 1fr;
+    @include media(mobile, up) {
+      grid-gap: 12px 50px;
+      grid-template-columns: minmax(auto,300px) 1fr;
+    }
   }
 }
