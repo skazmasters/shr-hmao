@@ -1,4 +1,8 @@
 <div class="slider-nav{{#if nav-mode}} slider-nav--{{nav-mode}}{{/if}}">
-  <button class="slider-nav__btn slider-nav__btn--prev {{class}}__prev" type="button" aria-label="К предыдущему слайду."></button>
-  <button class="slider-nav__btn slider-nav__btn--next {{class}}__next" type="button" aria-label="К следующему слайду."></button>
+  <button class="slider-nav__btn slider-nav__btn--prev {{class}}__prev" type="button" aria-label="К предыдущему слайду.">
+    {{#if icon-nav}}<i class="slider-nav__icon"></i>{{/if}}
+  </button>
+  <button class="slider-nav__btn slider-nav__btn--next {{class}}__next" type="button" aria-label="К следующему слайду.">
+    {{#if icon-nav}}<i class="slider-nav__icon"></i>{{/if}}
+  </button>
 </div>

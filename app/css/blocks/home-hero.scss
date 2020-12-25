@@ -18,68 +18,15 @@
     }
 
     > * {
-      display: flex;
-      align-items: center;
-
       @include media(mobile, up) {
+        display: flex;
+        align-items: center;
         justify-content: flex-end;
       }
 
       @include media(mobile) {
-        justify-content: space-between;
+        width: 100%;
       }
-    }
-  }
-
-  &__nav-btn {
-    display: flex;
-    align-items: center;
-    margin-left: 34px;
-    min-width: 51px;
-
-    &:first-child {
-      margin-left: 0;
-    }
-
-    &--prev {
-      &:hover i {
-        clip-path: inset(0 15px 0 0);
-      }
-    }
-
-    &--next {
-      &:hover i {
-        clip-path: inset(0 0 0 15px);
-      }
-    }
-  }
-
-  &__nav-icon {
-    position: relative;
-    display: flex;
-    align-items: center;
-    clip-path: inset(0 0 0 0);
-    @include transition;
-
-    .home-hero__nav-btn--prev & {
-      justify-content: flex-start;
-
-      &::after {
-        @include sprite('slick-left');
-      }
-    }
-
-    .home-hero__nav-btn--next & {
-      justify-content: flex-end;
-
-      &::after {
-        @include sprite('slick-right');
-      }
-    }
-
-    &::after {
-      content: '';
-      display: block;
     }
   }
 

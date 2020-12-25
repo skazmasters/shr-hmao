@@ -5,48 +5,112 @@
 
   &__btn {
     position: relative;
+  }
 
-    &::before,
-    &::after {
-      content: '';
-      @include transition;
+  &--circled {
+    .slider-nav {
+      &__btn {
+        position: relative;
+
+        &::before,
+        &::after {
+          content: '';
+          @include transition;
+        }
+
+        &::after {
+          @include fill;
+        }
+
+        &:hover {
+          &::before {
+            opacity: 0;
+          }
+
+          &::after {
+            opacity: initial;
+          }
+        }
+
+        &--prev {
+          &::before {
+            @include sprite('slider-prev');
+            opacity: initial;
+          }
+
+          &::after {
+            @include sprite('slider-prev-primary');
+            opacity: 0;
+          }
+        }
+
+        &--next {
+          &::before {
+            @include sprite('slider-next');
+            opacity: initial;
+          }
+
+          &::after {
+            @include sprite('slider-next-primary');
+            opacity: 0;
+          }
+        }
+      }
     }
+  }
 
-    &::after {
-      @include fill;
-    }
+  &--arrows {
+    .slider-nav {
+      &__btn {
+        display: flex;
+        align-items: center;
+        margin-left: 34px;
+        min-width: 51px;
 
-    &:hover {
-      &::before {
-        opacity: 0;
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &--prev {
+          &:hover i {
+            clip-path: inset(0 15px 0 0);
+          }
+
+          .slider-nav__icon {
+            justify-content: flex-start;
+
+            &::after {
+              @include sprite('slick-left');
+            }
+          }
+        }
+
+        &--next {
+          &:hover i {
+            clip-path: inset(0 0 0 15px);
+          }
+
+          .slider-nav__icon {
+            justify-content: flex-end;
+
+            &::after {
+              @include sprite('slick-right');
+            }
+          }
+        }
       }
 
-      &::after {
-        opacity: initial;
-      }
-    }
+      &__icon {
+        position: relative;
+        display: flex;
+        align-items: center;
+        clip-path: inset(0 0 0 0);
+        @include transition;
 
-    &--prev {
-      &::before {
-        @include sprite('slider-prev');
-        opacity: initial;
-      }
-
-      &::after {
-        @include sprite('slider-prev-primary');
-        opacity: 0;
-      }
-    }
-
-    &--next {
-      &::before {
-        @include sprite('slider-next');
-        opacity: initial;
-      }
-
-      &::after {
-        @include sprite('slider-next-primary');
-        opacity: 0;
+        &::after {
+          content: '';
+          display: block;
+        }
       }
     }
   }

@@ -1,9 +1,14 @@
-<section class="page-section">
+<section class="page-section{{#if slider-class}} {{slider-class}}{{/if}}">
   <div class="page-section__header">
     <h2 class="page-section__title">{{title}}</h2>
     {{#if action}}
       <div class="page-section__header-action">
         <a href="{{#if link}}{{link}}{{else}}#{{/if}}" class="page-section__header-link">{{>icons/arrow-right small=1}} Все {{action}}</a>
+      </div>
+    {{/if}}
+    {{#if slider-class}}
+      <div class="page-section__header-action">
+        {{>components/slider-nav class=slider-class}}
       </div>
     {{/if}}
   </div>
