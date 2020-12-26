@@ -14,9 +14,15 @@
   img {
     flex: 0 1 auto;
     display: block;
-    height: 100%;
     width: auto;
-    max-height: 260px;
+
+    @include media(mobile, up) {
+      height: 260px;
+    }
+
+    @include media(mobile) {
+      height: 190px;
+    }
   }
 
   &__caption {

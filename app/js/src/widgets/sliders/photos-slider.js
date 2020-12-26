@@ -22,6 +22,7 @@ class PhotosSlider extends Widget {
   swiperSetup() {
     this.initSwiper();
     this.onClick();
+    this.counter.classList.add('active')
   }
 
   onClick() {

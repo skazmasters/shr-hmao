@@ -1,6 +1,18 @@
 .news-single {
-  > * + * {
-    margin-top: 35px;
+  .container {
+    @include media(mobile, up) {
+      margin-bottom: 100px;
+    }
+  }
+
+  &__container {
+    @include media(mobile) {
+      margin-bottom: 100px;
+    }
+
+    > * + * {
+      margin-top: 35px;
+    }
   }
 
   &__preview {

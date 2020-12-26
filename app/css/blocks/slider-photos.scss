@@ -21,6 +21,10 @@
     opacity: 0;
     pointer-events: none;
 
+    @include media(mobile) {
+      width: 130px;
+    }
+
     &.active {
       opacity: initial;
       pointer-events: auto;
@@ -33,11 +37,14 @@
 
   .swiper-container {
     max-width: 100%;
-    margin-left: 0;
-    padding-right: 145px;
-    margin-right: -145px;
-    padding-bottom: 100px;
-    margin-bottom: -100px;
+    margin: 0 -145px -100px 0;
+    padding: 0 145px 100px 0;
+
+    @include media(mobile) {
+      max-width: 100vw;
+      margin: 0 -15px -100px;
+      padding: 0 15px 100px;
+    }
   }
 
   .swiper-slide {
