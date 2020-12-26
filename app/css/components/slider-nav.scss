@@ -75,27 +75,11 @@
           &:hover i {
             clip-path: inset(0 15px 0 0);
           }
-
-          .slider-nav__icon {
-            justify-content: flex-start;
-
-            &::after {
-              @include sprite('slick-left');
-            }
-          }
         }
 
         &--next {
           &:hover i {
             clip-path: inset(0 0 0 15px);
-          }
-
-          .slider-nav__icon {
-            justify-content: flex-end;
-
-            &::after {
-              @include sprite('slick-right');
-            }
           }
         }
       }
@@ -111,6 +95,32 @@
           content: '';
           display: block;
         }
+
+        &--prev {
+          justify-content: flex-start;
+
+          &::after {
+            @include sprite('slick-left');
+          }
+        }
+
+        &--next {
+          justify-content: flex-end;
+
+          &::after {
+            @include sprite('slick-right');
+          }
+        }
+      }
+    }
+
+    &.slider-nav--dark {
+      .slider-nav__icon--prev::after {
+        @include sprite('slick-left-dark');
+      }
+
+      .slider-nav__icon--next::after {
+        @include sprite('slick-right-dark');
       }
     }
   }

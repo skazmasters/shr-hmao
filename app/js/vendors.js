@@ -9,7 +9,7 @@ import 'lazysizes/plugins/native-loading/ls.native-loading';
 import 'lazysizes/plugins/object-fit/ls.object-fit';
 import svgPolyfill from 'svg4everybody';
 import jquery from 'jquery';
-import swiper from 'swiper';
+import Swiper from 'swiper/bundle';
 import imask from 'imask';
 import datepicker from 'js-datepicker';
 import { format as dateFormat } from 'date-fns';
@@ -19,7 +19,7 @@ import StickySidebar from "sticky-sidebar";
 
 window.$ = window.jQuery = jquery;
 window.svg4everybody = svgPolyfill;
-window.Swiper = swiper;
+window.Swiper = Swiper;
 window.IMask = imask;
 window.select2 = select2;
 window.PerfectScrollbar = PerfectScrollbar;

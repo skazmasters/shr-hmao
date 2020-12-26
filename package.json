@@ -71,7 +71,7 @@
     "select2": "^4.0.13",
     "sticky-sidebar": "^3.3.1",
     "svg4everybody": "^2.1.9",
-    "swiper": "^6.1.2"
+    "swiper": "^6.4.5"
   },
   "browserslist": [
     ">0.25%",

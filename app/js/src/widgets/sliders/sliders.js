@@ -6,6 +6,9 @@ class Sliders {
     document.querySelector('.js-slider-hero')
       ? document.querySelectorAll('.js-slider-hero').forEach(item => HeroSlider.init(item))
       : null;
+    document.querySelector('.js-slider-photos')
+      ? document.querySelectorAll('.js-slider-photos').forEach(item => PhotosSlider.init(item))
+      : null;
   }
 
   static init() {

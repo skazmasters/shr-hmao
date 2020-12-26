@@ -1,0 +1,46 @@
+.slider-photos {
+  position: relative;
+
+  &__counter {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 135px;
+    margin-bottom: 100px;
+    color: $color-white-75;
+    background-color: transparentize($color-primary, 0.2);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 22px;
+    opacity: 0;
+    pointer-events: none;
+
+    &.active {
+      opacity: initial;
+      pointer-events: auto;
+    }
+  }
+
+  &__counter-inner {
+    max-width: 74px;
+  }
+
+  .swiper-container {
+    max-width: 100%;
+    margin-left: 0;
+    padding-right: 145px;
+    margin-right: -145px;
+    padding-bottom: 100px;
+    margin-bottom: -100px;
+  }
+
+  .swiper-slide {
+    width: auto;
+  }
+}

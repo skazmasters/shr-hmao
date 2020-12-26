@@ -1,4 +1,9 @@
-{{#>blocks/common/page-single title="Заседание Совета при Президенте РФ по культуре и искусству" crumb-1="Новости" sidebar=1}}
+{{#>blocks/common/page-single
+    title="Заседание Совета при Президенте РФ по культуре и искусству"
+    crumb-1="Новости"
+    sidebar=1
+    page-class="news"
+}}
   <div class="news-single">
     <div class="news-single__preview">
       {{>components/image img="static/01" ext="jpg"}}
@@ -17,8 +22,48 @@
     </div>
 
     <div class="news-single__section">
-      {{#>blocks/common/page-section title="Фотоматериалы" slider-class="123"}}
-
+      {{#>blocks/common/page-section title="Фотоматериалы" slider-class="js-slider-photos"}}
+        <div class="slider-photos">
+          <div class="swiper-container js-slider-photos__slider">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                {{>widgets/photos-card
+                    img="1"
+                    caption="Визель Г. М. <b>Декоративное панно из серии: «Наследие Югры»</b>"
+                }}
+              </div>
+              <div class="swiper-slide">
+                {{>widgets/photos-card
+                    img="2"
+                    caption="Визель Г. М. <b>Декоративное панно из серии: «Наследие Югры»</b>"
+                }}
+              </div>
+              <div class="swiper-slide">
+                {{>widgets/photos-card
+                    img="3"
+                    caption="Визель Г. М. <b>Декоративное панно из серии: «Наследие Югры»</b>"
+                }}
+              </div>
+              <div class="swiper-slide">
+                {{>widgets/photos-card
+                    img="4"
+                    caption="Визель Г. М. <b>Декоративное панно из серии: «Наследие Югры»</b>"
+                }}
+              </div>
+              <div class="swiper-slide">
+                {{>widgets/photos-card
+                    img="1"
+                    caption="Визель Г. М. <b>Декоративное панно из серии: «Наследие Югры»</b>"
+                }}
+              </div>
+            </div>
+            <a class="slider-photos__counter js-slider-photos__counter" href="#">
+              <div class="slider-photos__counter-inner">
+                Всего <span class="js-slider-photos__counter-text"></span>&nbsp;фото
+              </div>
+            </a>
+          </div>
+        </div>
       {{/blocks/common/page-section}}
     </div>
   </div>
