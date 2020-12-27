@@ -1,0 +1,61 @@
+.expositions-category {
+  &__header {
+    display: grid;
+    grid-template-columns: minmax(auto, 380px) 1fr;
+    grid-gap: 95px;
+
+    @include media(tablet, only) {
+      grid-template-columns: minmax(auto, 275px) 1fr;
+      grid-gap: 30px;
+    }
+
+    @include media(tabletSmall, only) {
+      grid-template-columns: minmax(auto, 225px) 1fr;
+      grid-gap: 25px;
+    }
+
+    @include media(mobile) {
+      grid-template-columns: 1fr;
+      grid-gap: 30px;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin: 0;
+    @include rodchenko;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 37px;
+    color: $color-black-87;
+
+    @include media(tablet) {
+      font-size: 22px;
+      line-height: 24px;
+    }
+
+    @include media(mobile) {
+      text-align: center;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 80px 30px;
+
+    @include media(tablet, only) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 56px 40px;
+    }
+
+    @include media(tabletSmall, only) {
+      grid-gap: 56px 30px;
+    }
+  }
+
+  .static p {
+    text-align: justify;
+  }
+}

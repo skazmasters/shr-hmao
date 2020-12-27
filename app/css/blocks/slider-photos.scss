@@ -25,6 +25,10 @@
       width: 130px;
     }
 
+    &:hover {
+      background-color: $color-primary;
+    }
+
     &.active {
       opacity: initial;
       pointer-events: auto;

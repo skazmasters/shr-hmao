@@ -1,0 +1,68 @@
+.exposition-card {
+  position: relative;
+
+  &__link {
+    @include fill;
+    z-index: 1;
+
+    &:hover {
+      ~ .exposition-card__image img {
+        transform: scale(1.05);
+      }
+
+      ~ .exposition-card__title {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__image {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+      content: '';
+      padding-top: 45%;
+      display: block;
+    }
+
+    img {
+      @include fill;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transform: scale(1);
+      @include transition;
+    }
+  }
+
+  &__title {
+    display: block;
+    margin: 38px 0 0;
+    color: $color-black-87;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 22px;
+  }
+
+  &__date {
+    display: block;
+    margin: 14px 0 0;
+    color: $color-black-54;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  &__text {
+    display: block;
+    margin: 14px 0 0;
+    color: $color-black-87;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
