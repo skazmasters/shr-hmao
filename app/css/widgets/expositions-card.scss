@@ -10,6 +10,14 @@
     min-height: 580px;
   }
 
+  @include media(mobile) {
+    min-height: 390px;
+  }
+
+  @include media(mobileSmall) {
+    padding: 55px 15px;
+  }
+
   &__title {
     position: relative;
     z-index: 0;
@@ -20,6 +28,12 @@
     font-size: 20px;
     line-height: 22px;
     color: $color-white-87;
+
+    @include media(tablet) {
+      margin: auto 0 0;
+      font-size: 17px;
+      line-height: 20px;
+    }
   }
 
   &__image {

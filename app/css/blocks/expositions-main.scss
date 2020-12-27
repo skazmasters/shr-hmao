@@ -1,4 +1,8 @@
 .expositions-main {
+  @include media(tablet, up) {
+    margin-bottom: 30px;
+  }
+
   &__container {
     display: grid;
     grid-template-columns: minmax(auto, 351px) 1fr;
@@ -10,6 +14,11 @@
       grid-gap: 80px;
     }
 
+    @include media(tabletSmall) {
+      grid-template-columns: minmax(auto, 280px) 1fr;
+      grid-gap: 30px;
+    }
+
     @include media(mobile) {
       grid-template-columns: 1fr;
       grid-gap: 50px;
@@ -19,7 +28,18 @@
   &__list {
     display: grid;
     grid-template-columns: repeat(2, minmax(auto, 285px));
-    grid-gap: 32px;
+
+    @include media(tablet, up) {
+      grid-gap: 32px;
+    }
+
+    @include media(tablet, only) {
+      grid-gap: 20px;
+    }
+
+    @include media(mobile) {
+      grid-gap: 9px;
+    }
   }
 
   .static {
