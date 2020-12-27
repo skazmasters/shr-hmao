@@ -1,0 +1,7 @@
+<article class="expositions-card">
+  <a class="expositions-card__link" href="{{#if link}}{{link}}{{else}}#{{/if}}"></a>
+  <div class="expositions-card__image">
+    {{>components/image img=(concat "expositions/0" img) ext="jpg"}}
+  </div>
+  <h2 class="expositions-card__title">{{{title}}}</h2>
+</article>

@@ -32,22 +32,6 @@
     }
   }
 
-  &__title {
-    display: block;
-    margin: 35px 0 0;
-    @include rodchenko;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 35px;
-    line-height: 37px;
-    color: $color-black-87;
-
-    @include media(tablet) {
-      font-size: 22px;
-      line-height: 35px;
-    }
-  }
-
   &__section {
     margin-top: 0;
     padding-top: 44px;

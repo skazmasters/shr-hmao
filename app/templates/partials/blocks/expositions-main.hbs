@@ -1,0 +1,37 @@
+{{#>blocks/common/page-single title="Выставки" crumb-1="Выставки" pagination=1 page-class="expositions-main"}}
+  <div class="expositions-main__container">
+    <div class="expositions-main__description">
+      <div class="static">
+        <h2>Выставки</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Netus et malesuada fames ac turpis egestas.
+          Sit amet venenatis urna cursus eget nunc. Duis ut diam quam nulla porttitor massa id. Vel quam elementum
+          pulvinar etiam non quam. In metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Aliquet
+          sagittis id consectetur purus. Quis lectus nulla at volutpat diam ut venenatis tellus in. Nisi lacus sed
+          viverra tellus in hac. Aliquet bibendum enim facilisis gravida neque convallis a cras. Sollicitudin ac orci
+          phasellus egestas tellus rutrum tellus pellentesque.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+          magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Netus et malesuada fames ac turpis egestas.
+          Sit amet venenatis urna cursus eget nunc. Duis ut diam quam nulla porttitor massa id.
+        </p>
+      </div>
+    </div>
+    <ul class="expositions-main__list">
+      <li class="expositions-main__item">
+        {{>widgets/expositions-card
+            img="1"
+            title="Ханты-Мансийского отделения"
+        }}
+      </li>
+      <li class="expositions-main__item">
+        {{>widgets/expositions-card
+            img="2"
+            title="Участие в выставочных проектах"
+        }}
+      </li>
+    </ul>
+  </div>
+{{/blocks/common/page-single}}

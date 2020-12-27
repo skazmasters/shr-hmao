@@ -9,6 +9,30 @@
     }
   }
 
+  h2 {
+    display: block;
+    margin: 35px 0 0;
+    @include rodchenko;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 35px;
+    line-height: 37px;
+    color: $color-black-87;
+
+    @include media(tablet) {
+      font-size: 22px;
+      line-height: 35px;
+    }
+
+    + p {
+      margin-top: 36px;
+
+      @include media(tablet) {
+        margin-top: 30px;
+      }
+    }
+  }
+
   p {
     display: block;
     margin: 22px 0 0;

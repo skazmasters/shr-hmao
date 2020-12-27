@@ -1,0 +1,32 @@
+.expositions-main {
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(auto, 351px) 1fr;
+    grid-gap: 93px;
+    align-items: center;
+
+    @include media(tablet) {
+      grid-template-columns: minmax(auto, 310px) 1fr;
+      grid-gap: 80px;
+    }
+
+    @include media(mobile) {
+      grid-template-columns: 1fr;
+      grid-gap: 50px;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 285px));
+    grid-gap: 32px;
+  }
+
+  .static {
+    text-align: justify;
+
+    p {
+      line-height: 18px;
+    }
+  }
+}
