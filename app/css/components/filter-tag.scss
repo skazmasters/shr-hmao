@@ -1,0 +1,29 @@
+.filter-tag {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 15px 18px;
+    border: 1px solid #333333;
+    border-radius: 28px;
+  }
+
+  &__label {
+    display: block;
+    margin: 0;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 13px;
+    color: $color-black-87;
+  }
+
+  &__remove-btn {
+    &::before {
+      content: '';
+      display: block;
+      @include sprite('cross');
+    }
+  }
+}

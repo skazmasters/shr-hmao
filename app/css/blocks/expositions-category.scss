@@ -53,6 +53,11 @@
     @include media(tabletSmall, only) {
       grid-gap: 56px 30px;
     }
+
+    @include media(mobile) {
+      grid-template-columns: 1fr;
+      grid-gap: 70px;
+    }
   }
 
   .static p {

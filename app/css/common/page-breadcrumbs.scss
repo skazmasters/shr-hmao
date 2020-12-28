@@ -2,7 +2,13 @@
 
   &__container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+
+    @include media(mobile) {
+      max-width: calc(100vw - 30px);
+      white-space: nowrap;
+      overflow: auto;
+    }
   }
 
   &__item {

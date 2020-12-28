@@ -1,12 +1,48 @@
-<section class="page-single{{#if page-class}} {{page-class}}{{/if}}">
+<section class="page-single{{#if page-class}} {{page-class}}{{/if}}{{#if page-filters}} page-filters js-filters{{/if}}">
   <h1 class="visually-hidden">{{title}}</h1>
   <div class="container">
     {{#if crumb-1}}
       <div class="page-single__header">
-        {{>blocks/common/page-breadcrumbs}}
+        <div class="page-single__breadcrumbs">
+          {{>blocks/common/page-breadcrumbs}}
+        </div>
+        {{#if page-filters}}
+          <div class="page-filters__header-action">
+            <button class="page-filters__header-btn js-filters__toggle" type="button" data-toggle-text="Скрыть фильтр">
+              Открыть фильтр
+            </button>
+          </div>
+        {{/if}}
       </div>
     {{/if}}
     <div class="page-single__body{{#if sidebar}} page-single__body--sidebar{{/if}}">
+      {{#if page-filters}}
+        <div class="page-filters__body">
+          <div class="page-filters__content js-filters__body">
+            <ul class="page-filters__content-list">
+              {{#ifCond page-filters 'years'}}
+                <li class="page-filters__content-item">
+                  {{>blocks/common/page-filters filter="years"}}
+                </li>
+              {{/ifCond}}
+            </ul>
+          </div>
+          <div class="page-filters__results">
+            {{#ifCond page-filters 'years'}}
+              <ul class="page-filters__results-list">
+                <li class="page-filters__results-item">
+                  {{>components/filter-tag tabel="2019"}}
+                </li>
+              </ul>
+            {{/ifCond}}
+            <div class="page-filters__results-clear">
+              <button class="page-filters__clear-btn js-filters__close" type="button">
+                Сбросить фильтр
+              </button>
+            </div>
+          </div>
+        </div>
+      {{/if}}
       {{>@partial-block}}
       {{#if pagination}}
         <div class="page-single__pagination">

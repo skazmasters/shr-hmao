@@ -1,0 +1,152 @@
+.page-filters {
+  &__header-action {
+    @include media(mobile) {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      display: flex;
+      justify-content: center;
+      margin-top: 8px;
+    }
+  }
+
+  &__header-btn {
+    display: block;
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    color: $color-black-75;
+  }
+
+  &__body {
+    @include media(mobile) {
+      padding: 30px 0 0;
+    }
+
+    + * {
+      margin-top: 100px;
+
+      @include media(mobile) {
+        margin-top: 70px;
+      }
+    }
+  }
+
+  &__content {
+    display: none;
+
+    .opened & {
+      display: block;
+    }
+
+    &.animate {
+      position: relative;
+      display: block;
+      height: 0;
+      overflow: hidden;
+      transition: height .32s ease;
+    }
+  }
+
+  &__content-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 240px));
+    grid-gap: 30px;
+    padding: 35px 0;
+
+    @include media(mobile) {
+      justify-content: center;
+      padding: 30px 0 42px;
+    }
+  }
+
+  &__results {
+    position: relative;
+    padding-top: 35px;
+    border-top: 1px solid transparent;
+    @include transition;
+
+    @include media(mobile) {
+      display: flex;
+      flex-direction: column-reverse;
+
+    }
+
+    .opened & {
+      border-color: $color-black-34;
+    }
+  }
+
+  &__results-list {
+    display: flex;
+    align-items: center;
+    max-width: calc(100% - 140px);
+    overflow: auto;
+    white-space: nowrap;
+    @include hide-scrollbar;
+
+    @include media(mobile) {
+      justify-content: center;
+      width: 100%;
+      max-width: 100%;
+      margin: 30px auto 0;
+    }
+  }
+
+  &__results-item {
+    flex: 0 0 160px;
+    margin-left: 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+
+  &__results-clear {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 140px;
+    background-color: $color-white;
+
+    @include media(mobile, up) {
+      position: absolute;
+      top: 35px;
+      bottom: 0;
+      right: 0;
+    }
+
+    @include media(mobile) {
+      margin: 0 auto;
+    }
+  }
+
+  &__clear-btn {
+    display: block;
+    margin: 0;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 22px;
+    text-decoration: underline;
+    color: $color-black-75;
+  }
+
+  .page-single__header {
+    @include media(mobile, up) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    @include media(mobile) {
+      position: relative;
+    }
+  }
+
+  .page-single__body {
+    padding-top: 0;
+  }
+}

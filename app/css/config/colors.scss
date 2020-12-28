@@ -20,5 +20,5 @@ $color-primary-hover: darken($color-primary, 5%);
 $color-secondary: #1B74FD;
 $color-secondary-hover: darken($color-secondary, 5%);
 
-$color-placeholder: rgba(255, 255, 255, 0.74);
-$color-input-border: #DAE4ED;
+$color-placeholder: $color-black-87;
+$color-input-border: $color-black-87;
