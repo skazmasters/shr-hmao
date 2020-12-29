@@ -34,6 +34,10 @@
       align-items: baseline;
       margin-top: 8px;
 
+      @include media(mobile) {
+        align-items: center;
+      }
+
       &:first-child {
         margin-top: 0;
       }
@@ -47,7 +51,11 @@
           content: '';
           display: block;
           margin-right: 11px;
-          @include sprite('phone')
+          @include sprite('phone');
+
+          @include media(mobile) {
+            transform: scale(0.75);
+          }
         }
       }
 
@@ -58,7 +66,11 @@
           content: '';
           display: block;
           margin-right: 11px;
-          @include sprite('mail')
+          @include sprite('mail');
+
+          @include media(mobile) {
+            transform: scale(0.8);
+          }
         }
       }
     }

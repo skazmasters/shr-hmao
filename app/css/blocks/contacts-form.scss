@@ -26,11 +26,16 @@
       grid-column: -1 / 1;
     }
 
+    @include media(mobile) {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
     + * {
       margin-top: 73px;
 
       @include media(mobile) {
-        margin-top: 50px!important;
+        margin-top: 47px !important;
       }
     }
   }
@@ -50,6 +55,7 @@
     @include media(mobile) {
       margin-top: 28px;
       font-size: 14px;
+      line-height: 17px;
     }
 
     &:first-child {
@@ -59,7 +65,7 @@
 
   &__form {
     @include media(tablet) {
-      margin-top: 50px;
+      margin-top: 47px;
     }
   }
 
@@ -92,6 +98,12 @@
     }
   }
 
+  &__form-submit {
+    @include media(mobile) {
+      margin-top: 40px;
+    }
+  }
+
   &__form-btn {
     display: block;
     width: 100%;
@@ -103,12 +115,12 @@
     line-height: 22px;
     text-align: center;
     border: 1px solid;
-    border-radius: 3px;
+    border-radius: 6px;
     @include transition;
     text-transform: uppercase;
 
     @include media(mobile) {
-      padding: 7px 10px;
+      padding: 6px 10px;
       font-size: 14px;
     }
 

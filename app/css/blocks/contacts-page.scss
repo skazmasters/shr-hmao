@@ -3,7 +3,7 @@
     border-top: 1px solid $color-black-34;
 
     @include media(mobile, up) {
-      padding: 82px 0;
+      padding: 93px 0;
     }
 
     @include media(mobile) {
@@ -17,6 +17,12 @@
 
     &:last-child {
       padding-bottom: 0;
+    }
+  }
+
+  &__container {
+    @include media(tablet, up) {
+      padding-bottom: 20px;
     }
   }
 }
