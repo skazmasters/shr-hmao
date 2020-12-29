@@ -53,5 +53,13 @@
 
   .swiper-slide {
     width: auto;
+
+    &:last-child .photos-card__caption {
+      @include media(mobile) {
+        right: 0;
+        left: unset;
+      }
+    }
+
   }
 }

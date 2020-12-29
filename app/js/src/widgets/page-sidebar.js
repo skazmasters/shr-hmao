@@ -24,15 +24,15 @@ class PageSidebar extends Widget {
   }
 
   destroy() {
-    this.sidebar.destroy();
+    this.sidebar !== null ? this.sidebar.destroy() : null;
   }
 
   setup() {
     this.sidebar = new StickySidebar('.js-page-sidebar', {
       // containerSelector: '.js-page-sidebar',
-      // innerWrapperSelector: '.js-page-sidebar__content',
+      innerWrapperSelector: '.js-page-sidebar__content',
       topSpacing: 120,
-      bottomSpacing: 20
+      bottomSpacing: 20,
     });
   }
 

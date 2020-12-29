@@ -1,4 +1,9 @@
 .news-single {
+  @include media(tabletSmall) {
+    display: flex;
+    flex-direction: column;
+  }
+
   .container {
     @include media(mobile, up) {
       margin-bottom: 100px;
@@ -18,6 +23,14 @@
   &__preview {
     position: relative;
 
+    @include media(tabletSmall, only) {
+      margin: 0 -#{$tabletGutter};
+    }
+
+    @include media(mobile) {
+      margin: 0 -#{$mobileGutter};
+    }
+
     &::after {
       content: '';
       display: block;
@@ -33,11 +46,24 @@
   }
 
   &__static {
+    margin-top: 35px;
     padding-bottom: 65px;
+
+    @include media(tablet) {
+      margin-top: 30px;
+    }
+
+    @include media(mobile) {
+      margin-top: 40px;
+    }
   }
 
   .page-single__section {
     margin-top: 0;
     padding-top: 44px;
+
+    @include media(mobile) {
+      padding-top: 16px;
+    }
   }
 }

@@ -8,5 +8,9 @@
     font-size: 15px;
     line-height: 18px;
     color: $color-black-87;
+
+    @include media(mobile) {
+      font-size: 14px;
+    }
   }
 }

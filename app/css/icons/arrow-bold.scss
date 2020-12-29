@@ -1,0 +1,26 @@
+.arrow-bold {
+  --arrow-color: #{$color-dark};
+
+  position: relative;
+  display: flex;
+  align-items: center;
+  color: var(--arrow-color);
+
+  .icon {
+    width: 50px;
+    clip-path: inset(0 0 0 0);
+    @include transition;
+  }
+
+  &--left {
+    &:hover .icon {
+      clip-path: inset(0 15px 0 0);
+    }
+  }
+
+  &--right {
+    &:hover .icon {
+      clip-path: inset(0 0 0 15px);
+    }
+  }
+}

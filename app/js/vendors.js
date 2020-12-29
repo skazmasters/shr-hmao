@@ -15,7 +15,7 @@ import datepicker from 'js-datepicker';
 import { format as dateFormat } from 'date-fns';
 import select2 from 'select2';
 import PerfectScrollbar from 'perfect-scrollbar';
-import StickySidebar from "sticky-sidebar";
+import StickySidebar from './src/modules/sidebar';
 
 window.$ = window.jQuery = jquery;
 window.svg4everybody = svgPolyfill;
@@ -23,6 +23,7 @@ window.Swiper = Swiper;
 window.IMask = imask;
 window.select2 = select2;
 window.PerfectScrollbar = PerfectScrollbar;
+
 window.StickySidebar = StickySidebar;
 window.datepicker = datepicker;
 window.dateHelper = {
