@@ -39,11 +39,11 @@ class PartnersSlider extends Widget {
           spaceBetween: 20,
         },
         768: {
-          slidesPerView: 3,
+          slidesPerView: 'auto',
           spaceBetween: 20,
         },
         1261: {
-          slidesPerView: 4,
+          slidesPerView: 'auto',
           spaceBetween: 40,
         },
       },

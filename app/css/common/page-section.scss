@@ -21,10 +21,14 @@
   &__header-link {
     display: inline-flex;
     align-items: center;
+    line-height: 22px;
+
+    @include media(tablet, up) {
+      font-size: 22px;
+    }
 
     @include media(tablet) {
       font-size: 14px;
-      line-height: 22px;
     }
 
     &:hover {

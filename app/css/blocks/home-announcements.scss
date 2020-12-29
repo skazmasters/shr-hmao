@@ -47,5 +47,13 @@
     @include media(tabletSmall, only) {
       grid-area: form;
     }
+
+    @include media(mobile) {
+      margin-top: 5px;
+
+      .form-field__label {
+        line-height: 22px;
+      }
+    }
   }
 }

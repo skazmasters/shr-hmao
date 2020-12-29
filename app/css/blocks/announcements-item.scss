@@ -12,6 +12,10 @@
     font-size: 15px;
     line-height: 22px;
     color: $color-black-75;
+
+    @include media(mobile) {
+      font-size: 14px;
+    }
   }
 
   &__title {
@@ -22,6 +26,12 @@
     font-size: 20px;
     line-height: 23px;
     color: $color-black-87;
+
+    @include media(mobile) {
+      margin-top: 12px;
+      font-size: 17px;
+      line-height: 22px;
+    }
 
     a {
       position: relative;
@@ -40,10 +50,20 @@
     font-weight: normal;
     font-size: 15px;
     line-height: 18px;
+
+    @include media(mobile) {
+      margin-top: 12px;
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 
   &__action {
     margin: 24px 0 0;
+
+    @include media(mobile) {
+      margin-top: 29px;
+    }
   }
 
   &__action-link {
@@ -55,5 +75,10 @@
     line-height: 22px;
     text-decoration: underline;
     color: $color-black-75;
+
+    @include media(mobile) {
+      font-size: 14px;
+      line-height: 17px;
+    }
   }
 }

@@ -31,13 +31,13 @@
 
     > * {
       &:first-child {
-        @include media(tablet, up) {
-          padding-right: 70px;
-        }
-
         @include media(tabletSmall, up) {
           padding-right: 30px;
           border-right: 1px solid $color-black-34;
+        }
+
+        @include media(tablet, up) {
+          padding-right: 70px;
         }
 
         @include media(tabletSmall, only) {
@@ -46,12 +46,12 @@
       }
 
       &:last-child {
-        @include media(tablet, up) {
-          padding-left: 60px;
-        }
-
         @include media(tabletSmall, up) {
           padding-left: 30px;
+        }
+
+        @include media(tablet, up) {
+          padding-left: 60px;
         }
       }
     }
