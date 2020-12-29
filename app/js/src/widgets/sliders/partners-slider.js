@@ -27,11 +27,17 @@ class PartnersSlider extends Widget {
   }
 
   initSwiper() {
-    this.swiper = new Swiper(this.slider, {
+    this.swiper = new Swiper(this.slider, this.sliderOptions);
+  }
+
+  get sliderOptions() {
+    return {
       loop: this.state,
-      slidesPerView: 2,
-      spaceBetween: 20,
       breakpoints: {
+        280: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
         768: {
           slidesPerView: 3,
           spaceBetween: 20,
@@ -41,9 +47,8 @@ class PartnersSlider extends Widget {
           spaceBetween: 40,
         },
       },
-    });
+    }
   }
-
 
   static init(el) {
     el && new PartnersSlider(el);

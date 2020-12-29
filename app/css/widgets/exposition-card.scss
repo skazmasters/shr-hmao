@@ -32,7 +32,7 @@
       height: 100%;
       object-fit: cover;
       transform: scale(1);
-      @include transition;
+      @include transition(all, 250ms, linear);
     }
   }
 

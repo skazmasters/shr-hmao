@@ -45,8 +45,11 @@
 
   .form-input input {
     height: auto;
-    padding: 22px 10px;
-    border: unset;
+    padding: 22px 10px 20px 0;
+    font-size: 20px;
+    border-top: unset;
+    border-left: unset;
+    border-right: unset;
     border-bottom: 1px solid #DADADA;
     border-radius: unset;
 
