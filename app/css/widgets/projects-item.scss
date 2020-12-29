@@ -73,6 +73,11 @@
     font-size: 20px;
     line-height: 22px;
     color: $color-black-87;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
 
     @include media(tablet) {
       margin-top: 9px;

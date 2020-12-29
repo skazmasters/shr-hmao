@@ -61,6 +61,10 @@
         }
 
         > .main-menu__link {
+          @include media(tablet, up) {
+            color: transparentize($color-dark, 0.4);
+          }
+
           @include media(tablet) {
             color: $color-white;
           }
@@ -108,6 +112,10 @@
         font-size: 20px;
         line-height: 21px;
         color: $color-dark;
+
+        &:hover {
+          color: transparentize($color-dark, 0.4);
+        }
       }
 
       @include media(tablet) {

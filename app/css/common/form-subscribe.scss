@@ -1,6 +1,15 @@
 .form-subscribe {
   position: relative;
 
+  label {
+    @include media(mobile) {
+      line-height: 22px;
+    }
+    @include media(mobileSmall) {
+      font-size: 14px;
+    }
+  }
+
   input {
     @include media(mobile, up) {
       padding-right: 80px;

@@ -7,6 +7,10 @@
     height: 25px;
     @include transition;
 
+    @include media(tablet) {
+      color: $color-black-54;
+    }
+
     &.active,
     &:hover {
       color: $color-primary;
@@ -41,6 +45,10 @@
   &__form {
     padding-top: 10px;
     padding-bottom: 38px;
+
+    @include media(mobile) {
+      padding-bottom: 25px;
+    }
   }
 
   .form-input input {
@@ -52,6 +60,12 @@
     border-right: unset;
     border-bottom: 1px solid #DADADA;
     border-radius: unset;
+
+    @include media(mobile) {
+      padding: 10px 10px 10px 0;
+      font-size: 16px;
+      line-height: 22px;
+    }
 
     &::placeholder {
       color: $color-white;

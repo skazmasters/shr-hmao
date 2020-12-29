@@ -9,7 +9,13 @@
     line-height: 19px;
 
     + * {
-      margin-top: 13px;
+      @include media(mobile, up) {
+        margin-top: 13px;
+      }
+
+      @include media(mobile) {
+        margin-top: 11px;
+      }
     }
   }
 
