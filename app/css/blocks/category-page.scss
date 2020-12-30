@@ -1,4 +1,4 @@
-.expositions-category {
+.category-page {
   &__header {
     display: grid;
     grid-template-columns: minmax(auto, 380px) 1fr;
@@ -41,22 +41,40 @@
   }
 
   &__list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 80px 30px;
+    &--rows {
+      > * {
+        padding: 82px 0;
+        border-top: 1px solid $color-black-34;
 
-    @include media(tablet, only) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 56px 40px;
+        &:first-child {
+          padding-top: 0;
+          border-top: unset;
+        }
+
+        &:last-child {
+          padding-bottom: 0;
+        }
+      }
     }
 
-    @include media(tabletSmall, only) {
-      grid-gap: 56px 30px;
-    }
+    &--columns {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 80px 30px;
 
-    @include media(mobile) {
-      grid-template-columns: 1fr;
-      grid-gap: 70px;
+      @include media(tablet, only) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 56px 40px;
+      }
+
+      @include media(tabletSmall, only) {
+        grid-gap: 56px 30px;
+      }
+
+      @include media(mobile) {
+        grid-template-columns: 1fr;
+        grid-gap: 70px;
+      }
     }
   }
 

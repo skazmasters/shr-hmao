@@ -1,0 +1,11 @@
+<article class="projects-card">
+  <a class="projects-card__link" href="#" aria-label="Перейти на страницу"></a>
+  <div class="projects-card__image">
+    <a class="projects-card__image-link" href="#">{{>components/image img=(concat 'projects/cards/' projects-img) ext="jpg"}}</a>
+  </div>
+  <h3 class="projects-card__title"><a href="#">{{projects-title}}</a></h3>
+  <p class="projects-card__date">
+    <time datetime="20-12-2020">{{projects-time}}</time>
+  </p>
+  <p class="projects-card__text">{{projects-text}}</p>
+</article>
