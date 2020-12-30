@@ -17,6 +17,7 @@ class Filters extends Widget {
   }
 
   build() {
+    this.$node.classList.contains('opened') ? this.changeButtonText() : null;
     this.$toggle.addEventListener('click', this.onToggleClick);
   }
 
@@ -59,11 +60,15 @@ class Filters extends Widget {
     if (this.busy) return;
     this.busy = true;
 
+    this.changeButtonText();
+
+    !this.$node.classList.contains('opened') ? this.open() : this.close();
+  }
+
+  changeButtonText() {
     const prevText = this.$toggle.textContent;
     this.$toggle.textContent = this.$toggle.dataset.toggleText;
     this.$toggle.dataset.toggleText = prevText;
-
-    !this.$node.classList.contains('opened') ? this.open() : this.close();
   }
 
   collapse() {
