@@ -1,8 +1,8 @@
-{{#>blocks/common/page-single title="Выставки" crumb-1="Выставки" page-class="expositions-main"}}
-  <div class="expositions-main__container">
-    <div class="expositions-main__description">
+{{#>blocks/common/page-single title="Выставки" crumb-1="Наши проекты" page-class="projects-main"}}
+  <div class="projects-main__container">
+    <div class="projects-main__description">
       <div class="static">
-        <h2>Выставки</h2>
+        <h2>Наши проекты</h2>
         <p>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
           magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Netus et malesuada fames ac turpis egestas.
@@ -19,19 +19,29 @@
         </p>
       </div>
     </div>
-    <ul class="expositions-main__list">
-      <li class="expositions-main__item">
+    <ul class="projects-main__list">
+      <li class="projects-main__item">
         {{>widgets/category-card
-            img="expositions/main/01"
-            title="Ханты-Мансийского отделения"
-            big=1
+            img="projects/main/01"
+            title="Акции"
         }}
       </li>
-      <li class="expositions-main__item">
+      <li class="projects-main__item">
         {{>widgets/category-card
-            img="expositions/main/02"
-            title="Участие в выставочных проектах"
-            big=1
+            img="projects/main/02"
+            title="Культурно-просветительская деятельность"
+        }}
+      </li>
+      <li class="projects-main__item">
+        {{>widgets/category-card
+            img="projects/main/03"
+            title="Пленэры"
+        }}
+      </li>
+      <li class="projects-main__item">
+        {{>widgets/category-card
+            img="projects/main/04"
+            title="Издания"
         }}
       </li>
     </ul>

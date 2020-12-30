@@ -1,0 +1,7 @@
+<article class="category-card{{#if big}} category-card--big{{else}} category-card--regular{{/if}}">
+  <a class="category-card__link" href="{{#if link}}{{link}}{{else}}#{{/if}}"></a>
+  <div class="category-card__image">
+    {{>components/image img=img ext="jpg"}}
+  </div>
+  <h2 class="category-card__title">{{{title}}}</h2>
+</article>

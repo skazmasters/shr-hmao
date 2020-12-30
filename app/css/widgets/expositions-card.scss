@@ -1,18 +1,9 @@
-.expositions-card {
+.category-card {
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-height: 660px;
   padding: 55px 25px;
-
-  @include media(tablet) {
-    min-height: 580px;
-  }
-
-  @include media(mobile) {
-    min-height: 390px;
-  }
 
   @include media(mobileSmall) {
     padding: 55px 15px;
@@ -33,6 +24,14 @@
       margin: auto 0 0;
       font-size: 17px;
       line-height: 20px;
+    }
+
+    @include media(tablet) {
+      font-size: 15px;
+    }
+
+    @include media(mobileSmall) {
+      font-size: 13px;
     }
   }
 
@@ -68,13 +67,50 @@
     z-index: 1;
 
     &:hover {
-      ~ .expositions-card__image img {
+      ~ .category-card__image img {
         transform: scale(1.05);
       }
 
-      ~ .expositions-card__title {
+      ~ .category-card__title {
         text-decoration: underline;
       }
+    }
+  }
+
+  &--regular {
+    min-height: 460px;
+
+    @include media(tablet) {
+      min-height: 400px;
+    }
+
+    @include media(mobile) {
+      min-height: 270px;
+      padding: 55px 15px;
+    }
+
+    .category-card__title {
+      min-height: 69px;
+
+      @include media(tablet) {
+        min-height: 60px;
+      }
+
+      @include media(mobile) {
+        min-height: 54px;
+      }
+    }
+  }
+
+  &--big {
+    min-height: 660px;
+
+    @include media(tablet) {
+      min-height: 580px;
+    }
+
+    @include media(mobile) {
+      min-height: 390px;
     }
   }
 }

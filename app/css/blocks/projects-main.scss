@@ -1,0 +1,65 @@
+.projects-main {
+  @include media(tablet, up) {
+    margin-bottom: 30px;
+  }
+
+  &__container {
+    display: grid;
+    grid-template-columns: minmax(auto, 351px) 1fr;
+    grid-gap: 93px;
+
+    @include media(tablet) {
+      grid-template-columns: minmax(auto, 310px) 1fr;
+      grid-gap: 80px;
+    }
+
+    @include media(tabletSmall) {
+      grid-template-columns: 1fr;
+      grid-gap: 50px;
+    }
+  }
+
+  &__description {
+    margin-top: 65px;
+
+    @include media(tablet) {
+      margin-top: 52px;
+    }
+
+    @include media(tabletSmall) {
+      margin-top: 0;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(auto, 285px));
+
+    @include media(tablet, up) {
+      grid-gap: 32px;
+    }
+
+    @include media(tablet) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+    }
+
+    @include media(mobile) {
+      grid-gap: 9px;
+    }
+  }
+
+  .static {
+    text-align: justify;
+
+    h2 {
+      @include media(tabletSmall) {
+        text-align: center;
+      }
+    }
+
+    p {
+      line-height: 18px;
+    }
+  }
+}
