@@ -77,7 +77,12 @@
     }
 
     .opened & {
+      padding-top: 25px;
       border-color: $color-black-34;
+
+      @include media(mobile) {
+        padding-top: 8px;
+      }
     }
   }
 
@@ -110,7 +115,6 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    width: 140px;
     background-color: $color-white;
 
     @include media(mobile, up) {
@@ -118,6 +122,7 @@
       top: 35px;
       bottom: 0;
       right: 0;
+      width: 140px;
     }
 
     @include media(mobile) {
