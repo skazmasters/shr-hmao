@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-  <title>Наши проекты / Разводящая</title>
+  <title>Наши проекты / Галерея</title>
   <meta name="description" content>
 
   <meta name="msapplication-config" content="../assets/images/favicon/browserconfig.xml">
@@ -21,7 +21,7 @@
   <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#DD6900">
 
   <link rel="canonical" href>
-  <link rel="stylesheet" href="../css/main.css?v=3175">
+  <link rel="stylesheet" href="../css/main.css?v=4239">
 
 
 </head>
@@ -134,111 +134,119 @@
 
 <main class="page__content">
 
-<section class="page-single projects-main">
-  <h1 class="visually-hidden">Выставки</h1>
+<section class="page-single project-single">
+  <h1 class="visually-hidden">Плэнеры</h1>
   <div class="container">
       <div class="page-single__header">
         <div class="page-single__breadcrumbs">
           <div class="page-breadcrumbs">
             <div class="page-breadcrumbs__container">
                 <div class="page-breadcrumbs__item">
-                  <span class="page-breadcrumbs__item-text page-breadcrumbs__item-text--current">Наши проекты</span>
+                  <a class="page-breadcrumbs__item-text" href="#">О союзе</a>
                 </div>
+                <div class="page-breadcrumbs__item">
+                  <span class="page-breadcrumbs__item-text page-breadcrumbs__item-text--current">Фотогалерея</span>
                 </div>
+            </div>
           </div>
         </div>
       </div>
     <div class="page-single__body">
-        <div class="projects-main__container">
-          <div class="projects-main__description">
-            <div class="static">
-              <h2>Наши проекты</h2>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Netus et malesuada fames ac turpis egestas.
-                Sit amet venenatis urna cursus eget nunc. Duis ut diam quam nulla porttitor massa id. Vel quam elementum
-                pulvinar etiam non quam. In metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Aliquet
-                sagittis id consectetur purus. Quis lectus nulla at volutpat diam ut venenatis tellus in. Nisi lacus sed
-                viverra tellus in hac. Aliquet bibendum enim facilisis gravida neque convallis a cras. Sollicitudin ac orci
-                phasellus egestas tellus rutrum tellus pellentesque.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Netus et malesuada fames ac turpis egestas.
-                Sit amet venenatis urna cursus eget nunc. Duis ut diam quam nulla porttitor massa id.
-              </p>
+        <div class="project-single__container">
+          <aside class="project-single__sidebar">
+            <ul class="project-single__sidebar-list">
+              <li class="project-single__sidebar-item">
+                <a class="project-single__sidebar-link" href="#">Живопись</a></li>
+              <li class="project-single__sidebar-item">
+                <a class="project-single__sidebar-link" href="#">Графика</a></li>
+              <li class="project-single__sidebar-item">
+                <a class="project-single__sidebar-link project-single__sidebar-link--current" href="#">Скульптура</a></li>
+              <li class="project-single__sidebar-item">
+                <a class="project-single__sidebar-link" href="#">ДПИ</a>
+                <ul class="project-single__sidebar-list project-single__sidebar-list--nested">
+                  <li class="project-single__sidebar-item">
+                    <a class="project-single__sidebar-link" href="#">Керамика</a></li>
+                  <li class="project-single__sidebar-item">
+                    <a class="project-single__sidebar-link" href="#">Текстиль</a></li>
+                  <li class="project-single__sidebar-item">
+                    <a class="project-single__sidebar-link" href="#">Дерево</a></li>
+                  <li class="project-single__sidebar-item">
+                    <a class="project-single__sidebar-link" href="#">Металл</a></li>
+                </ul>
+              </li>
+            </ul>
+          </aside>
+      
+          <div class="project-single__content">
+            <div class="project-single__gallery">
+              <figure class="gallery-item project-single__gallery-item project-single__gallery-item--portrait" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a class="gallery-item__link" href="../assets/images/gallery/ex1/01.jpg" itemprop="contentUrl" data-size="1200x800" data-author="Творжинская М. Д.">
+                  <img class="gallery-item__image" src="../assets/images/gallery/ex1/01-small.jpg" itemprop="thumbnail" alt="Изображение галереи" loading="lazy">
+                </a>
+                <figcaption class="gallery-item__caption" itemprop="caption description">
+                  <strong class="gallery-item__caption-author">Творжинская М. Д.</strong>
+                  <span class="gallery-item__caption-text">Введение во храм</span>
+                </figcaption>
+              </figure>
+              <figure class="gallery-item project-single__gallery-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a class="gallery-item__link" href="../assets/images/gallery/ex1/02.jpg" itemprop="contentUrl" data-size="1200x800" data-author="Автор 1">
+                  <img class="gallery-item__image" src="../assets/images/gallery/ex1/02-small.jpg" itemprop="thumbnail" alt="Изображение галереи" loading="lazy">
+                </a>
+                <figcaption class="gallery-item__caption" itemprop="caption description">
+                  <strong class="gallery-item__caption-author">Автор 1</strong>
+                  <span class="gallery-item__caption-text">Описание работы</span>
+                </figcaption>
+              </figure>
+              <figure class="gallery-item project-single__gallery-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a class="gallery-item__link" href="../assets/images/gallery/ex1/03.jpg" itemprop="contentUrl" data-size="1200x800" data-author="Автор 2">
+                  <img class="gallery-item__image" src="../assets/images/gallery/ex1/03-small.jpg" itemprop="thumbnail" alt="Изображение галереи" loading="lazy">
+                </a>
+                <figcaption class="gallery-item__caption" itemprop="caption description">
+                  <strong class="gallery-item__caption-author">Автор 2</strong>
+                  <span class="gallery-item__caption-text">Описание работы с очень длинным текстом</span>
+                </figcaption>
+              </figure>
+              <figure class="gallery-item project-single__gallery-item project-single__gallery-item--portrait" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a class="gallery-item__link" href="../assets/images/gallery/ex1/04.jpg" itemprop="contentUrl" data-size="1200x800" data-author="Автор 3">
+                  <img class="gallery-item__image" src="../assets/images/gallery/ex1/04-small.jpg" itemprop="thumbnail" alt="Изображение галереи" loading="lazy">
+                </a>
+                <figcaption class="gallery-item__caption" itemprop="caption description">
+                  <strong class="gallery-item__caption-author">Автор 3</strong>
+                  <span class="gallery-item__caption-text">Описание работы</span>
+                </figcaption>
+              </figure>
+              <figure class="gallery-item project-single__gallery-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a class="gallery-item__link" href="../assets/images/gallery/ex1/05.jpg" itemprop="contentUrl" data-size="1200x800" data-author="Творжинская М. Д.">
+                  <img class="gallery-item__image" src="../assets/images/gallery/ex1/05-small.jpg" itemprop="thumbnail" alt="Изображение галереи" loading="lazy">
+                </a>
+                <figcaption class="gallery-item__caption" itemprop="caption description">
+                  <strong class="gallery-item__caption-author">Творжинская М. Д.</strong>
+                  <span class="gallery-item__caption-text">Введение во храм</span>
+                </figcaption>
+              </figure>
+              <figure class="gallery-item project-single__gallery-item" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+                <a class="gallery-item__link" href="../assets/images/gallery/ex1/06.jpg" itemprop="contentUrl" data-size="1200x800" data-author="Творжинская М. Д.">
+                  <img class="gallery-item__image" src="../assets/images/gallery/ex1/06-small.jpg" itemprop="thumbnail" alt="Изображение галереи" loading="lazy">
+                </a>
+                <figcaption class="gallery-item__caption" itemprop="caption description">
+                  <strong class="gallery-item__caption-author">Творжинская М. Д.</strong>
+                  <span class="gallery-item__caption-text">Введение во храм</span>
+                </figcaption>
+              </figure>
+            </div>
+      
+            <div class="project-single__pagination">
+              <div class="page-pagination">
+                <ul class="page-pagination__list">
+                  <li><a class="page-pagination__item page-pagination__item--current" href="#">1</a></li>
+                  <li><a class="page-pagination__item" href="#">2</a></li>
+                  <li><a class="page-pagination__item" href="#">3</a></li>
+                  <li><span class="page-pagination__item">...</span></li>
+                  <li><a class="page-pagination__item" href="#">8</a></li>
+                </ul>
+              </div>
             </div>
           </div>
-          <ul class="projects-main__list">
-            <li class="projects-main__item">
-              <article class="category-card category-card--regular">
-                <a class="category-card__link" href="#"></a>
-                <div class="category-card__image">
-                    <picture>
-                  
-                  
-                  
-                      
-                      <source data-srcset="../assets/images/projects/main/01.jpg, ../assets/images/projects/main/01@2x.jpg 2x" type="image/jpeg">
-                  
-                        <img class="lazy" data-sizes="auto" data-original="../assets/images/projects/main/01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
-                    </picture>
-                </div>
-                <h2 class="category-card__title">Акции</h2>
-              </article>
-            </li>
-            <li class="projects-main__item">
-              <article class="category-card category-card--regular">
-                <a class="category-card__link" href="#"></a>
-                <div class="category-card__image">
-                    <picture>
-                  
-                  
-                  
-                      
-                      <source data-srcset="../assets/images/projects/main/02.jpg, ../assets/images/projects/main/02@2x.jpg 2x" type="image/jpeg">
-                  
-                        <img class="lazy" data-sizes="auto" data-original="../assets/images/projects/main/02.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
-                    </picture>
-                </div>
-                <h2 class="category-card__title">Культурно-просветительская деятельность</h2>
-              </article>
-            </li>
-            <li class="projects-main__item">
-              <article class="category-card category-card--regular">
-                <a class="category-card__link" href="#"></a>
-                <div class="category-card__image">
-                    <picture>
-                  
-                  
-                  
-                      
-                      <source data-srcset="../assets/images/projects/main/03.jpg, ../assets/images/projects/main/03@2x.jpg 2x" type="image/jpeg">
-                  
-                        <img class="lazy" data-sizes="auto" data-original="../assets/images/projects/main/03.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
-                    </picture>
-                </div>
-                <h2 class="category-card__title">Пленэры</h2>
-              </article>
-            </li>
-            <li class="projects-main__item">
-              <article class="category-card category-card--regular">
-                <a class="category-card__link" href="#"></a>
-                <div class="category-card__image">
-                    <picture>
-                  
-                  
-                  
-                      
-                      <source data-srcset="../assets/images/projects/main/04.jpg, ../assets/images/projects/main/04@2x.jpg 2x" type="image/jpeg">
-                  
-                        <img class="lazy" data-sizes="auto" data-original="../assets/images/projects/main/04.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
-                    </picture>
-                </div>
-                <h2 class="category-card__title">Издания</h2>
-              </article>
-            </li>
-          </ul>
         </div>
     </div>
   </div>
@@ -262,18 +270,18 @@
       </div>
       <div class="footer__contacts">
         <div class="main-contacts">
-          <a class="main-contacts__item" href="mailto:shrugra2020@mail.ru">
+          <p class="main-contacts__item">
             <svg class="icon icon--mail">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#mail"/>
             </svg>
-            <span><b>e-mail:</b> shrugra2020@mail.ru</span>
-          </a>
-          <a class="main-contacts__item" href="tel:+79044805860">
+            <span><b>E-mail:</b> <a href="mailto:shrugra2020@mail.ru">shrugra2020@mail.ru</a></span>
+          </p>
+          <p class="main-contacts__item">
             <svg class="icon icon--phone">
                 <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#phone"/>
             </svg>
-            <span><b>тел.:</b> +7 (904) 480-58-60</span>
-          </a>
+            <span><b>Тел.:</b> <a href="tel:+79044805860">+7 (904) 480-58-60</a></span>
+          </p>
         </div>
       </div>
       <div class="footer__form">
@@ -327,7 +335,7 @@
 
 </div>
 
-<script src="../js/vendors.js?v=3175" defer></script>
-  <script src="../js/main.js?v=3175" defer></script>
+<script src="../js/vendors.js?v=4239" defer></script>
+  <script src="../js/main.js?v=4239" defer></script>
 </body>
 </html>
