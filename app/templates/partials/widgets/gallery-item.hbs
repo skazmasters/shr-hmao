@@ -1,0 +1,10 @@
+<figure class="gallery-item{{#if mode}} {{mode}}{{/if}}" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+  <a class="gallery-item__link" href="../assets/images/gallery/ex1/0{{img}}.jpg" itemprop="contentUrl"
+     data-size="{{#if data-size}}{{data-size}}{{else}}1200x800{{/if}}" data-author="{{author}}">
+    <img class="gallery-item__image" src="../assets/images/gallery/ex1/0{{img}}-small.jpg" itemprop="thumbnail" alt="Изображение галереи" loading="lazy"/>
+  </a>
+  <figcaption class="gallery-item__caption" itemprop="caption description">
+    <strong class="gallery-item__caption-author">{{author}}</strong>
+    <span class="gallery-item__caption-text">{{caption}}</span>
+  </figcaption>
+</figure>

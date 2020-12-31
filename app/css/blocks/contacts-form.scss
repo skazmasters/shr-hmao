@@ -61,6 +61,12 @@
     &:first-child {
       margin-top: 0;
     }
+
+    + .contacts-form__text {
+      @include media(tablet, up) {
+        margin-top: 28px;
+      }
+    }
   }
 
   &__form {
