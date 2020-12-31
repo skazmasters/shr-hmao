@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <title>Страница выставки / Категория</title>
+  <meta name="description" content>
+
+  <meta name="msapplication-config" content="../assets/images/favicon/browserconfig.xml">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../assets/images/favicon/site.webmanifest" crossorigin="use-credentials">
+  <link rel="mask-icon" href="../assets/images/favicon/safari-pinned-tab.svg" color="#DD6900">
+
+  <link rel="canonical" href>
+  <link rel="stylesheet" href="../css/main.css?v=3175">
+
+
+</head>
+
+<body class="page  ">
+<div class="preloader js-preloader">
+</div>
+<div class="page__inner">
+
+<header class="page__header header js-header">
+  <div class="container">
+    <div class="header__grid">
+      <div class="header__logo">
+        <div class="page-logo">
+          <a class="page-logo__link" href="home.html"><svg class="icon icon--logo">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#logo"/>
+        </svg>
+        </a>
+        </div>
+      </div>
+      <div class="header__top">
+        <h2 class="header__top-title">
+          Региональное отделение ВТОО <br class="_tablet-hidden">
+          «Союз Художников России» по ХМАО — Югре</h2>
+      </div>
+      <div class="header__nav">
+        <div class="header__menu js-header__menu">
+            <div class="main-menu main-menu--header">
+              <nav>
+                <ul class="main-menu__list">
+                  <li class="main-menu__item"><a class="main-menu__link" href="about.html">О союзе</a></li>
+                  <li class="main-menu__item main-menu__item--nested">
+                    <a class="main-menu__link js-header__menu-link" href="projects.html">Наши проекты</a>
+                    <svg class="icon icon--chevron-right">
+                        <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#chevron-right"/>
+                    </svg>
+                    <div class="main-menu__submenu">
+                      <div class="main-submenu">
+                        <ul class="main-submenu__list">
+                          <li class="main-submenu__item"><a class="main-submenu__link" href="#">Акции</a></li>
+                          <li class="main-submenu__item"><a class="main-submenu__link" href="#">просветительская деятельность</a></li>
+                          <li class="main-submenu__item main-submenu__item--nested">
+                            <a class="main-submenu__link" href="#">Пленэры</a>
+                            <svg class="icon icon--chevron-right">
+                                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#chevron-right"/>
+                            </svg>
+                            <div class="main-submenu__menu">
+                              <div class="main-submenu">
+                                <ul class="main-submenu__list">
+                                  <li class="main-submenu__item">
+                                    <a class="main-submenu__link" href="#">III Международный арт-пленэр «ART-UGRA 2020»</a>
+                                  </li>
+                                  <li class="main-submenu__item">
+                                    <a class="main-submenu__link" href="#">Межрегиональный пленэр «Югорская академичка»</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                          </li>
+                          <li class="main-submenu__item"><a class="main-submenu__link" href="#">Издания союза</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="main-menu__item"><a class="main-menu__link main-menu__link--current" href="expositions.html">Выставки</a></li>
+                  <li class="main-menu__item"><a class="main-menu__link" href="news.html">Новости</a></li>
+                  <li class="main-menu__item"><a class="main-menu__link" href="contacts.html">Контакты</a></li>
+                </ul>
+              </nav>
+            </div>
+        </div>
+        <div class="header__search">
+          <div class="header-search js-header-search">
+            <button class="header-search__btn js-header-search__open" type="button" aria-label="Открыть поиск"><svg class="icon icon--search">
+              <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#search"/>
+          </svg>
+          </button>
+            <div class="header-search__dropdown js-header-search__dropdown">
+              <div class="container">
+                <form>
+                  <div class="header-search__form">
+          <div class="form-field">
+            
+            <div class="form-field__input">
+                          <div class="form-input form-input--reset">
+                            <input id="search_01" type="text" placeholder="Что вы ищите?" class="js-header-search__input">
+                            
+                            
+                            <button class="form-input__reset js-header-search__close" type="reset" aria-label="Очистить форму"><span class="icon-close icon-close--white"></span>
+                          </button>
+                          </div>
+            </div>
+            
+          </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__burger _tablet-visible">
+          <button class="header__burger-btn js-header__burger" type="button" aria-label="Открыть меню">
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="page__content">
+
+<section class="page-single category-page page-filters js-filters opened">
+  <h1 class="visually-hidden">Ханты-Мансийского отделения </h1>
+  <div class="container">
+      <div class="page-single__header">
+        <div class="page-single__breadcrumbs">
+          <div class="page-breadcrumbs">
+            <div class="page-breadcrumbs__container">
+                <div class="page-breadcrumbs__item">
+                  <a class="page-breadcrumbs__item-text" href="#">Выставки</a>
+                </div>
+                <div class="page-breadcrumbs__item">
+                  <span class="page-breadcrumbs__item-text page-breadcrumbs__item-text--current">Ханты-Мансийского отделения</span>
+                </div>
+            </div>
+          </div>
+        </div>
+          <div class="page-filters__header-action">
+            <button class="page-filters__header-btn js-filters__toggle" type="button" data-toggle-text="Скрыть фильтр">
+              Открыть фильтр
+            </button>
+          </div>
+      </div>
+    <div class="page-single__body">
+        <div class="page-filters__body">
+          <div class="page-filters__content js-filters__body">
+            <ul class="page-filters__content-list">
+                <li class="page-filters__content-item">
+                  <div class="filter-option">
+                    <div class="filter-option__item">
+                  <div class="form-field">
+                    
+                    <div class="form-field__input">
+                      <div class="form-select">
+                        <select class="js-select visually-hidden" data-placeholder="Год">
+                                  <option value="0">2021</option>
+                                  <option value="1">2020</option>
+                                  <option value="2">2019</option>
+                                  <option value="3">2018</option>
+                                  <option value="4">2017</option>
+                                  <option value="5">2016</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                  </div>
+                    </div>
+                  </div>
+                </li>
+            </ul>
+          </div>
+          <div class="page-filters__results">
+              <ul class="page-filters__results-list">
+                <li class="page-filters__results-item">
+                  <div class="filter-tag">
+                    <div class="filter-tag__container">
+                      <p class="filter-tag__label">2019</p>
+                      <button class="filter-tag__remove-btn" type="button" aria-label="Удалить тег"></button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            <div class="page-filters__results-clear">
+              <button class="page-filters__clear-btn js-filters__close" type="button">
+                Сбросить фильтр
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="category-page__container">
+          <div class="category-page__header">
+            <h2 class="category-page__title">Ханты-Мансийского отделения</h2>
+            <div class="static">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+                magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Netus et malesuada fames ac turpis egestas.
+                Sit amet venenatis urna cursus eget nunc. Duis ut diam quam nulla porttitor massa id. Vel quam elementum
+                pulvinar etiam non quam. In metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Aliquet sagittis
+                id consectetur purus. Quis lectus nulla at volutpat diam ut venenatis tellus in. Nisi lacus sed viverra tellus
+                in hac. Aliquet bibendum enim facilisis gravida neque convallis a cras. Sollicitudin ac orci phasellus egestas
+                tellus rutrum tellus pellentesque.
+              </p>
+            </div>
+          </div>
+      
+          <div class="page-single__section">
+      <section class="page-section">
+        <div class="page-section__content">
+                  <ul class="category-page__list category-page__list--columns">
+                    <li class="category-page__item">
+                      <article class="exposition-card">
+                        <a class="exposition-card__link" href="#"></a>
+                        <div class="exposition-card__image">
+                            <picture>
+                          
+                          
+                          
+                              
+                              <source data-srcset="../assets/images/expositions/category/01.jpg, ../assets/images/expositions/category/01@2x.jpg 2x" type="image/jpeg">
+                          
+                                <img class="lazy" data-sizes="auto" data-original="../assets/images/expositions/category/01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                            </picture>
+                        </div>
+                        <h3 class="exposition-card__title">«Не о войне» – выставка в Академии Сергея Андрияки</h3>
+                        <div class="exposition-card__date">
+                          <time datetime="12-12-2020">18 декабря 2020</time>
+                        </div>
+                        <p class="exposition-card__text">3 сентября 2020 года в Музейно-выставочном комплексе Академии акварели и изящных искусств Сергея Андрияки открывается выставка «Не о войне», посвященная 75-летию Великой Победы.</p>
+                      </article>
+                    </li>
+                    <li class="category-page__item">
+                      <article class="exposition-card">
+                        <a class="exposition-card__link" href="#"></a>
+                        <div class="exposition-card__image">
+                            <picture>
+                          
+                          
+                          
+                              
+                              <source data-srcset="../assets/images/expositions/category/02.jpg, ../assets/images/expositions/category/02@2x.jpg 2x" type="image/jpeg">
+                          
+                                <img class="lazy" data-sizes="auto" data-original="../assets/images/expositions/category/02.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                            </picture>
+                        </div>
+                        <h3 class="exposition-card__title">Международная Ассамблея «Пластовская осень»</h3>
+                        <div class="exposition-card__date">
+                          <time datetime="12-12-2020">18 декабря 2020</time>
+                        </div>
+                        <p class="exposition-card__text">В Ульяновской области завершилась X Международная Ассамблея художников «Пластовская осень 2020». Программа ассамблеи, как всегда, была насыщенной. В ней приняла участие делегация Союза художников России – секретари СХР А.Н. Суховецкий и В.П. Полотнов.</p>
+                      </article>
+                    </li>
+                    <li class="category-page__item">
+                      <article class="exposition-card">
+                        <a class="exposition-card__link" href="#"></a>
+                        <div class="exposition-card__image">
+                            <picture>
+                          
+                          
+                          
+                              
+                              <source data-srcset="../assets/images/expositions/category/03.jpg, ../assets/images/expositions/category/03@2x.jpg 2x" type="image/jpeg">
+                          
+                                <img class="lazy" data-sizes="auto" data-original="../assets/images/expositions/category/03.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                            </picture>
+                        </div>
+                        <h3 class="exposition-card__title">«Не о войне» – выставка в Академии Сергея Андрияки</h3>
+                        <div class="exposition-card__date">
+                          <time datetime="12-12-2020">18 декабря 2020</time>
+                        </div>
+                        <p class="exposition-card__text">3 сентября 2020 года в Музейно-выставочном комплексе Академии акварели и изящных искусств Сергея Андрияки открывается выставка «Не о войне», посвященная 75-летию Великой Победы.</p>
+                      </article>
+                    </li>
+                    <li class="category-page__item">
+                      <article class="exposition-card">
+                        <a class="exposition-card__link" href="#"></a>
+                        <div class="exposition-card__image">
+                            <picture>
+                          
+                          
+                          
+                              
+                              <source data-srcset="../assets/images/expositions/category/01.jpg, ../assets/images/expositions/category/01@2x.jpg 2x" type="image/jpeg">
+                          
+                                <img class="lazy" data-sizes="auto" data-original="../assets/images/expositions/category/01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                            </picture>
+                        </div>
+                        <h3 class="exposition-card__title">«Не о войне» – выставка в Академии Сергея Андрияки</h3>
+                        <div class="exposition-card__date">
+                          <time datetime="12-12-2020">18 декабря 2020</time>
+                        </div>
+                        <p class="exposition-card__text">3 сентября 2020 года в Музейно-выставочном комплексе Академии акварели и изящных искусств Сергея Андрияки открывается выставка «Не о войне», посвященная 75-летию Великой Победы.</p>
+                      </article>
+                    </li>
+                    <li class="category-page__item">
+                      <article class="exposition-card">
+                        <a class="exposition-card__link" href="#"></a>
+                        <div class="exposition-card__image">
+                            <picture>
+                          
+                          
+                          
+                              
+                              <source data-srcset="../assets/images/expositions/category/02.jpg, ../assets/images/expositions/category/02@2x.jpg 2x" type="image/jpeg">
+                          
+                                <img class="lazy" data-sizes="auto" data-original="../assets/images/expositions/category/02.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                            </picture>
+                        </div>
+                        <h3 class="exposition-card__title">Международная Ассамблея «Пластовская осень»</h3>
+                        <div class="exposition-card__date">
+                          <time datetime="12-12-2020">18 декабря 2020</time>
+                        </div>
+                        <p class="exposition-card__text">В Ульяновской области завершилась X Международная Ассамблея художников «Пластовская осень 2020». Программа ассамблеи, как всегда, была насыщенной. В ней приняла участие делегация Союза художников России – секретари СХР А.Н. Суховецкий и В.П. Полотнов.</p>
+                      </article>
+                    </li>
+                    <li class="category-page__item">
+                      <article class="exposition-card">
+                        <a class="exposition-card__link" href="#"></a>
+                        <div class="exposition-card__image">
+                            <picture>
+                          
+                          
+                          
+                              
+                              <source data-srcset="../assets/images/expositions/category/03.jpg, ../assets/images/expositions/category/03@2x.jpg 2x" type="image/jpeg">
+                          
+                                <img class="lazy" data-sizes="auto" data-original="../assets/images/expositions/category/03.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                            </picture>
+                        </div>
+                        <h3 class="exposition-card__title">«Не о войне» – выставка в Академии Сергея Андрияки</h3>
+                        <div class="exposition-card__date">
+                          <time datetime="12-12-2020">18 декабря 2020</time>
+                        </div>
+                        <p class="exposition-card__text">3 сентября 2020 года в Музейно-выставочном комплексе Академии акварели и изящных искусств Сергея Андрияки открывается выставка «Не о войне», посвященная 75-летию Великой Победы.</p>
+                      </article>
+                    </li>
+                  </ul>
+        </div>
+      </section>
+          </div>
+        </div>
+        <div class="page-single__pagination">
+          <div class="page-pagination">
+            <ul class="page-pagination__list">
+              <li><a class="page-pagination__item page-pagination__item--current" href="#">1</a></li>
+              <li><a class="page-pagination__item" href="#">2</a></li>
+              <li><a class="page-pagination__item" href="#">3</a></li>
+              <li><span class="page-pagination__item">...</span></li>
+              <li><a class="page-pagination__item" href="#">8</a></li>
+            </ul>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="page__footer footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__menu">
+          <div class="main-menu main-menu--footer">
+            <ul class="main-menu__list">
+              <li class="main-menu__item"><a class="main-menu__link" href="about.html">О союзе</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="projects.html">Наши проекты</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="expositions.html">Выставки</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="news.html">Новости</a></li>
+              <li class="main-menu__item"><a class="main-menu__link" href="contacts.html">Контакты</a></li>
+            </ul>
+          </div>
+      </div>
+      <div class="footer__contacts">
+        <div class="main-contacts">
+          <a class="main-contacts__item" href="mailto:shrugra2020@mail.ru">
+            <svg class="icon icon--mail">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#mail"/>
+            </svg>
+            <span><b>e-mail:</b> shrugra2020@mail.ru</span>
+          </a>
+          <a class="main-contacts__item" href="tel:+79044805860">
+            <svg class="icon icon--phone">
+                <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#phone"/>
+            </svg>
+            <span><b>тел.:</b> +7 (904) 480-58-60</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer__form">
+        <form>
+          <div class="form-subscribe form-subscribe--white">
+        <div class="form-field">
+          <label class="form-field__label" for="email_01">Подпишитесь на рассылку объявлений:</label>
+          <div class="form-field__input">
+                  <div class="form-input">
+                    <input id="email_01" type="text" placeholder="Ваш e-mail адрес" class="input-white">
+                    
+                    <button class="form-input__submit" type="submit" aria-label="Подписаться"><span class="arrow arrow-right">
+                    <i class="arrow-right__body"></i>
+                  </span>
+                  </button>
+                    
+                  </div>
+          </div>
+          
+        </div>
+          </div>
+        </form>
+      </div>
+      <div class="footer__logo">
+        <div class="page-logo">
+          <a class="page-logo__link" href="home.html"><svg class="icon icon--logo-white">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#logo-white"/>
+        </svg>
+        </a>
+        </div>
+      </div>
+      <div class="footer__socials">
+        <div class="page-socials">
+          <a class="page-socials__link" href="#" target="_blank"><svg class="icon icon--vk">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#vk"/>
+        </svg>
+        </a>
+          <a class="page-socials__link" href="#" target="_blank"><svg class="icon icon--fb">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#fb"/>
+        </svg>
+        </a>
+          <a class="page-socials__link" href="#" target="_blank"><svg class="icon icon--tw">
+            <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="../assets/images/spriteInline.svg#tw"/>
+        </svg>
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<script src="../js/vendors.js?v=3175" defer></script>
+  <script src="../js/main.js?v=3175" defer></script>
+</body>
+</html>

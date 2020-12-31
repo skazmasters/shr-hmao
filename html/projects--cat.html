@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-  <title>Наши проекты / Разводящая</title>
+  <title>Наши проекты / Категория</title>
   <meta name="description" content>
 
   <meta name="msapplication-config" content="../assets/images/favicon/browserconfig.xml">
@@ -134,111 +134,175 @@
 
 <main class="page__content">
 
-<section class="page-single projects-main">
-  <h1 class="visually-hidden">Выставки</h1>
+<section class="page-single category-page page-filters js-filters opened">
+  <h1 class="visually-hidden">Ханты-Мансийского отделения </h1>
   <div class="container">
       <div class="page-single__header">
         <div class="page-single__breadcrumbs">
           <div class="page-breadcrumbs">
             <div class="page-breadcrumbs__container">
                 <div class="page-breadcrumbs__item">
-                  <span class="page-breadcrumbs__item-text page-breadcrumbs__item-text--current">Наши проекты</span>
+                  <a class="page-breadcrumbs__item-text" href="#">Выставки</a>
                 </div>
+                <div class="page-breadcrumbs__item">
+                  <span class="page-breadcrumbs__item-text page-breadcrumbs__item-text--current">Ханты-Мансийского отделения</span>
                 </div>
+            </div>
           </div>
         </div>
+          <div class="page-filters__header-action">
+            <button class="page-filters__header-btn js-filters__toggle" type="button" data-toggle-text="Скрыть фильтр">
+              Открыть фильтр
+            </button>
+          </div>
       </div>
     <div class="page-single__body">
-        <div class="projects-main__container">
-          <div class="projects-main__description">
+        <div class="page-filters__body">
+          <div class="page-filters__content js-filters__body">
+            <ul class="page-filters__content-list">
+                <li class="page-filters__content-item">
+                  <div class="filter-option">
+                    <div class="filter-option__item">
+                  <div class="form-field">
+                    
+                    <div class="form-field__input">
+                      <div class="form-select">
+                        <select class="js-select visually-hidden" data-placeholder="Год">
+                                  <option value="0">2021</option>
+                                  <option value="1">2020</option>
+                                  <option value="2">2019</option>
+                                  <option value="3">2018</option>
+                                  <option value="4">2017</option>
+                                  <option value="5">2016</option>
+                        </select>
+                      </div>
+                    </div>
+                    
+                  </div>
+                    </div>
+                  </div>
+                </li>
+            </ul>
+          </div>
+          <div class="page-filters__results">
+              <ul class="page-filters__results-list">
+                <li class="page-filters__results-item">
+                  <div class="filter-tag">
+                    <div class="filter-tag__container">
+                      <p class="filter-tag__label">2019</p>
+                      <button class="filter-tag__remove-btn" type="button" aria-label="Удалить тег"></button>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            <div class="page-filters__results-clear">
+              <button class="page-filters__clear-btn js-filters__close" type="button">
+                Сбросить фильтр
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="category-page__container">
+          <div class="category-page__header">
+            <h2 class="category-page__title">Ханты-Мансийского отделения</h2>
             <div class="static">
-              <h2>Наши проекты</h2>
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
                 magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Netus et malesuada fames ac turpis egestas.
                 Sit amet venenatis urna cursus eget nunc. Duis ut diam quam nulla porttitor massa id. Vel quam elementum
-                pulvinar etiam non quam. In metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Aliquet
-                sagittis id consectetur purus. Quis lectus nulla at volutpat diam ut venenatis tellus in. Nisi lacus sed
-                viverra tellus in hac. Aliquet bibendum enim facilisis gravida neque convallis a cras. Sollicitudin ac orci
-                phasellus egestas tellus rutrum tellus pellentesque.
-              </p>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-                magna aliqua. Elit ullamcorper dignissim cras tincidunt lobortis. Netus et malesuada fames ac turpis egestas.
-                Sit amet venenatis urna cursus eget nunc. Duis ut diam quam nulla porttitor massa id.
+                pulvinar etiam non quam. In metus vulputate eu scelerisque felis imperdiet proin fermentum leo. Aliquet sagittis
+                id consectetur purus. Quis lectus nulla at volutpat diam ut venenatis tellus in. Nisi lacus sed viverra tellus
+                in hac. Aliquet bibendum enim facilisis gravida neque convallis a cras. Sollicitudin ac orci phasellus egestas
+                tellus rutrum tellus pellentesque.
               </p>
             </div>
           </div>
-          <ul class="projects-main__list">
-            <li class="projects-main__item">
-              <article class="category-card category-card--regular">
-                <a class="category-card__link" href="#"></a>
-                <div class="category-card__image">
-                    <picture>
-                  
-                  
-                  
+      
+          <div class="page-single__section">
+      <section class="page-section">
+        <div class="page-section__content">
+                  <ul class="category-page__list category-page__list--rows">
+                    <li class="category-page__item">
+                      <article class="projects-card">
+                        <a class="projects-card__link" href="#" aria-label="Перейти на страницу"></a>
+                        <div class="projects-card__image">
+                          <a class="projects-card__image-link" href="#">  <picture>
                       
-                      <source data-srcset="../assets/images/projects/main/01.jpg, ../assets/images/projects/main/01@2x.jpg 2x" type="image/jpeg">
-                  
-                        <img class="lazy" data-sizes="auto" data-original="../assets/images/projects/main/01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
-                    </picture>
-                </div>
-                <h2 class="category-card__title">Акции</h2>
-              </article>
-            </li>
-            <li class="projects-main__item">
-              <article class="category-card category-card--regular">
-                <a class="category-card__link" href="#"></a>
-                <div class="category-card__image">
-                    <picture>
-                  
-                  
-                  
                       
-                      <source data-srcset="../assets/images/projects/main/02.jpg, ../assets/images/projects/main/02@2x.jpg 2x" type="image/jpeg">
-                  
-                        <img class="lazy" data-sizes="auto" data-original="../assets/images/projects/main/02.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
-                    </picture>
-                </div>
-                <h2 class="category-card__title">Культурно-просветительская деятельность</h2>
-              </article>
-            </li>
-            <li class="projects-main__item">
-              <article class="category-card category-card--regular">
-                <a class="category-card__link" href="#"></a>
-                <div class="category-card__image">
-                    <picture>
-                  
-                  
-                  
                       
-                      <source data-srcset="../assets/images/projects/main/03.jpg, ../assets/images/projects/main/03@2x.jpg 2x" type="image/jpeg">
-                  
-                        <img class="lazy" data-sizes="auto" data-original="../assets/images/projects/main/03.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
-                    </picture>
-                </div>
-                <h2 class="category-card__title">Пленэры</h2>
-              </article>
-            </li>
-            <li class="projects-main__item">
-              <article class="category-card category-card--regular">
-                <a class="category-card__link" href="#"></a>
-                <div class="category-card__image">
-                    <picture>
-                  
-                  
-                  
+                          
+                          <source data-srcset="../assets/images/projects/cards/01.jpg, ../assets/images/projects/cards/01@2x.jpg 2x" type="image/jpeg">
                       
-                      <source data-srcset="../assets/images/projects/main/04.jpg, ../assets/images/projects/main/04@2x.jpg 2x" type="image/jpeg">
-                  
-                        <img class="lazy" data-sizes="auto" data-original="../assets/images/projects/main/04.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
-                    </picture>
-                </div>
-                <h2 class="category-card__title">Издания</h2>
-              </article>
-            </li>
-          </ul>
+                            <img class="lazy" data-sizes="auto" data-original="../assets/images/projects/cards/01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                        </picture>
+                      </a>
+                        </div>
+                        <h3 class="projects-card__title"><a href="#">Межрегиональный пленэр «Югорская академичка»</a></h3>
+                        <p class="projects-card__date">
+                          <time datetime="20-12-2020">18 декабря 2020</time>
+                        </p>
+                        <p class="projects-card__text">Бюджетное учреждение Ханты-Мансийского автономного округа-Югры «Государственный художественный музей» (г. Ханты-Мансийск) приглашает принять участие в Межрегиональном пленэре «Югорская академичка».</p>
+                      </article>
+                    </li>
+                    <li class="category-page__item">
+                      <article class="projects-card">
+                        <a class="projects-card__link" href="#" aria-label="Перейти на страницу"></a>
+                        <div class="projects-card__image">
+                          <a class="projects-card__image-link" href="#">  <picture>
+                      
+                      
+                      
+                          
+                          <source data-srcset="../assets/images/projects/cards/02.jpg, ../assets/images/projects/cards/02@2x.jpg 2x" type="image/jpeg">
+                      
+                            <img class="lazy" data-sizes="auto" data-original="../assets/images/projects/cards/02.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                        </picture>
+                      </a>
+                        </div>
+                        <h3 class="projects-card__title"><a href="#">Межрегиональный пленэр «Югорская академичка»</a></h3>
+                        <p class="projects-card__date">
+                          <time datetime="20-12-2020">18 декабря 2020</time>
+                        </p>
+                        <p class="projects-card__text">Бюджетное учреждение Ханты-Мансийского автономного округа-Югры «Государственный художественный музей» (г. Ханты-Мансийск) приглашает принять участие в Межрегиональном пленэре «Югорская академичка».</p>
+                      </article>
+                    </li>
+                    <li class="category-page__item">
+                      <article class="projects-card">
+                        <a class="projects-card__link" href="#" aria-label="Перейти на страницу"></a>
+                        <div class="projects-card__image">
+                          <a class="projects-card__image-link" href="#">  <picture>
+                      
+                      
+                      
+                          
+                          <source data-srcset="../assets/images/projects/cards/01.jpg, ../assets/images/projects/cards/01@2x.jpg 2x" type="image/jpeg">
+                      
+                            <img class="lazy" data-sizes="auto" data-original="../assets/images/projects/cards/01.jpg" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==" alt>
+                        </picture>
+                      </a>
+                        </div>
+                        <h3 class="projects-card__title"><a href="#">Межрегиональный пленэр «Югорская академичка»</a></h3>
+                        <p class="projects-card__date">
+                          <time datetime="20-12-2020">18 декабря 2020</time>
+                        </p>
+                        <p class="projects-card__text">Бюджетное учреждение Ханты-Мансийского автономного округа-Югры «Государственный художественный музей» (г. Ханты-Мансийск) приглашает принять участие в Межрегиональном пленэре «Югорская академичка».</p>
+                      </article>
+                    </li>
+                  </ul>
+        </div>
+      </section>
+          </div>
+        </div>
+        <div class="page-single__pagination">
+          <div class="page-pagination">
+            <ul class="page-pagination__list">
+              <li><a class="page-pagination__item page-pagination__item--current" href="#">1</a></li>
+              <li><a class="page-pagination__item" href="#">2</a></li>
+              <li><a class="page-pagination__item" href="#">3</a></li>
+              <li><span class="page-pagination__item">...</span></li>
+              <li><a class="page-pagination__item" href="#">8</a></li>
+            </ul>
+          </div>
         </div>
     </div>
   </div>
