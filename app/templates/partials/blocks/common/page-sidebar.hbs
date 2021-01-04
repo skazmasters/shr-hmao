@@ -24,20 +24,49 @@
         {{/widgets/sidebar-item}}
       </div>
     {{/if}}
+    {{#if opened-ex}}
+      <div class="page-sidebar__item">
+        {{#>widgets/sidebar-item title="Залы открыты:" icon="time"}}
+          {{#>widgets/sidebar-text}}
+            <p>ср - вс</p>
+            <p> 11:00 - 19:00</p>
+          {{/widgets/sidebar-text}}
+        {{/widgets/sidebar-item}}
+      </div>
+    {{/if}}
     {{#if location}}
       <div class="page-sidebar__item">
         {{#>widgets/sidebar-item title="Адрес:" icon="location"}}
           {{#>widgets/sidebar-text}}
-            <p></p>
+            <p>Address</p>
           {{/widgets/sidebar-text}}
         {{/widgets/sidebar-item}}
       </div>
     {{/if}}
     {{#if location-ex}}
       <div class="page-sidebar__item">
-        {{#>widgets/sidebar-item title="Место проведения:" icon="location"}}
+        {{#>widgets/sidebar-item title="Адрес:" icon="location"}}
           {{#>widgets/sidebar-text}}
             <p>БУ ХМАО-Югры «Государственный художественный музей» (г. Ханты-Мансиск, ул. Мира, 2)</p>
+          {{/widgets/sidebar-text}}
+        {{/widgets/sidebar-item}}
+      </div>
+    {{/if}}
+    {{#if cite-ex}}
+      <div class="page-sidebar__item">
+        {{#>widgets/sidebar-item title="Сайт:" icon="global"}}
+          {{#>widgets/sidebar-text}}
+            <p><a href="#" target="_blank">academy-andriaka.ru</a></p>
+          {{/widgets/sidebar-text}}
+        {{/widgets/sidebar-item}}
+      </div>
+    {{/if}}
+    {{#if documents-ex}}
+      <div class="page-sidebar__item">
+        {{#>widgets/sidebar-item title="Документы:" icon="file"}}
+          {{#>widgets/sidebar-text}}
+            {{>ui/download-btn label="Заявление на участие (pdf)"}}
+            {{>ui/download-btn label="Программа (pdf)"}}
           {{/widgets/sidebar-text}}
         {{/widgets/sidebar-item}}
       </div>
@@ -52,7 +81,18 @@
     {{#if video-ex}}
       <div class="page-sidebar__item">
         {{#>widgets/sidebar-item title="Видео материалы:" icon="video"}}
-          {{>widgets/sidebar-video label="Отчетная выставка Ханты-Мансийского отделения Союза художников России" url="https://www.youtube.com/embed/YmICcD-tyg0"}}
+          {{>widgets/sidebar-video
+              img="01"
+              label="Отчетная выставка Ханты-Мансийского отделения Союза художников России"
+              href="https://www.youtube.com/watch?v=ze_ie8Ctp60"
+              dataset="ze_ie8Ctp60"
+          }}
+          {{>widgets/sidebar-video
+              img="01"
+              label="Какой-то текст"
+              href="https://www.youtube.com/watch?v=ze_ie8Ctp60"
+              dataset="ze_ie8Ctp60"
+          }}
         {{/widgets/sidebar-item}}
       </div>
     {{/if}}

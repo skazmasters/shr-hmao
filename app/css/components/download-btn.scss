@@ -1,0 +1,27 @@
+.download-btn {
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: underline;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 18px;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    &::after {
+      content: '';
+      @include sprite('download');
+      margin-left: 5px;
+      transform: scale(0.75);
+    }
+  }
+
+
+  + .download-btn {
+    margin-top: 8px;
+  }
+}

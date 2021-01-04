@@ -13,4 +13,17 @@
       font-size: 14px;
     }
   }
+
+  a {
+    font-style: normal;
+    font-weight: normal;
+    //font-size: 20px;
+    //line-height: 23px;
+    text-decoration-line: underline;
+
+    &:hover {
+      color: $color-primary;
+      text-decoration: none;
+    }
+  }
 }

@@ -54,6 +54,24 @@
         @include sprite('views');
       }
     }
+
+    &--global {
+      &::before {
+        @include sprite('global');
+      }
+    }
+
+    &--time {
+      &::before {
+        @include sprite('time');
+      }
+    }
+
+    &--file {
+      &::before {
+        @include sprite('file');
+      }
+    }
   }
 
   &__content {

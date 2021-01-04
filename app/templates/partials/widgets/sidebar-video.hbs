@@ -1,6 +1,8 @@
 <div class="sidebar-video">
-  <div class="sidebar-video__iframe">
-    <iframe  width="560" height="315" src="{{url}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  </div>
-  <span class="sidebar-video__label">{{label}}</span>
+  <a href="{{href}}" class="sidebar-video__link js-video-link" data-youtube-id="{{dataset}}">
+    <span class="sidebar-video__bg">
+      {{>components/image img=(concat 'sidebar/video/' img) ext="jpg"}}
+    </span>
+    <span class="sidebar-video__label">{{label}}</span>
+  </a>
 </div>

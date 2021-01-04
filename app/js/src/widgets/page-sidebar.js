@@ -32,7 +32,7 @@ class PageSidebar extends Widget {
       // containerSelector: '.js-page-sidebar',
       innerWrapperSelector: '.js-page-sidebar__content',
       topSpacing: 120,
-      bottomSpacing: 20,
+      bottomSpacing: 0,
     });
   }
 
