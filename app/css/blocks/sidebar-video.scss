@@ -1,9 +1,21 @@
 .sidebar-video {
   &__link {
-    margin-top: 35px;
+    display: block;
 
-    &:first-child {
-      margin-top: 0;
+    &:hover {
+      .sidebar-video__bg {
+        &::before {
+          transform: translate(-50%, -50%) scale(1.1);
+        }
+
+        &::after {
+          opacity: 0;
+        }
+      }
+
+      .sidebar-video__label {
+        text-decoration: unset;
+      }
     }
   }
 
@@ -11,14 +23,30 @@
     position: relative;
     display: block;
 
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      z-index: 2;
+      content: '';
+      @include sprite('youtube');
+      transform: translate(-50%, -50%);
+      @include transition;
+    }
+
     &::after {
+      position: relative;
+      z-index: 1;
       content: '';
       display: block;
       padding-top: 56%;
+      background: linear-gradient(0deg, rgba(40, 40, 40, 0.3), rgba(40, 40, 40, 0.3));
+      @include transition;
     }
 
     img {
       @include fill;
+      z-index: 0;
       width: 100%;
       height: 100%;
       object-fit: cover;
