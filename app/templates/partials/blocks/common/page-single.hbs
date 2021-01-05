@@ -22,25 +22,35 @@
             <ul class="page-filters__content-list">
               {{#ifCond page-filters 'years'}}
                 <li class="page-filters__content-item">
-                  {{>blocks/common/page-filters filter="years"}}
+                  {{>blocks/common/page-filters filter=page-filters}}
+                </li>
+              {{/ifCond}}
+              {{#ifCond page-filters 'artists'}}
+                <li class="page-filters__content-item">
+                  {{>blocks/common/page-filters filter='city'}}
+                </li>
+                <li class="page-filters__content-item">
+                  {{>blocks/common/page-filters filter='section'}}
                 </li>
               {{/ifCond}}
             </ul>
           </div>
-          <div class="page-filters__results">
-            {{#ifCond page-filters 'years'}}
-              <ul class="page-filters__results-list">
-                <li class="page-filters__results-item">
-                  {{>components/filter-tag tabel="2019"}}
-                </li>
-              </ul>
-            {{/ifCond}}
-            <div class="page-filters__results-clear">
-              <button class="page-filters__clear-btn js-filters__close" type="button">
-                Сбросить фильтр
-              </button>
+          {{#if page-filters-result}}
+            <div class="page-filters__results">
+              {{#ifCond page-filters-result 'years'}}
+                <ul class="page-filters__results-list">
+                  <li class="page-filters__results-item">
+                    {{>components/filter-tag tabel="2019"}}
+                  </li>
+                </ul>
+              {{/ifCond}}
+              <div class="page-filters__results-clear">
+                <button class="page-filters__clear-btn js-filters__clear" type="reset">
+                  Сбросить фильтр
+                </button>
+              </div>
             </div>
-          </div>
+          {{/if}}
         </div>
       {{/if}}
       {{>@partial-block}}

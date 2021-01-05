@@ -22,6 +22,7 @@ import './src/utils/input-filter';
 
 import './src/widgets/accord';
 import './src/widgets/filters';
+import './src/widgets/artists';
 
 import './src/widgets/header/header-scroll';
 import './src/widgets/header/header-search';

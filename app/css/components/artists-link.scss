@@ -1,0 +1,19 @@
+.artists-link {
+  display: block;
+  padding: 5px 0 4px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  @include transition;
+
+  @include media(tablet) {
+    font-size: 17px;
+    line-height: 20px;
+  }
+
+  &:hover {
+    font-weight: 900;
+    color: $color-primary;
+  }
+}

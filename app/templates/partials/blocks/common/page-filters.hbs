@@ -1,14 +1,50 @@
-<div class="filter-option">
-  <div class="filter-option__item">
-    {{#> ui/field id="select_filters_02"}}
-      {{#> ui/select id="select_filters_02" placeholder="Год" }}
-        <option value="0">2021</option>
-        <option value="1">2020</option>
-        <option value="2">2019</option>
-        <option value="3">2018</option>
-        <option value="4">2017</option>
-        <option value="5">2016</option>
-      {{/ui/select}}
-    {{/ui/field}}
+{{#ifCond filter 'years'}}
+  <div class="filter-option">
+    <div class="filter-option__body">
+      {{#> ui/field id="select_filters_02"}}
+        {{#> ui/select id="select_filters_02" placeholder="Год" }}
+          <option value="0">2021</option>
+          <option value="1">2020</option>
+          <option value="2">2019</option>
+          <option value="3">2018</option>
+          <option value="4">2017</option>
+          <option value="5">2016</option>
+        {{/ui/select}}
+      {{/ui/field}}
+    </div>
   </div>
-</div>
+{{/ifCond}}
+
+{{#ifCond filter 'city'}}
+  <div class="filter-option">
+    <div class="filter-option__body">
+      {{#> ui/field id="select_filters_artists_city"}}
+        {{#> ui/select id="select_filters_artists_city" placeholder="Город"}}
+          <option value="0">Город</option>
+          <option value="1">Город</option>
+          <option value="2">Город</option>
+          <option value="3">Город</option>
+          <option value="4">Город</option>
+          <option value="5">Город</option>
+        {{/ui/select}}
+      {{/ui/field}}
+    </div>
+  </div>
+{{/ifCond}}
+
+{{#ifCond filter 'section'}}
+  <div class="filter-option">
+    <div class="filter-option__body">
+      {{#> ui/field id="select_filters_artists_section"}}
+        {{#> ui/select id="select_filters_artists_section" placeholder="Секция"}}
+          <option value="0">Секция</option>
+          <option value="1">Секция</option>
+          <option value="2">Секция</option>
+          <option value="3">Секция</option>
+          <option value="4">Секция</option>
+          <option value="5">Секция</option>
+        {{/ui/select}}
+      {{/ui/field}}
+    </div>
+  </div>
+{{/ifCond}}

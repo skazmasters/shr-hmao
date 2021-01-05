@@ -38,9 +38,11 @@
 
   &__content {
     display: none;
+    border-bottom: 1px solid transparent;
 
     .opened & {
       display: block;
+      border-color: $color-black-34;
     }
 
     &.animate {
@@ -48,7 +50,7 @@
       display: block;
       height: 0;
       overflow: hidden;
-      transition: height .32s ease;
+      transition: height 320ms ease, border-color 320ms ease;
     }
   }
 
@@ -67,7 +69,6 @@
   &__results {
     position: relative;
     padding-top: 35px;
-    border-top: 1px solid transparent;
     @include transition;
 
     @include media(mobile) {
@@ -77,7 +78,6 @@
 
     .opened & {
       padding-top: 25px;
-      border-color: $color-black-34;
 
       @include media(mobile) {
         padding-top: 8px;
