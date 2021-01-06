@@ -16,6 +16,8 @@ import { format as dateFormat } from 'date-fns';
 import select2 from 'select2';
 import PerfectScrollbar from 'perfect-scrollbar';
 import StickySidebar from './src/modules/sidebar';
+import PhotoSwipe from 'photoswipe';
+import PhotoSwipeUI from 'photoswipe/dist/photoswipe-ui-default';
 
 window.$ = window.jQuery = jquery;
 window.svg4everybody = svgPolyfill;
@@ -29,6 +31,9 @@ window.datepicker = datepicker;
 window.dateHelper = {
   format: dateFormat,
 };
+
+window.PhotoSwipe = PhotoSwipe;
+window.PhotoSwipeUI = PhotoSwipeUI;
 
 lazySizes.cfg.lazyClass = 'lazy';
 lazySizes.cfg.srcAttr = 'data-original';

@@ -30,13 +30,49 @@
     </aside>
 
     <div class="project-single__content">
-      <div class="project-single__gallery">
-        {{>widgets/gallery-item img="1" mode="project-single__gallery-item project-single__gallery-item--portrait" author="Творжинская М. Д." caption="Введение во храм"}}
-        {{>widgets/gallery-item img="2" mode="project-single__gallery-item" author="Автор 1" caption="Описание работы"}}
-        {{>widgets/gallery-item img="3" mode="project-single__gallery-item" author="Автор 2" caption="Описание работы с очень длинным текстом"}}
-        {{>widgets/gallery-item img="4" mode="project-single__gallery-item project-single__gallery-item--portrait" author="Автор 3" caption="Описание работы"}}
-        {{>widgets/gallery-item img="5" mode="project-single__gallery-item" author="Творжинская М. Д." caption="Введение во храм"}}
-        {{>widgets/gallery-item img="6" mode="project-single__gallery-item" author="Творжинская М. Д." caption="Введение во храм"}}
+      <div class="project-single__gallery js-gallery">
+        {{>widgets/gallery-item
+            img="1"
+            mode="project-single__gallery-item project-single__gallery-item--portrait"
+            author="Творжинская М. Д."
+            caption="Введение во храм"
+            data-size="638x978"
+        }}
+        {{>widgets/gallery-item
+            img="2"
+            mode="project-single__gallery-item"
+            author="Автор 1"
+            caption="Описание работы"
+            data-size="638x456"
+        }}
+        {{>widgets/gallery-item
+            img="3"
+            mode="project-single__gallery-item"
+            author="Автор 2"
+            caption="Описание работы с очень длинным текстом"
+            data-size="638x458"
+        }}
+        {{>widgets/gallery-item
+            img="4"
+            mode="project-single__gallery-item project-single__gallery-item--portrait"
+            author="Автор 3"
+            caption="Описание работы"
+            data-size="638x980"
+        }}
+        {{>widgets/gallery-item
+            img="5"
+            mode="project-single__gallery-item"
+            author="Творжинская М. Д."
+            caption="Введение во храм"
+            data-size="638x456"
+        }}
+        {{>widgets/gallery-item
+            img="6"
+            mode="project-single__gallery-item"
+            author="Творжинская М. Д."
+            caption="Введение во храм"
+            data-size="638x457"
+        }}
       </div>
 
       <div class="project-single__pagination">

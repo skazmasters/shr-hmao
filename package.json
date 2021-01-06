@@ -66,6 +66,7 @@
     "lazysizes": "^5.2.0-beta1",
     "normalize-scss": "^7.0.1",
     "perfect-scrollbar": "^1.5.0",
+    "photoswipe": "^4.1.3",
     "picturefill": "^3.0.3",
     "react-app-polyfill": "^1.0.5",
     "select2": "^4.0.13",

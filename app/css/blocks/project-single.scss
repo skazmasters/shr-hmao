@@ -4,6 +4,16 @@
     grid-template-columns: minmax(auto, 350px) 1fr;
     grid-gap: 120px;
     padding-bottom: 55px;
+
+    @include media(tablet, only) {
+      grid-template-columns: minmax(auto, 235px) 1fr;
+      grid-gap: 35px;
+    }
+
+    @include media(mobile) {
+      grid-template-columns: 1fr;
+      grid-gap: 60px;
+    }
   }
 
   &__sidebar {
@@ -60,6 +70,15 @@
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: minmax(10px,auto);
     grid-gap: 30px 27px;
+
+    @include media(tablet, only) {
+      grid-gap: 20px 19px;
+    }
+
+    @include media(mobile) {
+      grid-template-columns: 1fr;
+      grid-gap: 20px;
+    }
   }
 
   &__gallery-item {

@@ -2,10 +2,22 @@
   position: relative;
 
   &__link {
+    @include media(mobile) {
+      display: block;
+      width: 100%;
+    }
+
     &:hover {
       + * {
         opacity: initial;
         pointer-events: auto;
+      }
+    }
+
+    img {
+      @include media(mobile) {
+        display: block;
+        width: 100%;
       }
     }
   }
@@ -23,6 +35,12 @@
     opacity: 0;
     pointer-events: none;
     @include transition;
+
+    @include media(tablet) {
+      padding: 20px 35px 15px 25px;
+      font-size: 14px;
+      line-height: 18px;
+    }
   }
 
   &__caption-author {
@@ -33,4 +51,8 @@
   &__caption-text {
     display: block;
   }
+}
+
+.pswp__img {
+  object-fit: contain;
 }
