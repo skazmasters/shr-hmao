@@ -31,6 +31,12 @@
       margin-right: 5px;
     }
 
+    &--palette {
+      &::before {
+        @include sprite('palette');
+      }
+    }
+
     &--date {
       &::before {
         @include sprite('date');

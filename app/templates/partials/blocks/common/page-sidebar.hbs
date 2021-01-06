@@ -74,7 +74,12 @@
     {{#if video}}
       <div class="page-sidebar__item">
         {{#>widgets/sidebar-item title="Видео материалы:" icon="video"}}
-          {{>widgets/sidebar-video label="Интервью для ТРК Югра 2018" url="https://www.youtube.com/embed/mJ3MB7ISUlM"}}
+          {{>widgets/sidebar-video
+              img="01"
+              href="https://www.youtube.com/watch?v=mJ3MB7ISUlM"
+              dataset="mJ3MB7ISUlM"
+              label="Интервью для ТРК Югра 2018"
+          }}
         {{/widgets/sidebar-item}}
       </div>
     {{/if}}
@@ -109,6 +114,45 @@
       <div class="page-sidebar__item">
         {{#>widgets/sidebar-item title="307" icon="views"}}{{/widgets/sidebar-item}}
       </div>
+    {{/if}}
+
+    {{#if artists}}
+      <div class="page-sidebar__item page-sidebar__item--related">
+        <a class="page-sidebar__link" href="#">{{>icons/arrow-bold-left}}</a>
+        <a class="page-sidebar__link" href="#">{{>icons/arrow-bold-right}}</a>
+      </div>
+
+      <div class="page-sidebar__item">
+        {{#>widgets/sidebar-item title="Персональные выставки:" icon="palette"}}
+          <ul class="sidebar-label">
+            <li class="sidebar-label__item">Скульптура</li>
+            <li class="sidebar-label__item">ДПИ</li>
+            <li class="sidebar-label__item">Ханты-Мансийск</li>
+          </ul>
+        {{/widgets/sidebar-item}}
+      </div>
+
+      <div class="page-sidebar__item">
+        {{#>widgets/sidebar-item title="Персональные выставки:" icon="palette"}}
+          {{#>widgets/sidebar-text}}
+            <p>
+              1981, 1983, 1991, 1996,  2001 – Тюмень, 1991 – Тобольск, 1999 – Когалым, Мегион, 2003, 2007,  2011, 2016, 2018 – Ханты-Мансийск, 2003, 2011 – Москва, 2013, 2016 – Красноярск,  2017 – Мытищи,  2018 – Павлов. 2007 – Леер (Германия), 2008 – Целле (Германия)
+            </p>
+          {{/widgets/sidebar-text}}
+        {{/widgets/sidebar-item}}
+      </div>
+
+      <div class="page-sidebar__item">
+        {{#>widgets/sidebar-item title="Видео материалы:" icon="video"}}
+          {{>widgets/sidebar-video
+              img="01"
+              href="https://www.youtube.com/watch?v=mJ3MB7ISUlM"
+              dataset="mJ3MB7ISUlM"
+              label="Интервью для ТРК Югра 2018"
+          }}
+        {{/widgets/sidebar-item}}
+      </div>
+
     {{/if}}
   </div>
 </aside>

@@ -1,0 +1,22 @@
+.sidebar-label {
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  margin: -4.5px -9px;
+
+  @include media(mobile) {
+    justify-content: center;
+  }
+
+  &__item {
+    display: block;
+    margin: 4.5px 9px;
+    padding: 10px 18px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 13px;
+    border: 1px solid $color-black-87;
+    border-radius: 18px;
+  }
+}
