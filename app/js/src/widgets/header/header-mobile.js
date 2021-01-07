@@ -6,10 +6,14 @@ class HeaderMobile extends Widget {
     this.mobileInit = false;
     this.$burgerButton = this.queryElement('.burger');
     this.$headerMenu = this.queryElement('.menu');
+    this.$headerOpenBtn = this.queryElements('.mobile-open');
+
+    this.busy = false;
 
     this.toggle = this.toggle.bind(this);
     this.resizeEvents = this.resizeEvents.bind(this);
     this.onDocumentClick = this.onDocumentClick.bind(this);
+    this.onBtnClick = this.onBtnClick.bind(this);
 
     this.events();
   }
@@ -32,10 +36,12 @@ class HeaderMobile extends Widget {
 
   setup() {
     this.$burgerButton.addEventListener('click', this.toggle);
+    this.$headerOpenBtn.forEach(btn => btn.addEventListener('click', this.onBtnClick));
     this.mobileInit = true;
   }
 
   removeAll() {
+    this.$headerOpenBtn.forEach(btn => btn.removeEventListener('click', this.onBtnClick))
     this.$burgerButton.removeEventListener('click', this.toggle);
   }
 
@@ -76,6 +82,69 @@ class HeaderMobile extends Widget {
 
   toggle() {
     this.opened ? this.close() : this.open();
+  }
+
+  onBtnClick(e) {
+    e.preventDefault();
+    if (this.busy) return;
+
+    let target = e.target;
+    this.busy = true;
+
+    const parentEl = target.closest('.js-header__mobile');
+    const bodyEl = parentEl.querySelector('.js-header__mobile-menu');
+
+    if (!parentEl.classList.contains('opened')) {
+      parentEl.classList.add('opened');
+      this.expand(bodyEl);
+    } else {
+      const nestedMenus = parentEl.querySelectorAll('.js-header__mobile');
+
+      nestedMenus.forEach(menu => {
+        const nestedContainerMenus = parentEl.querySelector('.js-header__mobile-menu');
+        this.collapse(nestedContainerMenus);
+
+        menu.classList.remove('opened');
+      });
+
+      setTimeout(() => {
+        this.collapse(bodyEl);
+        parentEl.classList.remove('opened');
+      }, 320)
+    }
+  }
+
+  collapse(el) {
+    this.animate({
+      from: el.scrollHeight,
+      to: 0,
+    }, el);
+  }
+
+  expand(el) {
+    this.animate({
+      from: 0,
+      to: el.scrollHeight,
+    }, el);
+  }
+
+  animate(height, target) {
+    const elem = target;
+
+    const handler = e => {
+      if (e.target !== e.currentTarget) return false;
+      elem.removeEventListener(endEvents.transition, handler);
+      elem.classList.remove('animate');
+      elem.style.height = '';
+      this.busy = false;
+    };
+    elem.addEventListener(endEvents.transition, handler);
+
+    elem.classList.add('animate');
+    elem.style.height = `${height.from}px`;
+    raf2x(() => {
+      elem.style.height = `${height.to}px`;
+    });
   }
 
   static init(el) {

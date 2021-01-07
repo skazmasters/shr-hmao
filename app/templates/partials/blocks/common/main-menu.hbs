@@ -13,18 +13,18 @@
     <nav>
       <ul class="main-menu__list">
         <li class="main-menu__item"><a class="main-menu__link{{#ifCond activeLink 'about'}} main-menu__link--current{{/ifCond}}" href="about.html">О союзе</a></li>
-        <li class="main-menu__item main-menu__item--nested">
+        <li class="main-menu__item main-menu__item--nested js-header__mobile">
           <a class="main-menu__link js-header__menu-link{{#ifCond activeLink 'projects'}} main-menu__link--current{{/ifCond}}" href="projects.html">Наши проекты</a>
-          {{>ui/svg name="chevron-right"}}
-          <div class="main-menu__submenu">
+          <button class="main-menu__link-button js-header__mobile-open" type="button">{{>ui/svg name="chevron-right"}}</button>
+          <div class="main-menu__submenu js-header__mobile-menu">
             <div class="main-submenu">
               <ul class="main-submenu__list">
                 <li class="main-submenu__item"><a class="main-submenu__link" href="#">Акции</a></li>
                 <li class="main-submenu__item"><a class="main-submenu__link" href="#">просветительская деятельность</a></li>
-                <li class="main-submenu__item main-submenu__item--nested">
+                <li class="main-submenu__item main-submenu__item--nested js-header__mobile">
                   <a class="main-submenu__link" href="#">Пленэры</a>
-                  {{>ui/svg name="chevron-right"}}
-                  <div class="main-submenu__menu">
+                  <button class="main-submenu__item-button js-header__mobile-open" type="button">{{>ui/svg name="chevron-right"}}</button>
+                  <div class="main-submenu__menu js-header__mobile-menu">
                     <div class="main-submenu">
                       <ul class="main-submenu__list">
                         <li class="main-submenu__item">
