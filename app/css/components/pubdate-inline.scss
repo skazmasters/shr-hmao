@@ -1,0 +1,16 @@
+.pubdate-inline {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: $color-black-75;
+
+  &::before {
+    content: '';
+    @include sprite('date');
+    margin-right: 5px;
+    margin-top: -2px;
+  }
+}

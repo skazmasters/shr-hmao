@@ -1,0 +1,49 @@
+.files-btn {
+  display: flex;
+  align-items: flex-start;
+
+  &::before {
+    flex: 0 0 40px;
+    content: '';
+    margin-right: 7px;
+  }
+
+  &--pdf::before {
+    @include sprite('icon-pdf')
+  }
+
+  &--doc::before {
+    @include sprite('icon-doc')
+  }
+
+  &--txt::before {
+    @include sprite('icon-txt')
+  }
+
+  &--rar::before {
+    @include sprite('icon-rar')
+  }
+
+  &--png::before {
+    @include sprite('icon-png')
+  }
+
+  &--zip::before {
+    @include sprite('icon-zip')
+  }
+
+  &__link {
+    align-self: center;
+    color: $color-primary;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 22px;
+    text-decoration-line: underline;
+    word-break: break-all;
+
+    &:hover {
+      color: $color-primary-hover;
+    }
+  }
+}

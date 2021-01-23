@@ -96,4 +96,13 @@
       font-size: 14px;
     }
   }
+
+  a {
+    color: $color-primary;
+    text-decoration: underline;
+
+    &:hover {
+      color: $color-primary-hover;
+    }
+  }
 }
