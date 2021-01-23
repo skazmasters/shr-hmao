@@ -1,17 +1,17 @@
 .gallery-item {
   position: relative;
 
+  &:hover {
+    .gallery-item__caption {
+      opacity: initial;
+      pointer-events: auto;
+    }
+  }
+
   &__link {
     @include media(mobile) {
       display: block;
       width: 100%;
-    }
-
-    &:hover {
-      + * {
-        opacity: initial;
-        pointer-events: auto;
-      }
     }
 
     img {
@@ -27,6 +27,8 @@
     bottom: 0;
     left: 0;
     right: 0;
+    z-index: 0;
+    display: block;
     padding: 21px 34px 16px 28px;
     font-size: 15px;
     line-height: 20px;
@@ -35,6 +37,7 @@
     opacity: 0;
     pointer-events: none;
     @include transition;
+    cursor: pointer;
 
     @include media(tablet) {
       padding: 20px 35px 15px 25px;

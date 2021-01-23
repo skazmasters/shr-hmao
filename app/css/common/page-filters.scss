@@ -138,6 +138,11 @@
     line-height: 22px;
     text-decoration: underline;
     color: $color-black-75;
+    @include transition();
+
+    &:hover {
+      text-decoration: unset;
+    }
   }
 
   .page-single__header {

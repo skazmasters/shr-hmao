@@ -4,9 +4,14 @@ class Artists extends Widget {
 
     this.$body = this.queryElement('.body');
     this.$resultsImg = this.queryElement('.results-img');
+    this.$artistsLinks = this.queryElements('.link');
 
-    this.onArtistHover = this.onArtistHover.bind(this);
-    this.img = null;
+    this.onMouseOver = this.onMouseOver.bind(this);
+    this.onMouseOut = this.onMouseOut.bind(this);
+    this.visibleImg = null;
+
+    this.currentElem = null;
+
     this.busy = false;
     this.events();
   }
@@ -21,34 +26,62 @@ class Artists extends Widget {
   }
 
   setup() {
-    if (isLaptopLayout()) {
-      document.removeEventListener('mouseover', this.onArtistHover);
-      this.removeImage();
-    } else {
-      this.addImage();
-      document.addEventListener('mouseover', this.onArtistHover);
-    }
+    !isLaptopLayout() ? this.build() : this.destroy();
   }
 
-  onArtistHover(e) {
-    e.preventDefault();
+  build() {
+    this.$artistsLinks.forEach((img, i) => {
+      img.setAttribute('data-idx', i);
+      this.addImage(img.dataset.artistImage, i, img.alt);
+    });
 
-    let target = e.target;
+    this.$node.addEventListener('mouseover', this.onMouseOver);
+    this.$node.addEventListener('mouseout', this.onMouseOut);
+  }
+
+  destroy() {
+    this.$node.removeEventListener('mouseover', this.onMouseOver);
+    this.$node.removeEventListener('mouseout', this.onMouseOut);
+    this.removeImage();
+  }
+
+  onMouseOver(e) {
+    let target = e.target.closest('[data-artist-image]');
+    if (!target) return;
 
     if (target.closest('[data-artist-image]')) {
-      this.img.src = target.dataset.artistImage;
-      this.img.classList.remove('hidden');
-    } else {
-      this.img.src = '';
-      this.img.classList.add('hidden');
+      this.currentElem = target;
+
+      this.visibleImg = this.$resultsImg.querySelector(`[data-idx="${target.dataset.idx}"]`);
+      this.visibleImg.classList.remove('hover-reveal--hide');
     }
   }
 
-  addImage() {
-    this.img = document.createElement('img');
-    this.img.classList.add('hidden');
-    this.img.classList.add('artists-main__portrait-img');
-    this.$resultsImg.insertAdjacentElement('beforeend', this.img);
+  onMouseOut(e) {
+    if (!this.currentElem) return;
+
+    let relatedTarget = e.relatedTarget;
+
+    while (relatedTarget) {
+      if (relatedTarget === this.currentElem) return;
+
+      relatedTarget = relatedTarget.parentNode;
+    }
+
+    this.visibleImg = this.$resultsImg.querySelector(`[data-idx="${this.currentElem.dataset.idx}"]`);
+    this.visibleImg.classList.add('hover-reveal--hide');
+
+    this.currentElem = null;
+  }
+
+  addImage(source, idx, alt) {
+    this.$resultsImg.insertAdjacentHTML('beforeend', `
+      <div class="hover-reveal hover-reveal--hide" data-idx="${idx}">
+        <div class="hover-reveal__inner">
+          <img src="${source}" alt="${alt}" class="hover-reveal__img">
+        </div>
+      </div>
+    `);
   }
 
   removeImage() {
