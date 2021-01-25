@@ -56,37 +56,42 @@
       {{#>blocks/common/page-section section-title="Фотоматериалы" slider-class="js-slider-photos"}}
         <div class="slider-photos">
           <div class="swiper-container js-slider-photos__slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                {{>widgets/photos-card
-                    img="1"
-                    caption="Визель Г. М. <b>Декоративное панно из серии: «Наследие Югры»</b>"
-                }}
-              </div>
-              <div class="swiper-slide">
-                {{>widgets/photos-card
-                    img="2"
-                    caption="Визель Г. М. <b>Декоративное панно из серии: «Наследие Югры»</b>"
-                }}
-              </div>
-              <div class="swiper-slide">
-                {{>widgets/photos-card
-                    img="3"
-                    caption="Визель Г. М. <b>Декоративное панно из серии: «Наследие Югры»</b>"
-                }}
-              </div>
-              <div class="swiper-slide">
-                {{>widgets/photos-card
-                    img="4"
-                    caption="Визель Г. М. <b>Декоративное панно из серии: «Наследие Югры»</b>"
-                }}
-              </div>
-              <div class="swiper-slide">
-                {{>widgets/photos-card
-                    img="1"
-                    caption="Визель Г. М. <b>Декоративное панно из серии: «Наследие Югры»</b>"
-                }}
-              </div>
+            <div class="swiper-wrapper js-gallery">
+              {{>widgets/photos-card
+                  mode="swiper-slide"
+                  data-size="344x518"
+                  img="1"
+                  author="Визель Г. М."
+                  caption="Декоративное панно из серии: «Наследие Югры»"
+              }}
+              {{>widgets/photos-card
+                  mode="swiper-slide"
+                  data-size="228x518"
+                  img="2"
+                  author="Визель Г. М."
+                  caption="Декоративное панно из серии: «Наследие Югры»"
+              }}
+              {{>widgets/photos-card
+                  mode="swiper-slide"
+                  data-size="556x518"
+                  img="3"
+                  author="Визель Г. М."
+                  caption="Декоративное панно из серии: «Наследие Югры»"
+              }}
+              {{>widgets/photos-card
+                  mode="swiper-slide"
+                  data-size="594x568"
+                  img="4"
+                  author="Визель Г. М."
+                  caption="Декоративное панно из серии: «Наследие Югры»"
+              }}
+              {{>widgets/photos-card
+                  mode="swiper-slide"
+                  data-size="344x518"
+                  img="1"
+                  author="Визель Г. М."
+                  caption="Декоративное панно из серии: «Наследие Югры»"
+              }}
             </div>
             <a class="slider-photos__counter js-slider-photos__counter" href="#">
               <div class="slider-photos__counter-inner">

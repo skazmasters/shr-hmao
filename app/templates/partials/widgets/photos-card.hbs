@@ -1,4 +1,10 @@
-<figure class="photos-card{{#if mode}} {{mode}}{{/if}}">
-  <img src="../assets/images/photos/0{{img}}.jpg" alt="">
-  <figcaption class="photos-card__caption">{{{caption}}}</figcaption>
+<figure class="photos-card{{#if mode}} {{mode}}{{/if}}" tabindex="0" itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+  <a class="photos-card__link" href="../assets/images/photos/0{{img}}.jpg" itemprop="contentUrl"
+     data-size="{{#if data-size}}{{data-size}}{{else}}1200x800{{/if}}" data-author="{{author}}">
+    <img class="photos-card__image" src="../assets/images/photos/0{{img}}-small.jpg" itemprop="thumbnail" alt="Изображение галереи" loading="lazy"/>
+  </a>
+  <figcaption class="photos-card__caption" itemprop="caption description">
+    <strong class="photos-card__caption-author">{{author}}</strong>
+    <span class="photos-card__caption-text">{{caption}}</span>
+  </figcaption>
 </figure>

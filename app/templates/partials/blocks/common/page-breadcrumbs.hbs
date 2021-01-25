@@ -1,16 +1,16 @@
-<div class="page-breadcrumbs">
-  <div class="page-breadcrumbs__container">
+<nav class="page-breadcrumbs">
+  <ul class="page-breadcrumbs__container">
     {{#if crumb-2}}
-      <div class="page-breadcrumbs__item">
+      <li class="page-breadcrumbs__item">
         <a class="page-breadcrumbs__item-text" href="#">{{crumb-1}}</a>
-      </div>
-      <div class="page-breadcrumbs__item">
+      </li>
+      <li class="page-breadcrumbs__item">
         <span class="page-breadcrumbs__item-text page-breadcrumbs__item-text--current">{{crumb-2}}</span>
-      </div>
+      </li>
       {{else if crumb-1}}
-      <div class="page-breadcrumbs__item">
+      <li class="page-breadcrumbs__item">
         <span class="page-breadcrumbs__item-text page-breadcrumbs__item-text--current">{{crumb-1}}</span>
-      </div>
+      </li>
     {{/if}}
-  </div>
-</div>
+  </ul>
+</nav>
