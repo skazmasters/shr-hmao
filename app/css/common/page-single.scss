@@ -25,6 +25,10 @@
         grid-template-columns: minmax(auto, 730px)  minmax(285px, 1fr);
         grid-gap: 50px;
       }
+
+      @include media(tabletSmall) {
+        padding-top: 120px;
+      }
     }
   }
 

@@ -35,15 +35,19 @@
 
       @include media(tabletSmall) {
         position: absolute;
-        top: 12vh;
+        top: 80px;
         right: 0;
         left: 0;
         justify-content: space-between;
       }
 
+      @include media(mobile) {
+        top: 75px;
+      }
+
       .arrow-bold {
         @include media(tabletSmall) {
-          --arrow-color: #{$color-white};
+          --arrow-color: #{$color-dark-34};
         }
       }
 

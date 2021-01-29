@@ -5,11 +5,11 @@
     }
   }
 
-  .page-sidebar__item--related {
-    @include media(mobile) {
-      display: none;
-    }
-  }
+  //.page-sidebar__item--related {
+  //  @include media(mobile) {
+  //    display: none;
+  //  }
+  //}
 
   .static {
     img {
