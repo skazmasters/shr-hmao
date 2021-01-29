@@ -22,10 +22,13 @@ class PhotosSlider extends Widget {
   swiperSetup() {
     this.initSwiper();
     this.onClick();
-    this.counter.classList.add('active')
+    this.counter.classList.add('active');
   }
 
   onClick() {
+    this.navPrev = this.queryElement('.prev');
+    this.navNext = this.queryElement('.next');
+
     this.navNext.addEventListener('click', () => {
       this.swiper.slideNext();
     });
@@ -34,11 +37,19 @@ class PhotosSlider extends Widget {
       this.swiper.slidePrev();
     });
 
+    const node = this.$node;
     const slider = this.swiper;
     const counter = this.counter;
 
     this.swiper.on('slideChange', function () {
-      slider.isBeginning ? counter.classList.add('active') : counter.classList.remove('active');
+      if (slider.isBeginning) {
+        counter.classList.add('active')
+        node.classList.add('with-link')
+      }
+      else {
+        counter.classList.remove('active')
+        node.classList.remove('with-link')
+      }
     });
   }
 

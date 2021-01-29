@@ -1,0 +1,128 @@
+{{#>blocks/common/page-single title="Результаты поиска"}}
+  <div class="search-page">
+    <h2 class="search-page__title">Результаты поиска</h2>
+
+    <div class="search-page__categories">
+      <ul>
+        <li><a class="active" href="#">Все</a></li>
+        <li><a href="#">Художники</a></li>
+        <li><a href="#">Работы</a></li>
+        <li><a href="#">Мероприятия</a></li>
+        <li><a href="#">Выставки</a></li>
+        <li><a href="#">Публикации</a></li>
+        <li><a href="#">Ресурсы</a></li>
+        <li><a href="#">Пресс релизы</a></li>
+      </ul>
+    </div>
+
+    <div class="search-page__results">
+      <section class="search-page__item">
+        <h3 class="search-page__item-title">Художники</h3>
+        <div class="search-page__item-content">
+          <div class="search-text">
+            <ul>
+              <li><a href="#">Визель Галина Михайловна</a></li>
+              <li><a href="#">Вербицкий Виталий Дмитриевич</a></li>
+              <li><a href="#">Демьяненко Иван Владимирович</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="search-page__item">
+        <h3 class="search-page__item-title">Работы</h3>
+        <div class="search-page__item-content">
+          <div class="search-photos js-slider-photos">
+            <div class="search-photos__content">
+              <div class="slider-photos">
+                <div class="swiper-container js-slider-photos__slider">
+                  <div class="swiper-wrapper js-gallery">
+                    {{>widgets/photos-card
+                        mode="swiper-slide"
+                        data-size="344x518"
+                        img="1"
+                        author="Визель Г. М."
+                        caption="Декоративное панно из серии: «Наследие Югры»"
+                    }}
+                    {{>widgets/photos-card
+                        mode="swiper-slide"
+                        data-size="228x518"
+                        img="2"
+                        author="Визель Г. М."
+                        caption="Декоративное панно из серии: «Наследие Югры»"
+                    }}
+                    {{>widgets/photos-card
+                        mode="swiper-slide"
+                        data-size="556x518"
+                        img="3"
+                        author="Визель Г. М."
+                        caption="Декоративное панно из серии: «Наследие Югры»"
+                    }}
+                    {{>widgets/photos-card
+                        mode="swiper-slide"
+                        data-size="594x568"
+                        img="4"
+                        author="Визель Г. М."
+                        caption="Декоративное панно из серии: «Наследие Югры»"
+                    }}
+                    {{>widgets/photos-card
+                        mode="swiper-slide"
+                        data-size="344x518"
+                        img="1"
+                        author="Визель Г. М."
+                        caption="Декоративное панно из серии: «Наследие Югры»"
+                    }}
+                    {{>widgets/photos-card
+                        mode="swiper-slide"
+                        data-size="344x518"
+                        img="1"
+                        author="Визель Г. М."
+                        caption="Декоративное панно из серии: «Наследие Югры»"
+                    }}
+                    {{>widgets/photos-card
+                        mode="swiper-slide"
+                        data-size="344x518"
+                        img="1"
+                        author="Визель Г. М."
+                        caption="Декоративное панно из серии: «Наследие Югры»"
+                    }}
+                    {{>widgets/photos-card
+                        mode="swiper-slide"
+                        data-size="344x518"
+                        img="1"
+                        author="Визель Г. М."
+                        caption="Декоративное панно из серии: «Наследие Югры»"
+                    }}
+                  </div>
+                  <a class="slider-photos__counter js-slider-photos__counter" href="#">
+                    <div class="slider-photos__counter-inner">
+                      Всего <span class="js-slider-photos__counter-text"></span>&nbsp;фото
+                    </div>
+                  </a>
+                </div>
+              </div>
+
+              {{>components/slider-nav class="js-slider-photos" icon-svg="arrow-right-circle"}}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="search-page__item">
+        <h3 class="search-page__item-title">Мероприятия</h3>
+        <div class="search-page__item-content">
+          <div class="search-text search-text--underline">
+            <ul>
+              <li><a href="#">Персональная выставка Сергея Устюжанина</a></li>
+              <li><a href="#">Творческий лагерь в области Зала (Венгрия)</a></li>
+              <li><a href="#">Персональная выставка Василисы Портновой</a></li>
+              <li><a href="#">Персональная выставка Сергея Устюжанина</a></li>
+              <li><a href="#">Творческий лагерь в области Зала (Венгрия)</a></li>
+              <li><a href="#">Персональная выставка Василисы Портновой</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+{{/blocks/common/page-single}}

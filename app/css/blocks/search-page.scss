@@ -1,0 +1,172 @@
+.search-page {
+  &__title {
+    @include rodchenko;
+    font-style: normal;
+    font-weight: normal;
+    color: $color-black-87;
+
+    @include media(tablet, up) {
+      font-size: 35px;
+      line-height: 1;
+    }
+
+    @include media(tablet) {
+      font-size: 14px;
+      line-height: 22px;
+    }
+  }
+
+  &__categories {
+    margin-top: 30px;
+
+    ul {
+      display: flex;
+      overflow: auto;
+      white-space: nowrap;
+      border-bottom: 1px solid $color-black-34;
+    }
+
+    li {
+      &:first-child {
+        a {
+          padding-left: 0;
+        }
+      }
+    }
+
+    a {
+      display: block;
+      padding: 15px 14px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 15px;
+      line-height: 22px;
+      color: $color-black-54;
+
+      &:hover {
+        color: $color-black-87;
+      }
+
+      &.active {
+        color: $color-black-87;
+      }
+    }
+  }
+
+  &__results {
+    margin-top: 45px;
+  }
+
+  &__item {
+    margin-top: 66px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  &__item-title {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 22px;
+    color: #000000;
+  }
+
+  &__item-content {
+    margin-top: 16px;
+  }
+
+  .slider-nav {
+    &__btn {
+      position: absolute;
+      top: 110px;
+      z-index: 10;
+      color: #ABAAAA;
+      @include transition();
+
+      @include media(mobile) {
+        top: 75px;
+      }
+
+      &:hover {
+        color: $color-black-87;
+      }
+
+      &:first-child {
+        left: 160px;
+
+        @include media(mobile) {
+          left: 20px;
+        }
+
+        svg {
+          transform: scale(-1, 1);
+        }
+      }
+
+      &:last-child {
+        right: 120px;
+
+        @include media(mobile) {
+          right: 20px;
+        }
+      }
+
+      svg {
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        box-shadow: 0 4px 20px rgba(10, 10, 10, 0.13);
+        border-radius: 50%;
+        @include transition();
+      }
+    }
+  }
+
+  .with-link .slider-nav__btn:last-child {
+    @include media(mobile) {
+      right: 100px;
+    }
+  }
+}
+
+.search-text {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 18px;
+  color: #000000;
+
+  li {
+    margin-top: 4px;
+
+    &:first-child {
+      margin-top: 0;
+    }
+  }
+
+  a {
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  &--underline {
+    a {
+      text-decoration: underline;
+
+      &:hover {
+        color: initial;
+        text-decoration: unset;
+      }
+    }
+  }
+}
+
+.search-photos {
+  padding-bottom: 40px;
+
+  &__content {
+    position: relative;
+  }
+}

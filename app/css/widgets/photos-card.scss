@@ -20,7 +20,7 @@
     img {
       @include media(mobile) {
         display: block;
-        width: 100%;
+        //width: 100%;
       }
     }
   }
@@ -54,6 +54,7 @@
 
   &__caption-author {
     display: block;
+    font-weight: 400;
   }
 
   &__caption-text {
