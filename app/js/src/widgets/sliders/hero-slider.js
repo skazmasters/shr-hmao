@@ -28,6 +28,13 @@ class HeroSlider extends Widget {
 
   initSwiper() {
     this.swiper = new Swiper(this.slider, {
+      autoplay: {
+        delay: 5000,
+      },
+      flipEffect: {
+        slideShadows: false,
+      },
+      speed: 500,
       loop: this.state,
       slidesPerView: 1,
       spaceBetween: 0,

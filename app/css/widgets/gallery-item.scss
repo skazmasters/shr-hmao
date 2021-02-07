@@ -15,6 +15,10 @@
     }
 
     img {
+      @include media(mobile, up) {
+        //@include fill;
+      }
+
       @include media(mobile) {
         display: block;
         width: 100%;
