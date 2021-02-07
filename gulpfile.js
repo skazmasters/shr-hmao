@@ -49,7 +49,7 @@ $.gulp.task('build', done => {
   $.gulp.series('clean',
     $.gulp.parallel('styles', 'scripts'),
     $.gulp.parallel('hbs', 'pngSprite', 'svgSprite', 'svgInline', 'assets'),
-    $.gulp.parallel('imageMin', 'criticalCss'),
+    // $.gulp.parallel('imageMin', 'criticalCss'),
     $.gulp.parallel('prepareHtmlBuild', 'webp'),
     $.gulp.parallel('meta'),
   )(done);
@@ -60,7 +60,7 @@ $.gulp.task('build-prod', done => {
     $.gulp.parallel('styles', 'scripts'),
     $.gulp.parallel('hbs-prod', 'svgSprite', 'svgInline', 'pngSprite', 'assets'),
     $.gulp.parallel('prepareHtmlProd', 'webp'),
-    $.gulp.parallel('sitemap'),
-    $.gulp.parallel('imageMin', 'criticalCss'),
+    // $.gulp.parallel('sitemap'),
+    // $.gulp.parallel('imageMin', 'criticalCss'),
   )(done);
 });

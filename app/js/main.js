@@ -8,7 +8,7 @@ import './src/core/observer';
 // import './src/core/uikit/uikit-accord';
 
 import './src/utils/helpers';
-// import './src/utils/device';
+import './src/utils/device';
 import './src/utils/events';
 import './src/utils/layout';
 import './src/utils/scroll-observer';
